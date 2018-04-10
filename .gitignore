@@ -1,0 +1,10 @@
+#Bower
+bower_components
+
+#Mac Stuff
+.DS_Store
+
+#Misc Folders
+doc
+old
+resume

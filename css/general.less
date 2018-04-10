@@ -1,0 +1,166 @@
+//out: general.min.css, compress:true
+@landingBC : #e6e9f0;
+
+.container-fluid{
+    padding: 0px;
+}
+
+body{
+    background-color: white;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+
+h1#title{
+    text-align: center;
+}
+
+.section{
+    > h2{
+        margin-left: 15px;
+    }
+    min-height: 300px;
+    padding: 10px 0px 10px 20px;
+}
+
+@heightMenu : 50px;
+#menu{
+    width: 100%;
+    height: @heightMenu;
+    z-index: 1000;
+    position: fixed;
+    background-color: fade(black, 30%);
+    ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 10px;
+        li{
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-left: 20px;
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+#menu.dark{
+    background-color: fade(black, 80%);
+    a{
+        color: white;
+    }
+    a:visited{
+        color: white;
+    }
+}
+
+
+#spacerMenu{
+    height: @heightMenu;
+}
+
+
+#landing{
+    background-color: @landingBC;
+    #cont-logo{
+
+        width: 100%;
+        height: 100%;
+        #logo{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            text-align: center;
+            margin: 0px auto;
+            background-color: white;
+            background-image: url("../img/celsoLnkd.jpg");
+            background-size: 100%;
+            p{
+                visibility: hidden;
+                font-size: 70px;
+                margin: 0;
+                line-height: 70px;
+                padding-top: 30px;
+            }
+        }
+    }
+    #social{
+        text-align: center;
+        img{
+            width: 25px;
+            margin: 0px 10px;
+        }
+    }
+}
+
+#bio{
+    background-color: darken(@landingBC, 10%);
+    div{
+        vertical-align: top;
+    }
+    p{
+        text-align: justify;
+        line-height: 23px;
+    }
+    #photo-gallery{
+        img.gallery-thumbnail{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px 0px;
+        }
+    }
+}
+
+#resume{
+    background-color: darken(@landingBC, 20%);
+    img{
+        width: 50px;
+    }
+    .itemPortfolio{
+        img{
+            width: 120px;
+        }
+        p{
+            text-align: justify;
+        }
+    }
+}
+#portfolio{
+    background-color: darken(@landingBC, 30%);
+}
+#footer{
+    padding-top: 25px;
+    background-color: darken(@landingBC, 40%);
+    height: 100px;
+    p{
+        text-align: center;
+    }
+    img{
+        width: 50px;
+        margin-right: 15px;
+        display: inline-block;
+    }
+}
+#contact{
+    background-color: darken(@landingBC, 35%);
+    display: none;
+}
+#helpCelso{
+  text-align: center;
+  height: 80px;
+  padding-top: 35px;
+}
+.modal-body{
+  strong{
+    margin-right: 30px;
+  }
+}
