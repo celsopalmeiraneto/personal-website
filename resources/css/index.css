@@ -1,0 +1,140 @@
+:root {
+  --default-font-size: 18px;
+
+  --pantone-ultimate-gray: #939597;
+  --pantone-cloud-dancer: #f0eee9;
+  --pantone-pms-448: #474026;
+  --pantone-moondrop-grapes: #1c1619;
+
+  --background-color: var(--pantone-cloud-dancer);
+  --foreground-color: var(--pantone-pms-448);
+  --border-color: var(--pantone-moondrop-grapes);
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: var(--default-font-size);
+  font-weight: 400;
+  color: var(--foreground-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.6em;
+  font-weight: 200;
+}
+
+h5 {
+  font-size: 1.4em;
+  font-weight: 200;
+}
+
+h6 {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1em;
+}
+
+.main-container {
+  background-color: var(--pantone-cloud-dancer);
+}
+
+section,
+header {
+  padding: 10px 10px;
+}
+
+header {
+  display: grid;
+  color: black;
+  grid-template: "nome   foto" auto / 1fr 2fr;
+  background-color: var(--pantone-ultimate-gray);
+}
+
+header .portrait {
+  display: flex;
+  justify-content: center;
+}
+header .portrait img {
+  height: 150px;
+  border-radius: 50%;
+}
+
+header .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header .name p {
+  align-self: flex-end;
+  margin: 0 0 10px 0;
+}
+
+header .name h1 {
+  align-self: flex-end;
+  margin: 0 0 10px 0;
+}
+
+header .name h2 {
+  align-self: flex-end;
+  margin: 0 0 10px 0;
+}
+
+section .title {
+  margin: 0 0 10px 0;
+}
+
+section.social {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  width: 100%;
+}
+
+section.social img {
+  height: 60px;
+}
+
+section.bio .text.hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note-summary {
+  border: 2px var(--border-color) solid;
+  border-radius: 10px;
+  max-width: 280px;
+  padding: 10px;
+}
+
+.note-summary .title {
+  margin: 0 0 10px 0;
+}
