@@ -5,14 +5,22 @@
   --pantone-cloud-dancer: #f0eee9;
   --pantone-pms-448: #474026;
   --pantone-moondrop-grapes: #1c1619;
+  --post-it-color: #fffaeb;
 
-  --background-color: var(--pantone-cloud-dancer);
-  --foreground-color: var(--pantone-pms-448);
+  --viewport-extra-small: 576px;
+  --viewport-small: 576px;
+  --viewport-medium: 768px;
+  --viewport-large: 992px;
+  --viewport-extra-large: 1200px;
+  --viewport-extra-extra-large: 1400px;
+
+  --background-color: white;
+  --foreground-color: black;
   --border-color: var(--pantone-moondrop-grapes);
 }
 
 body {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: var(--default-font-size);
   font-weight: 400;
   color: var(--foreground-color);
@@ -62,7 +70,8 @@ p {
 }
 
 .main-container {
-  background-color: var(--pantone-cloud-dancer);
+  background-color: var(--background-color);
+  max-width: 1200px;
 }
 
 section,
@@ -72,9 +81,9 @@ header {
 
 header {
   display: grid;
-  color: black;
-  grid-template: "nome   foto" auto / 1fr 2fr;
-  background-color: var(--pantone-ultimate-gray);
+  color: white;
+  grid-template: "nome foto" auto / 1fr 1fr;
+  background-color: black;
 }
 
 header .portrait {
@@ -93,22 +102,28 @@ header .name {
 }
 
 header .name p {
-  align-self: flex-end;
   margin: 0 0 10px 0;
 }
 
 header .name h1 {
-  align-self: flex-end;
   margin: 0 0 10px 0;
 }
 
-header .name h2 {
-  align-self: flex-end;
+section > .title {
+  letter-spacing: 5px;
   margin: 0 0 10px 0;
+  text-transform: uppercase;
 }
 
-section .title {
-  margin: 0 0 10px 0;
+section.bio {
+  display: flex;
+  justify-content: center;
+}
+
+section.bio p {
+  line-height: 1.3em;
+  max-width: 700px;
+  text-align: center;
 }
 
 section.social {
@@ -119,22 +134,35 @@ section.social {
 }
 
 section.social img {
-  height: 60px;
+  height: 30px;
 }
 
-section.bio .text.hidden {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+section.notes .content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .note-summary {
-  border: 2px var(--border-color) solid;
-  border-radius: 10px;
+  background-color: var(--post-it-color);
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
   max-width: 280px;
+  max-height: 230px;
   padding: 10px;
+  overflow: hidden;
 }
 
 .note-summary .title {
+  margin: 0 0 5px 0;
+}
+
+.note-summary span.category {
+  font-size: 0.6em;
+  margin: 0 0 10px 0;
+}
+
+.note-summary .text {
+  font-size: 0.8em;
   margin: 0 0 10px 0;
 }
