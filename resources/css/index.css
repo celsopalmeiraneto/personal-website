@@ -24,6 +24,8 @@ body {
   font-size: var(--default-font-size);
   font-weight: 400;
   color: var(--foreground-color);
+  display: flex;
+  justify-content: center;
 }
 
 h1,
@@ -128,7 +130,7 @@ section.bio p {
 
 section.social {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 10px 0;
   width: 100%;
 }
