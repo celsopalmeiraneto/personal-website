@@ -1,6 +1,3 @@
-#Bower
-bower_components
-
 #Mac Stuff
 .DS_Store
 
@@ -8,3 +5,8 @@ bower_components
 doc
 old
 resume
+
+
+node_modules
+.next
+out

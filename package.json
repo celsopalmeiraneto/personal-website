@@ -1,0 +1,34 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Celso's personal website.",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "preexport": "npm run build",
+    "export": "next export",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celsopalmeiraneto/personal-website.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/celsopalmeiraneto/personal-website/issues"
+  },
+  "homepage": "https://github.com/celsopalmeiraneto/personal-website#readme",
+  "dependencies": {
+    "next": "^10.0.8",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "typescript": "^4.2.3"
+  }
+}
