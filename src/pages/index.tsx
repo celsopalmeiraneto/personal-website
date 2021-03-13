@@ -4,23 +4,21 @@ const Home = () => {
   return (
     <div className={styles.mainContainer}>
       <header id={styles.header}>
-        <div className={styles.name}>
-          <p>Hey there! I am</p>
-          <h1>Celso Neto</h1>
-        </div>
-        <div className={styles.portrait}>
-          <img src="img/celso.jpg" alt="Celso Neto's Portrait" />
-        </div>
+        <p>Hey there! I am</p>
+        <h1>Celso Neto</h1>
       </header>
       <section className={styles.bio}>
-        <p>
-          I am a father, husband, friend, software engineer, F1 buff and science
-          nerd.
-          <br />
-          I've been developing software since 2006, in this time I worked with a
-          lot of fantastic people to deliver pieces of technology that helped
-          real people get things done throughout the world.
-        </p>
+        <div>
+          <p>Father, Husband, Friend, Software Engineer.</p>
+          <p>
+            I've been in the software industry since 2006, in this time I worked
+            with a lot of fantastic people to deliver pieces of technology that
+            helped real people get things done throughout the world.
+          </p>
+        </div>
+        <div className={styles.portrait}>
+          <img src="img/celso.png" alt="Celso Neto's Portrait" />
+        </div>
       </section>
       <section className={styles.notes}>
         <h5 className="title">Notes</h5>

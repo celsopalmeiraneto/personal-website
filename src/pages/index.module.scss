@@ -4,44 +4,52 @@
 }
 
 header#header {
-  display: grid;
   color: white;
-  grid-template: "name portrait" auto / 1fr 1fr;
   background-color: black;
 
-  .portrait {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
 
-    img {
-      height: 150px;
-      border-radius: 50%;
-    }
+  p {
+    margin: 0 4px 10px 0;
   }
 
-  .name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    p {
-      margin: 0 0 10px 0;
-    }
-
-    h1 {
-      margin: 0 0 10px 0;
-    }
+  h1 {
+    margin: 0 0 10px 0;
   }
 }
 
 section.bio {
+  align-items: center;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
 
+  p:first-of-type {
+    font-weight: 200;
+    font-size: 1.5em;
+  }
   p {
     line-height: 1.3em;
     max-width: 700px;
     text-align: center;
+  }
+
+  .portrait {
+    background: linear-gradient(315deg, #7b1a1a 50%, #fffaeb 50%);
+    border-radius: 50%;
+    display: flex;
+    height: 150px;
+    overflow: hidden;
+    justify-content: end;
+    width: 150px;
+
+    img {
+      border-end-start-radius: 7%;
+      height: 200px;
+      transform: scaleX(-1) translateX(-2px) translateY(3px);
+    }
   }
 }
 
@@ -79,7 +87,7 @@ section.notes {
 
   span.category {
     font-size: 0.6em;
-    margin: 0 0 10px 0;
+    margin: 0 0 var(--margin-default) 0;
   }
 
   .text {
