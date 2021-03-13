@@ -20,7 +20,7 @@ header#header {
   }
 }
 
-section.bio {
+.bioContainer {
   align-items: center;
   display: flex;
   flex-wrap: wrap-reverse;
@@ -53,7 +53,7 @@ section.bio {
   }
 }
 
-section.social {
+.socialContainer {
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
@@ -64,11 +64,9 @@ section.social {
   }
 }
 
-section.notes {
-  .content {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.notesContainer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .noteSummary {

@@ -21,6 +21,7 @@
   --border-color: var(--pantone-moondrop-grapes);
 
   --margin-default: 10px;
+  --padding-default: 10px;
 }
 
 body {
@@ -75,13 +76,6 @@ p {
   font-size: 1em;
 }
 
-section,
 header {
   padding: 10px 10px;
-}
-
-section > .title {
-  letter-spacing: 5px;
-  margin: 10px 0;
-  text-transform: uppercase;
 }
