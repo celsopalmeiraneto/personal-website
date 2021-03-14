@@ -1,3 +1,4 @@
+import { PostIt } from "../components/post-it";
 import { Section } from "../components/section";
 import styles from "./index.module.scss";
 
@@ -22,36 +23,21 @@ const Home = () => {
         </div>
       </Section>
       <Section title="Notes" className={styles.notesContainer}>
-        <div className={styles.noteSummary}>
-          <h6 className={styles.title}>Monolith or Microservices?</h6>
-          <span className={styles.category}>Tech</span>
-          <div className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
-            deleniti molestiae quam eveniet atque iste provident excepturi quos
-            ipsum itaque sequi veritatis saepe nobis quasi, sed ducimus
-            praesentium, expedita dolorem!
-          </div>
-        </div>
-        <div className={styles.noteSummary}>
-          <h6 className={styles.title}>Color Transition using Math</h6>
-          <span className={styles.category}>Tech</span>
-          <div className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
-            deleniti molestiae quam eveniet atque iste provident excepturi quos
-            ipsum itaque sequi veritatis saepe nobis quasi, sed ducimus
-            praesentium, expedita dolorem!
-          </div>
-        </div>
-        <div className={styles.noteSummary}>
-          <h6 className={styles.title}>A Walk in the Park</h6>
-          <span className={styles.category}>Short Stories</span>
-          <div className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
-            deleniti molestiae quam eveniet atque iste provident excepturi quos
-            ipsum itaque sequi veritatis saepe nobis quasi, sed ducimus
-            praesentium, expedita dolorem!
-          </div>
-        </div>
+        <PostIt
+          title="Monolith or Microservices"
+          tag="Tech"
+          text="Aliqua excepteur ut voluptate excepteur ea adipisicing enim officia cillum enim veniam nostrud."
+        />
+        <PostIt
+          title="Color Transition using Math"
+          tag="Tech"
+          text="Quis do minim minim mollit fugiat magna."
+        />
+        <PostIt
+          title="A Walk in the Park"
+          tag="Short Stories"
+          text="Dolore elit ea aute excepteur ad."
+        />
       </Section>
       <Section className={styles.socialContainer} title="Social">
         <a href="">
