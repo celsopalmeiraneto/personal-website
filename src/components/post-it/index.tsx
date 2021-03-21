@@ -9,10 +9,18 @@ export interface PostItProps {
 export const PostIt = ({ title, tag, text }: PostItProps) => {
   return (
     <div className={styles.container}>
-      <img src="/img/numbers.jpg" />
-      <h6 className={styles.title}>{title}</h6>
-      <span className={styles.tag}>{tag}</span>
-      <div className={styles.text}>{text}</div>
+      <a href="/blog-post">
+        <img className={styles.image} src="/img/numbers.jpg" />
+      </a>
+      <a href="/blog-post">
+        <h6 className={styles.title}>{title}</h6>
+      </a>
+      <a href="/blog-post">
+        <span className={styles.tag}>{tag}</span>
+      </a>
+      <a href="/blog-post">
+        <div className={styles.text}>{text}</div>
+      </a>
     </div>
   );
 };

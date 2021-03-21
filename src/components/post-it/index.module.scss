@@ -5,9 +5,14 @@
   width: 280px;
   overflow: hidden;
 
-  img {
+  a {
+    text-decoration: none;
+  }
+
+  img.image {
     object-fit: cover;
     height: 150px;
+    width: 100%;
   }
 
   .title {
