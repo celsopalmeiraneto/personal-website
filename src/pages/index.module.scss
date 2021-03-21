@@ -1,6 +1,6 @@
 .mainContainer {
   background-color: var(--background-color);
-  max-width: 1200px;
+  min-height: 100vh;
 }
 
 header#header {
@@ -21,10 +21,9 @@ header#header {
 }
 
 .bioContainer {
-  align-items: center;
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 
   p:first-of-type {
     font-weight: 200;
@@ -33,23 +32,8 @@ header#header {
   p {
     line-height: 1.3em;
     max-width: 700px;
+    margin-bottom: 0;
     text-align: center;
-  }
-
-  .portrait {
-    background: linear-gradient(315deg, #7b1a1a 50%, #fffaeb 50%);
-    border-radius: 50%;
-    display: flex;
-    height: 150px;
-    overflow: hidden;
-    justify-content: end;
-    width: 150px;
-
-    img {
-      border-end-start-radius: 7%;
-      height: 200px;
-      transform: scaleX(-1) translateX(-2px) translateY(3px);
-    }
   }
 }
 

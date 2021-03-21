@@ -10,17 +10,11 @@ const Home = () => {
         <h1>Celso Neto</h1>
       </header>
       <Section title="" className={styles.bioContainer}>
-        <div>
-          <p>Father, Husband, Friend, Software Engineer.</p>
-          <p>
-            I've been in the software industry since 2006, in this time I worked
-            with a lot of fantastic people to deliver pieces of technology that
-            helped real people get things done throughout the world.
-          </p>
-        </div>
-        <div className={styles.portrait}>
-          <img src="img/celso.png" alt="Celso Neto's Portrait" />
-        </div>
+        <p>Father, Husband, Friend, Software Engineer.</p>
+        <p>
+          I work with a lot of fantastic people to deliver software that helps
+          real people get things done throughout the world.
+        </p>
       </Section>
       <Section title="Notes" className={styles.notesContainer}>
         <PostIt
