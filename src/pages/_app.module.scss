@@ -1,0 +1,29 @@
+#mainContainer {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header#header,
+footer#footer {
+  padding: 10px 10px;
+  color: white;
+  background-color: black;
+
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  p {
+    margin: 0 4px 10px 0;
+  }
+
+  h1 {
+    margin: 0 0 10px 0;
+  }
+}
+
+#pageContent {
+  padding: var(--padding-default);
+}

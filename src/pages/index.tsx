@@ -4,11 +4,7 @@ import styles from "./index.module.scss";
 
 const Home = () => {
   return (
-    <div className={styles.mainContainer}>
-      <header id={styles.header}>
-        <p>Hey there! I am</p>
-        <h1>Celso Neto</h1>
-      </header>
+    <div>
       <Section title="" className={styles.bioContainer}>
         <p>Father, Husband, Friend, Software Engineer.</p>
         <p>
