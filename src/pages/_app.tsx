@@ -6,8 +6,11 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <div id={styles.mainContainer}>
       <header id={styles.header}>
-        <p>Hey there! I am</p>
-        <h1>Celso Neto</h1>
+        <p>
+          <a href="/">
+            Hey there! I am <span>Celso Neto</span>
+          </a>
+        </p>
       </header>
       <div id={styles.pageContent}>
         <Component {...pageProps} />

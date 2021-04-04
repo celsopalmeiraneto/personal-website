@@ -11,16 +11,18 @@ footer#footer {
   color: white;
   background-color: black;
 
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   p {
     margin: 0 4px 10px 0;
-  }
 
-  h1 {
-    margin: 0 0 10px 0;
+    span {
+      font-size: 2.2em;
+      font-weight: 200;
+    }
   }
 }
 
