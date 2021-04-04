@@ -30,13 +30,32 @@ const Home = () => {
         />
       </Section>
       <Section className={styles.socialContainer} title="Social">
-        <a href="">
+        <a
+          target="_blank"
+          rel="author noopener"
+          href="https://github.com/celsopalmeiraneto"
+        >
           <img src="img/github.png" alt="GitHub's Logo" />
         </a>
-        <a href="">
+        <a
+          target="_blank"
+          rel="author noopener"
+          href="https://www.linkedin.com/in/celsopalmeira/"
+        >
+          <img src="img/linkedin.png" alt="LinkedIn's Logo" />
+        </a>
+        <a
+          target="_blank"
+          rel="author noopener"
+          href="https://stackoverflow.com/users/2455964/celsoneto07"
+        >
           <img src="img/stackoverflow.png" alt="StackOverflow's Logo" />
         </a>
-        <a href="">
+        <a
+          target="_blank"
+          rel="author noopener"
+          href="https://www.goodreads.com/user/show/108800771-celso-palmeira"
+        >
           <img src="img/goodreads.svg" alt="GoodRead's Logo" />
         </a>
       </Section>
