@@ -1,7 +1,8 @@
 import { GetStaticProps } from "next";
 import { PostIt } from "../components/post-it";
 import { Section } from "../components/section";
-import { getPostsSummaries, PostSummary } from "../services/posts";
+import { getPostsSummaries } from "../services/posts";
+import { PostSummary, SupportedLocales } from "../types";
 import styles from "./index.module.scss";
 
 interface Props {
@@ -22,9 +23,10 @@ const Home = ({ posts }: Props) => {
         {posts.map((post) => (
           <PostIt
             key={post.id}
-            title={post.locales["en-US"].title}
+            id={post.locales[SupportedLocales.AmericanEnglish].slug}
+            title={post.locales[SupportedLocales.AmericanEnglish].title}
             tag={post.tags[0] ?? ""}
-            text={post.locales["en-US"].summary}
+            text={post.locales[SupportedLocales.AmericanEnglish].summary}
           />
         ))}
       </Section>

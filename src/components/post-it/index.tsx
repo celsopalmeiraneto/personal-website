@@ -1,24 +1,25 @@
 import styles from "./index.module.scss";
 
 export interface PostItProps {
+  id: string;
   title: string;
   tag: string;
   text: string;
 }
 
-export const PostIt = ({ title, tag, text }: PostItProps) => {
+export const PostIt = ({ id, title, tag, text }: PostItProps) => {
   return (
     <div className={styles.container}>
-      <a href="/blog-post">
+      <a href={`/posts/${id}`}>
         <img className={styles.image} src="/img/numbers.jpg" />
       </a>
-      <a href="/blog-post">
+      <a href={`/posts/${id}`}>
         <h6 className={styles.title}>{title}</h6>
       </a>
-      <a href="/blog-post">
+      <a href={`/posts/${id}`}>
         <span className={styles.tag}>{tag}</span>
       </a>
-      <a href="/blog-post">
+      <a href={`/posts/${id}`}>
         <div className={styles.text}>{text}</div>
       </a>
     </div>
