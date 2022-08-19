@@ -21,14 +21,15 @@
   },
   "homepage": "https://github.com/celsopalmeiraneto/personal-website#readme",
   "dependencies": {
-    "next": "^10.0.8",
+    "next": "12.2.5",
     "normalize.css": "^8.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "sass": "^1.32.8"
   },
   "devDependencies": {
-    "@types/react": "^17.0.3",
-    "typescript": "^4.2.3"
+    "@types/node": "16.11.49",
+    "@types/react": "17.0.3",
+    "typescript": "4.7.4"
   }
 }
