@@ -1,8 +1,14 @@
+import { GetStaticProps } from "next";
 import { PostIt } from "../components/post-it";
 import { Section } from "../components/section";
+import { getPostsSummaries, PostSummary } from "../services/posts";
 import styles from "./index.module.scss";
 
-const Home = () => {
+interface Props {
+  posts: PostSummary[];
+}
+
+const Home = ({ posts }: Props) => {
   return (
     <div>
       <Section title="" className={styles.bioContainer}>
@@ -13,21 +19,14 @@ const Home = () => {
         </p>
       </Section>
       <Section title="Notes" className={styles.notesContainer}>
-        <PostIt
-          title="Monolith or Microservices"
-          tag="Tech"
-          text="Aliqua excepteur ut voluptate excepteur ea adipisicing enim officia cillum enim veniam nostrud."
-        />
-        <PostIt
-          title="Color Transition using Math"
-          tag="Tech"
-          text="Quis do minim minim mollit fugiat magna."
-        />
-        <PostIt
-          title="A Walk in the Park"
-          tag="Short Stories"
-          text="Dolore elit ea aute excepteur ad."
-        />
+        {posts.map((post) => (
+          <PostIt
+            key={post.id}
+            title={post.locales["en-US"].title}
+            tag={post.tags[0] ?? ""}
+            text={post.locales["en-US"].summary}
+          />
+        ))}
       </Section>
       <Section className={styles.socialContainer} title="Social">
         <a
@@ -61,6 +60,16 @@ const Home = () => {
       </Section>
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const posts = await getPostsSummaries();
+
+  return {
+    props: {
+      posts,
+    },
+  };
 };
 
 export default Home;

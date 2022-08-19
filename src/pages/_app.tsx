@@ -1,8 +1,9 @@
+import { AppProps } from "next/app";
 import "normalize.css";
 import "./styles.scss";
 import styles from "./_app.module.scss";
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <div id={styles.mainContainer}>
       <header id={styles.header}>
