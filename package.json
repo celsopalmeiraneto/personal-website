@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/celsopalmeiraneto/personal-website#readme",
   "dependencies": {
+    "marked": "4.0.18",
     "next": "12.2.5",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",

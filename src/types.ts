@@ -3,14 +3,21 @@ export enum SupportedLocales {
   BrazilianPortuguese = "pt-BR",
 }
 
-export interface PostLocalizedSummary {
+export interface PostLocalized {
   title: string;
   slug: string;
   summary: string;
+  postId: string;
+  locale: SupportedLocales;
 }
 
-export interface PostSummary {
+export interface Post {
   id: string;
-  locales: Record<SupportedLocales, PostLocalizedSummary>;
+  locales: SupportedLocales[];
   tags: string[];
+}
+
+export interface PostWithLocale extends Omit<Post, "locales"> {
+  locale: SupportedLocales;
+  localizedInfo: PostLocalized;
 }

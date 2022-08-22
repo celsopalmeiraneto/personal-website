@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useEffect, useRef } from "react";
 import { getPostsSummaries } from "../../services/posts";
 import { SupportedLocales } from "../../types";
-import styles from "./[id].module.scss";
+import styles from "./[postId].module.scss";
 
 interface BlogPostProps {
   title: string;
@@ -31,15 +31,24 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: summaries.map((summary) => ({
-      params: { id: summary.locales[SupportedLocales.AmericanEnglish].slug },
+      params: {
+        postId: summary.localizedInfo.slug,
+      },
     })),
     fallback: false,
   };
 };
 
-export const getStaticProps: GetStaticProps<BlogPostProps> = async ({
-  params,
-}) => {
+export const getStaticProps: GetStaticProps<
+  BlogPostProps,
+  { postId: string }
+> = async ({ params }) => {
+  if (!params) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       title: "A Title",
