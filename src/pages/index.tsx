@@ -2,11 +2,11 @@ import { GetStaticProps } from "next";
 import { PostIt } from "../components/post-it";
 import { Section } from "../components/section";
 import { getPostsSummaries } from "../services/posts";
-import { Post, PostWithLocale, SupportedLocales } from "../types";
+import { PostLocalized, SupportedLocales } from "../types";
 import styles from "./index.module.scss";
 
 interface Props {
-  posts: PostWithLocale[];
+  posts: PostLocalized[];
 }
 
 const Home = ({ posts }: Props) => {
@@ -15,34 +15,26 @@ const Home = ({ posts }: Props) => {
       <Section title="" className={styles.bioContainer}>
         <p>Father, Husband, Friend, Software Engineer.</p>
         <p>
-          I work with a lot of fantastic people to deliver software that helps
-          real people get things done throughout the world.
+          I work with a lot of fantastic people to deliver software that helps real people get
+          things done throughout the world.
         </p>
       </Section>
       <Section title="Notes" className={styles.notesContainer}>
         {posts.map((post) => (
           <PostIt
-            key={post.id}
-            id={post.localizedInfo.slug}
-            title={post.localizedInfo.title}
+            key={post.slug}
+            id={post.slug}
+            title={post.title}
             tag={post.tags[0] ?? ""}
-            text={post.localizedInfo.summary}
+            text={post.summary}
           />
         ))}
       </Section>
       <Section className={styles.socialContainer} title="Social">
-        <a
-          target="_blank"
-          rel="author noopener"
-          href="https://github.com/celsopalmeiraneto"
-        >
+        <a target="_blank" rel="author noopener" href="https://github.com/celsopalmeiraneto">
           <img src="img/github.png" alt="GitHub's Logo" />
         </a>
-        <a
-          target="_blank"
-          rel="author noopener"
-          href="https://www.linkedin.com/in/celsopalmeira/"
-        >
+        <a target="_blank" rel="author noopener" href="https://www.linkedin.com/in/celsopalmeira/">
           <img src="img/linkedin.png" alt="LinkedIn's Logo" />
         </a>
         <a
