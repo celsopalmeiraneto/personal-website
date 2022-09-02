@@ -20,27 +20,29 @@ const groupFilesNamesByType = (files: string[]) => {
   };
 };
 
+const convertFileNameToPostKey = (name: string): LocalizedPostKey => {
+  const [match] = name.matchAll(LOCALIZED_POST);
+
+  const partialLocale = match?.groups?.locale ?? "";
+  const locale = isSupportedLocales(partialLocale)
+    ? partialLocale
+    : SupportedLocales.AmericanEnglish;
+
+  return {
+    postId: match?.groups?.postId ?? "",
+    locale,
+    slug: match?.groups?.slug ?? "",
+    fileName: name,
+  };
+};
+
 export const getPostsSummaries = async (locale?: SupportedLocales): Promise<PostLocalized[]> => {
   const fileNames = await readPostsFolder();
 
   const { localizedPostFileNames } = groupFilesNamesByType(fileNames);
 
   const postKeys = localizedPostFileNames
-    .map<LocalizedPostKey>((name) => {
-      const [match] = name.matchAll(LOCALIZED_POST);
-
-      const partialLocale = match?.groups?.locale ?? "";
-      const locale = isSupportedLocales(partialLocale)
-        ? partialLocale
-        : SupportedLocales.AmericanEnglish;
-
-      return {
-        postId: match?.groups?.postId ?? "",
-        locale,
-        slug: match?.groups?.slug ?? "",
-        fileName: name,
-      };
-    })
+    .map(convertFileNameToPostKey)
     .filter((postKey) => !!postKey.postId && !!postKey.slug);
 
   const filteredKeys = postKeys.filter((key) => {
