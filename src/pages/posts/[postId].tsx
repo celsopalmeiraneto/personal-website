@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useEffect, useRef } from "react";
-import { getPostsSummaries } from "../../services/posts";
+import { getPost, getPostsSummaries } from "../../services/posts";
 import styles from "./[postId].module.scss";
 
 interface BlogPostProps {
@@ -47,12 +47,18 @@ export const getStaticProps: GetStaticProps<BlogPostProps, { postId: string }> =
     };
   }
 
+  const post = await getPost(params.postId);
+
+  if (!post) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
-      title: "A Title",
-      contentHtml:
-        "<p>Eiusmod ad qui elit consequat. Nostrud id incididunt consequat amet. Nostrud consequat ullamco cupidatat quis ad. Commodo ex ea duis in aliquip Lorem Lorem mollit ad sunt tempor minim.</p>" +
-        "<p>Lorem ullamco excepteur sit veniam. Irure officia excepteur fugiat cillum ullamco aliquip commodo. Velit nostrud consequat commodo ad id reprehenderit irure. Irure nisi anim fugiat esse nostrud deserunt ipsum minim ex ut Lorem. Sint aliquip excepteur ipsum non non aute ad id deserunt aliquip. Mollit sunt adipisicing veniam officia esse nisi quis pariatur.</p>",
+      title: post.post.title,
+      contentHtml: post.htmlContent,
     },
   };
 };

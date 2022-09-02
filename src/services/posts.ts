@@ -1,5 +1,7 @@
 import fs from "fs/promises";
+import { marked } from "marked";
 import path from "path";
+import { promisify } from "util";
 import {
   SupportedLocales,
   PostLocalized,
@@ -7,6 +9,19 @@ import {
   LocalizedPostKey,
   isSupportedLocales,
 } from "../types";
+
+const parsePromisified = (
+  src: Parameters<typeof marked>[0],
+  options: Parameters<typeof marked>[1]
+): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    return marked(src, options, (error, result) => {
+      if (error) return reject(error);
+
+      return resolve(result);
+    });
+  });
+};
 
 const POSTS_FOLDER_PATH = path.resolve("data", "posts");
 
@@ -29,11 +44,18 @@ const convertFileNameToPostKey = (name: string): LocalizedPostKey => {
     : SupportedLocales.AmericanEnglish;
 
   return {
+    writtenAt: new Date(match?.groups?.writtenAt ?? Date.now()),
     postId: match?.groups?.postId ?? "",
     locale,
     slug: match?.groups?.slug ?? "",
     fileName: name,
   };
+};
+
+const getPostByKey = async (key: LocalizedPostKey) => {
+  const file = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, key.fileName));
+  const postLocalized: PostLocalized = JSON.parse(file.toString());
+  return postLocalized;
 };
 
 export const getPostsSummaries = async (locale?: SupportedLocales): Promise<PostLocalized[]> => {
@@ -43,7 +65,7 @@ export const getPostsSummaries = async (locale?: SupportedLocales): Promise<Post
 
   const postKeys = localizedPostFileNames
     .map(convertFileNameToPostKey)
-    .filter((postKey) => !!postKey.postId && !!postKey.slug);
+    .filter((postKey) => !!postKey.postId);
 
   const filteredKeys = postKeys.filter((key) => {
     if (!locale) return true;
@@ -54,11 +76,32 @@ export const getPostsSummaries = async (locale?: SupportedLocales): Promise<Post
   return await filteredKeys.reduce(async (accPromise, key) => {
     const acc = await accPromise;
 
-    const file = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, key.fileName));
-    const postLocalized: PostLocalized = JSON.parse(file.toString());
+    const postLocalized: PostLocalized = await getPostByKey(key);
 
     acc.push(postLocalized);
 
     return acc;
   }, Promise.resolve([] as PostLocalized[]));
+};
+
+export const getPost = async (slug: string) => {
+  const fileNames = await readPostsFolder();
+  const { localizedPostFileNames } = groupFilesNamesByType(fileNames);
+  const postKey = localizedPostFileNames
+    .map(convertFileNameToPostKey)
+    .find((postKey) => postKey.slug === slug);
+
+  if (!postKey) return null;
+
+  const post = await getPostByKey(postKey);
+  const postFile = `${postKey.slug}.md`;
+  const markdownContent = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, postFile));
+  const htmlContent: string = await parsePromisified(markdownContent.toString(), {
+    gfm: true,
+  });
+
+  return {
+    htmlContent,
+    post,
+  };
 };

@@ -21,6 +21,7 @@ export interface PostLocalized {
 }
 
 export interface LocalizedPostKey {
+  writtenAt: Date;
   postId: PostLocalized["postId"];
   locale: PostLocalized["locale"];
   slug: PostLocalized["slug"];
@@ -28,4 +29,4 @@ export interface LocalizedPostKey {
 }
 
 export const LOCALIZED_POST =
-  /\d*#(?<type>localizedPost)#(?<postId>.*)#(?<locale>.*)#(?<slug>.*)\.json/g;
+  /(?<writtenAt>.*)#(?<type>localizedPost)#(?<postId>.*)#(?<locale>.*)#(?<slug>.*)\.json/g;
