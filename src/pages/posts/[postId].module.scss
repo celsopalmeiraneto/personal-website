@@ -3,13 +3,19 @@
   max-width: 928px;
   h1 {
     text-align: center;
+    margin-bottom: 0;
   }
-  p {
-    line-height: 1.5em;
+
+  #dateAndAuthor {
+    margin-bottom: 2.5em;
   }
 }
 
 #postContent {
+  p {
+    line-height: 1  em;
+  }
+
   pre {
     display: block;
     background-color: #1e1e1e;

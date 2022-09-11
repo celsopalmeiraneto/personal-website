@@ -20,7 +20,13 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
 
   return (
     <div id={styles.container}>
-      <h1>{post.title}</h1>
+      <h1>&gt; {post.title}</h1>
+      <div id={styles.dateAndAuthor}>
+        Written on&nbsp;
+        {new Date(post.writtenAt).toLocaleDateString([post.locale], {
+          dateStyle: "long",
+        })}
+      </div>
       <div id={styles.postContent} ref={refContent}></div>
     </div>
   );
