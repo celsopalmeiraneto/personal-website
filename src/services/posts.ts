@@ -8,6 +8,7 @@ import {
   LOCALIZED_POST,
   LocalizedPostKey,
   isSupportedLocales,
+  PostLocalizedSerializable,
 } from "../types";
 
 const parsePromisified = (
@@ -52,10 +53,13 @@ const convertFileNameToPostKey = (name: string): LocalizedPostKey => {
   };
 };
 
-const getPostByKey = async (key: LocalizedPostKey) => {
+const getPostByKey = async (key: LocalizedPostKey): Promise<PostLocalized> => {
   const file = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, key.fileName));
   const postLocalized: PostLocalized = JSON.parse(file.toString());
-  return postLocalized;
+  return {
+    ...postLocalized,
+    writtenAt: new Date(postLocalized.writtenAt),
+  };
 };
 
 export const getPostsSummaries = async (locale?: SupportedLocales): Promise<PostLocalized[]> => {
@@ -84,7 +88,12 @@ export const getPostsSummaries = async (locale?: SupportedLocales): Promise<Post
   }, Promise.resolve([] as PostLocalized[]));
 };
 
-export const getPost = async (slug: string) => {
+export const getPost = async (
+  slug: string
+): Promise<null | {
+  htmlContent: string;
+  post: PostLocalizedSerializable;
+}> => {
   const fileNames = await readPostsFolder();
   const { localizedPostFileNames } = groupFilesNamesByType(fileNames);
   const postKey = localizedPostFileNames
@@ -102,6 +111,9 @@ export const getPost = async (slug: string) => {
 
   return {
     htmlContent,
-    post,
+    post: {
+      ...post,
+      writtenAt: post.writtenAt.toISOString(),
+    },
   };
 };

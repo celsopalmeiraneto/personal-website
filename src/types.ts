@@ -18,7 +18,12 @@ export interface PostLocalized {
   availableLocales: SupportedLocales[];
   postTags: string[];
   tags: string[];
+  writtenAt: Date;
 }
+
+export type PostLocalizedSerializable = Omit<PostLocalized, "writtenAt"> & {
+  writtenAt: string;
+};
 
 export interface LocalizedPostKey {
   writtenAt: Date;

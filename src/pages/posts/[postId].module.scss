@@ -1,5 +1,26 @@
 #container {
+  margin: 0 auto;
+  max-width: 928px;
+  h1 {
+    text-align: center;
+  }
   p {
     line-height: 1.5em;
+  }
+}
+
+#postContent {
+  pre {
+    display: block;
+    background-color: #1e1e1e;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5em;
+    max-width: max-content;
+    border-radius: 0.5em;
+
+    code {
+      color: #569cd6;
+    }
   }
 }

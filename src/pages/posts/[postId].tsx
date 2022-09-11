@@ -1,26 +1,27 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useEffect, useRef } from "react";
 import { getPost, getPostsSummaries } from "../../services/posts";
+import { PostLocalized, PostLocalizedSerializable } from "../../types";
 import styles from "./[postId].module.scss";
 
 interface BlogPostProps {
-  title: string;
-  contentHtml: string;
+  post: PostLocalizedSerializable;
+  htmlContent: string;
 }
 
-const BlogPost = ({ title, contentHtml }: BlogPostProps) => {
+const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
   const refContent = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!refContent.current) return;
 
-    refContent.current.innerHTML = contentHtml;
+    refContent.current.innerHTML = htmlContent;
   }, []);
 
   return (
     <div id={styles.container}>
-      <h1>{title}</h1>
-      <div ref={refContent}></div>
+      <h1>{post.title}</h1>
+      <div id={styles.postContent} ref={refContent}></div>
     </div>
   );
 };
@@ -56,10 +57,7 @@ export const getStaticProps: GetStaticProps<BlogPostProps, { postId: string }> =
   }
 
   return {
-    props: {
-      title: post.post.title,
-      contentHtml: post.htmlContent,
-    },
+    props: post,
   };
 };
 
