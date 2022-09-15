@@ -28,6 +28,8 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
         })}
       </div>
       <div id={styles.postContent} ref={refContent}></div>
+      <hr />
+      <div>Tags: {post.tags.join(", ")}</div>
     </div>
   );
 };
