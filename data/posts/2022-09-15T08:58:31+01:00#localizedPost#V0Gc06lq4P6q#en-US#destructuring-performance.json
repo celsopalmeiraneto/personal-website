@@ -1,0 +1,11 @@
+{
+  "slug": "destructuring-performance",
+  "title": "Destructuring Assignment and Mutability",
+  "summary": "Let's analyze the case for applying contained mutability.",
+  "postId": "V0Gc06lq4P6q",
+  "locale": "en-US",
+  "availableLocales": ["en-US"],
+  "postTags": ["Miscellaneous"],
+  "tags": ["JS", "Performance"],
+  "writtenAt": "2022-09-15T08:58:31+01:00"
+}
