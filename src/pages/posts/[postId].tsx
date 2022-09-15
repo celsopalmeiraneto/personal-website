@@ -1,7 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import { useEffect, useRef } from "react";
 import { getPost, getPostsSummaries } from "../../services/posts";
-import { PostLocalized, PostLocalizedSerializable } from "../../types";
+import { PostLocalizedSerializable } from "../../types";
 import styles from "./[postId].module.scss";
 
 interface BlogPostProps {
@@ -20,6 +21,9 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
 
   return (
     <div id={styles.container}>
+      <Head>
+        <title>Celso's Notes: {post.title}</title>
+      </Head>
       <h1>&gt; {post.title}</h1>
       <div id={styles.dateAndAuthor}>
         Written on&nbsp;
