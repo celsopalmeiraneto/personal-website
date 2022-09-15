@@ -2,11 +2,11 @@ import { GetStaticProps } from "next";
 import { PostIt } from "../components/post-it";
 import { Section } from "../components/section";
 import { getPostsSummaries } from "../services/posts";
-import { PostLocalized, SupportedLocales } from "../types";
+import { PostLocalizedSerializable, SupportedLocales } from "../types";
 import styles from "./index.module.scss";
 
 interface Props {
-  posts: PostLocalized[];
+  posts: PostLocalizedSerializable[];
 }
 
 const Home = ({ posts }: Props) => {
@@ -25,7 +25,7 @@ const Home = ({ posts }: Props) => {
             key={post.slug}
             id={post.slug}
             title={post.title}
-            tag={post.tags[0] ?? ""}
+            tag={post.tags.slice(0, 5).join(", ")}
             text={post.summary}
           />
         ))}
@@ -61,7 +61,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      posts,
+      posts: posts.map((post) => ({
+        ...post,
+        writtenAt: post.writtenAt.toISOString(),
+      })),
     },
   };
 };
