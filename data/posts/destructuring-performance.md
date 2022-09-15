@@ -69,3 +69,5 @@ When processing one million items we notice a 150x performance improvement.
 ## Takeaway
 
 Selectively applying mutability to solve some issues can be yield performance benefits here and there. We should not just say "mutability is bad" and spend more energy and time to perform the same work. It's a matter of always analyzing the context and use the right tools for the job.
+
+The full script I've used for this blog post can be found on [this gist](https://gist.github.com/celsopalmeiraneto/7e03c34f261c758f8efbf89e9f257b4b).
