@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import "normalize.css";
+import "highlight.js/styles/github-dark-dimmed.css";
 import "./styles.scss";
 import styles from "./_app.module.scss";
 

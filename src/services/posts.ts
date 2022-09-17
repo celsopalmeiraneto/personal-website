@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import { marked } from "marked";
 import path from "path";
-import { promisify } from "util";
+import highlight from "highlight.js";
 import {
   SupportedLocales,
   PostLocalized,
@@ -10,6 +10,19 @@ import {
   isSupportedLocales,
   PostLocalizedSerializable,
 } from "../types";
+
+marked.use({
+  renderer: {
+    code(code, language) {
+      const languageArray = language ? [language] : [];
+      const highlightedContent = highlight.highlightAuto(code, languageArray);
+
+      return `<pre><code class="hljs">${
+        highlightedContent.illegal ? code : highlightedContent.value
+      }</code></pre>`;
+    },
+  },
+});
 
 const parsePromisified = (
   src: Parameters<typeof marked>[0],

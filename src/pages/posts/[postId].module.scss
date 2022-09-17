@@ -18,17 +18,10 @@
   }
 
   pre {
-    display: block;
-    background-color: #1e1e1e;
-    white-space: pre;
-    -webkit-overflow-scrolling: touch;
-    padding: 0.5em;
+    font-size: 14px;
     max-width: max-content;
-    border-radius: 0.5em;
-    font-size: 0.8em;
-
     code {
-      color: #569cd6;
+      border-radius: 0.5em;
     }
   }
 
