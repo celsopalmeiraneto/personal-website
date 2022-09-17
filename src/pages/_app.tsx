@@ -13,12 +13,13 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         src="https://www.googletagmanager.com/gtag/js?id=G-MQHLVKFF7P"
         strategy="afterInteractive"
         onLoad={() => {
+          // @ts-ignore
           window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
+          function gtag(...args: unknown[]) {
+            // @ts-ignore
+            window.dataLayer.push(args);
           }
           gtag("js", new Date());
-
           gtag("config", "G-MQHLVKFF7P");
         }}
       />

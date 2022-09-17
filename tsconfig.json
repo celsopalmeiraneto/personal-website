@@ -23,7 +23,6 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "public/ttt.old"
   ],
   "exclude": [
     "node_modules"
