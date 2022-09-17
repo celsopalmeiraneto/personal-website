@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.0.0...v2.0.1) (2022-09-17)
+
+
+### Bug Fixes
+
+* replaces [@import](https://github.com/import) font with link ([f53e6c8](https://github.com/celsopalmeiraneto/personal-website/commit/f53e6c80884e56f952ff2d9ce1ee309b9e45069e))
+
 ## 2.0.0 (2022-09-17)
 
 
