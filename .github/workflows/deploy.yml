@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+name: deploy
+jobs:
+  deployment:
+    steps:    
+      - env:
+          WEBSITE_BUCKET: ${{ secrets.WEBSITE_BUCKET }}
+          WEBSITE_DISTRIBUTION: ${{ secrets.WEBSITE_DISTRIBUTION }}
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: sa-east-1
+      - uses: actions/checkout@v3
+      - uses: actions/node-setup@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run export
+      - run: aws s3 sync ./out 's3://%WEBSITE_BUCKET%'
+      - run: aws cloudfront create-invalidation --distribution-id %WEBSITE_DISTRIBUTION% --paths '/*'
