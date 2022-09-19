@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.0.1...v2.1.0) (2022-09-19)
+
+
+### Features
+
+* implements deploy action ([101a6f5](https://github.com/celsopalmeiraneto/personal-website/commit/101a6f50d694f565b4f4a925e34002963b599bb8))
+
 ## [2.0.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.0.0...v2.0.1) (2022-09-17)
 
 
