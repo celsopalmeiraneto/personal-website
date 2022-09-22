@@ -1,0 +1,16 @@
+#resume {
+  section {
+    h2 {
+      font-size: 1.2em;
+      text-decoration: underline;
+    }
+
+    .item {
+      display: grid;
+      grid-template: "institution location"
+                     "description period"
+                     "notes notes"
+    }
+
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "slug": "education",
+      "title": {
+        "en-US": "Education"
+      },
+      "items": [
+        {
+          "institution": {
+            "en-US": "FAESA - Faculdades Integradas Espíritossantanses"
+          },
+          "location": {
+            "en-US": "Vitória, Brazil"
+          },
+          "description": {
+            "en-US": "B. Sc. Information Systems"
+          },
+          "period": {
+            "begin": "",
+            "end": ""
+          }
+        }
+      ]
+    }
+  ]
+}
