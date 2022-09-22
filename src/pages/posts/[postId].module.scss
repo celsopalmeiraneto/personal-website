@@ -22,6 +22,7 @@
     max-width: max-content;
     code {
       border-radius: 0.5em;
+      max-width: calc(90vw - var(--padding-default));
     }
   }
 
