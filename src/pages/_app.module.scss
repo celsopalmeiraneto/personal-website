@@ -10,15 +10,15 @@ footer#footer {
   padding: 10px 10px;
   color: white;
   background-color: rgb(114, 85, 68);
-  
+
   a {
     color: inherit;
     text-decoration: none;
   }
-  
+
   p {
     margin: 0 4px 10px 0;
-    
+
     span {
       font-size: 2.2em;
       font-weight: 200;
@@ -28,4 +28,11 @@ footer#footer {
 
 #pageContent {
   padding: var(--padding-default);
+}
+
+@media print {
+  #header,
+  #footer {
+    display: none;
+  }
 }

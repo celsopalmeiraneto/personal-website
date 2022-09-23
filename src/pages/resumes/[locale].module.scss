@@ -1,0 +1,77 @@
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  > h1 {
+    margin-bottom: 5px;
+  }
+}
+
+@media print {
+  .container > * {
+    display: none;
+  }
+}
+
+#resume {
+  margin-top: 2em;
+  gap: 1.3em;
+  display: grid;
+
+  h2 {
+    margin: 0;
+  }
+  section {
+    display: grid;
+    gap: 1.2em;
+    h2 {
+      font-size: 1.2em;
+      text-decoration: underline;
+      margin: 0;
+    }
+
+    .item {
+      display: grid;
+      grid:
+        "institution location"
+        "description period"
+        "notes notes";
+
+      .itemNotes {
+        grid-column-start: notes-start;
+        grid-column-end: notes-end;
+      }
+
+      .itemLocation,
+      .itemPeriod {
+        justify-self: end;
+      }
+
+      .itemInstitution,
+      .itemLocation {
+        font-weight: bold;
+      }
+
+      p {
+        margin: 0.3em 0 0 0;
+        text-align: justify;
+        line-height: 1.2em;
+      }
+    }
+  }
+}
+
+@media print {
+  #resume {
+    font-size: 10px;
+  }
+}

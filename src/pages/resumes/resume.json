@@ -1,0 +1,185 @@
+{
+  "sections": [
+    {
+      "slug": "work",
+      "title": {
+        "en-US": "Work Experience"
+      },
+      "items": [
+        {
+          "slug": "mobietrain",
+          "institution": {
+            "en-US": "MobieTrain N.V."
+          },
+          "location": {
+            "en-US": "Lisbon, Portugal"
+          },
+          "description": {
+            "en-US": "Senior Software Engineer, Backend Tech Leader"
+          },
+          "period": {
+            "begin": "2020-04",
+            "end": ""
+          },
+          "notes": {
+            "en-US": "At MobieTrain I worked with our team in dozens of new features and improvements of the NodeJS API, including a migration from Vanilla JS to TypeScript, adoption of Secret Manager, Webhooks for systems integrations using Google PubSub, CI/CD integration with Google Cloud Build for CI/CD, SAML Authentication and more. As Tech Leader I helped nurturing new talent, designing solutions, and be the liaison between business and technology. In an environment that strived for quality and pace, we managed to often find a balance between those seemly paradoxical requisites."
+          }
+        },
+        {
+          "slug": "adentis",
+          "institution": {
+            "en-US": "HIQ Adentis S/A"
+          },
+          "location": {
+            "en-US": "Lisbon, Portugal"
+          },
+          "description": {
+            "en-US": "Consultant and Software Engineer"
+          },
+          "period": {
+            "begin": "2019-10",
+            "end": "2020-04"
+          },
+          "notes": {
+            "en-US": "For Adentis’ clients, I have developed web applications like a full-featured online Vehicle Dealership catalog using technologies that included React, AWS Lambda, S3, CloudFront and CloudFormation. Also worked on the improvement of internal infrastructure code. All of this in a remote environment, with coworkers in Belgium and Portugal, that relied heavily in self-discipline and commitment to the projects. In addition to that, I had the occasional informal role of mentor for recent grads who needed help to start developing web applications."
+          }
+        },
+        {
+          "slug": "onegrid",
+          "institution": {
+            "en-US": "ONEGRID Sistemas S/A"
+          },
+          "location": {
+            "en-US": "Vila Velha, Brazil"
+          },
+          "description": {
+            "en-US": "Software Development Manager"
+          },
+          "period": {
+            "begin": "2018-11",
+            "end": "2019-08"
+          },
+          "notes": {
+            "en-US": "As a startup in early stage, ONEGRID needed to prepare its software assets to scale. So, I was responsible for implementing Scrum into the Engineering Team, catalog and create repos for all applications into GitHub and migrate the Ruby on Rails webapp from a simple Heroku Dyno to AWS. In AWS we started using EC2 together with ECS and Docker for application scaling, EBS for load balancing, RDS for the Postgres database, CloudFront for CDN, S3 for static assets hosting, SNS and SES and to deliver messages to the users. By using the new infrastructure ONEGRID was able to handle millions of monthly requests."
+          }
+        },
+        {
+          "slug": "inflor",
+          "institution": {
+            "en-US": "INFLOR Consultoria e Sistemas"
+          },
+          "location": {
+            "en-US": "Vitória, Brazil"
+          },
+          "description": {
+            "en-US": "Systems Analyst"
+          },
+          "period": {
+            "begin": "2015-10",
+            "end": "2018-11"
+          },
+          "notes": {
+            "en-US": "Working on the Innovation area of INFLOR I developed Proof-of-Concept and MVPs for internal and external clients, allowing the commercial team to put new products into the market. While working in the projects area of the company, I used to deal directly with clients, getting demands, understanding their needs and working to implement changes onto the software. These proof-of-concepts were developed using Vue.JS (frontend) and C# ASP.NET MVC or Node.js + Express (backend), or SAPUI5 (frontend) and SAP Gateway (backend)."
+          }
+        },
+        {
+          "slug": "bacc",
+          "institution": {
+            "en-US": "Brazilian-American Chamber of Commerce, Inc."
+          },
+          "location": {
+            "en-US": "New York City, USA"
+          },
+          "description": {
+            "en-US": "Software Analyst Intern"
+          },
+          "period": {
+            "begin": "2015-05",
+            "end": "2015-08"
+          },
+          "notes": {
+            "en-US": "Delivered a diagnostic of all Chamber's needs related to software, analyzed the \"stack\" they had in house and wrote a report with recommendations to improve the Chamber's work. In addition to that, I acted as a liaison between the Chamber and its service providers, better translating the user needs to request of services."
+          }
+        },
+        {
+          "slug": "sep",
+          "institution": {
+            "en-US": "Espírito Santo State Dept. of Budget and Planning"
+          },
+          "location": {
+            "en-US": "Vitória, Brazil"
+          },
+          "description": {
+            "en-US": "Lead Systems Analyst"
+          },
+          "period": {
+            "begin": "2013-04",
+            "end": "2014-07"
+          },
+          "notes": {
+            "en-US": "Led the improvement of the SIGES, a projects and portfolios management system used state-wide by more than 400 users. As developer, improved the overall loading speed of the pages by implementing tactics as caching and image compression. This application was developed using C# with ASP.NET Webforms and jQuery."
+          }
+        },
+        {
+          "slug": "servinn",
+          "institution": {
+            "en-US": "Servinn Webservice"
+          },
+          "location": {
+            "en-US": "Eunápolis, Brazil"
+          },
+          "description": {
+            "en-US": "ERP Systems Analyst and Developer"
+          },
+          "period": {
+            "begin": "2006-05",
+            "end": "2013-04"
+          },
+          "notes": {
+            "en-US": "As part of a small team, I used to support customers, understand their needs, develop fixes and features for them. Working at Servinn was a great school to my career as had contact with a broad spectrum of the IT field. The technical stack was included Clipper and xHarbour for DOS legacy applications, xHarbour and C++ on a CGI application to reuse the old Clipper codebase on the Web and jQuery to perform AJAX requests. There were, also, some applications written in PHP + jQuery."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "education",
+      "title": {
+        "en-US": "Education"
+      },
+      "items": [
+        {
+          "slug": "baruch",
+          "institution": {
+            "en-US": "Baruch College/Zicklin School of Business, CUNY"
+          },
+          "location": {
+            "en-US": "New York City, USA"
+          },
+          "description": {
+            "en-US": "Exchange Program - Computer Information Systems"
+          },
+          "period": {
+            "begin": "2014-07",
+            "end": "2015-05"
+          }
+        },
+        {
+          "slug": "faesa",
+          "institution": {
+            "en-US": "FAESA - Faculdades Integradas Espíritossantanses"
+          },
+          "location": {
+            "en-US": "Vitória, Brazil"
+          },
+          "description": {
+            "en-US": "B. Sc. Information Systems"
+          },
+          "period": {
+            "begin": "2020-01",
+            "end": "2017-12"
+          }
+        }
+      ]
+    }
+  ]
+}
