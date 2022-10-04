@@ -1,9 +1,13 @@
 import styles from "./[locale].module.scss";
 import data from "./resume.json";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { SupportedLocales } from "../../types";
 
-const LOCALE = "en-US";
+interface ResumePageProps {
+  locale: "en-US";
+}
 
-const ResumePage = () => {
+const ResumePage = ({ locale }: ResumePageProps) => {
   return (
     <div className={styles.container}>
       <h1>Résumé</h1>
@@ -14,16 +18,16 @@ const ResumePage = () => {
         <h2>Celso Palmeira Neto</h2>
         {data.sections.map((sectionInfo) => (
           <section key={sectionInfo.slug}>
-            <h2>{sectionInfo.title[LOCALE]}</h2>
+            <h2>{sectionInfo.title[locale]}</h2>
             {sectionInfo.items.map((item) => (
               <div className={styles.item} key={item.slug}>
-                <div className={styles.itemInstitution}>{item.institution[LOCALE]}</div>
-                <div className={styles.itemLocation}>{item.location[LOCALE]}</div>
-                <div className={styles.itemDescription}>{item.description[LOCALE]}</div>
+                <div className={styles.itemInstitution}>{item.institution[locale]}</div>
+                <div className={styles.itemLocation}>{item.location[locale]}</div>
+                <div className={styles.itemDescription}>{item.description[locale]}</div>
                 <div className={styles.itemPeriod}>Julu 2000 - Sep. 2001</div>
                 {"notes" in item && (
                   <div className={styles.itemNotes}>
-                    <p>{item.notes[LOCALE]}</p>
+                    <p>{item.notes[locale]}</p>
                   </div>
                 )}
               </div>
@@ -33,6 +37,35 @@ const ResumePage = () => {
       </div>
     </div>
   );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      {
+        params: {
+          locale: SupportedLocales.AmericanEnglish,
+        },
+      },
+    ],
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<ResumePageProps, { locale: SupportedLocales }> = ({
+  params,
+}) => {
+  if (params?.locale !== SupportedLocales.AmericanEnglish) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      locale: SupportedLocales.AmericanEnglish,
+    },
+  };
 };
 
 export default ResumePage;
