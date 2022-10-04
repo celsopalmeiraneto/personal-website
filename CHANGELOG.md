@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.1.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.0.1...v2.1.0) (2022-10-04)
+
+
+### Features
+
+* adds RSS autodiscovery to header section ([33774c9](https://github.com/celsopalmeiraneto/personal-website/commit/33774c9cf3de169eb9f24a13902482e3fc0bc45c))
+* basic resume page ([b1a8004](https://github.com/celsopalmeiraneto/personal-website/commit/b1a80048e70294f698f363f75a36cbfaa6f7d5ae))
+* implement basic resume ([3a455a2](https://github.com/celsopalmeiraneto/personal-website/commit/3a455a2fb0e1e2aec41be9a1731a1cc6ec7d945b))
+* implements deploy action ([b0fbebe](https://github.com/celsopalmeiraneto/personal-website/commit/b0fbebeabf77351cfe9b1eac4c628ef721d04370))
+* implements rss feed ([7c3a259](https://github.com/celsopalmeiraneto/personal-website/commit/7c3a25969b413254ac1a1029d6adb9b969d629e8))
+* removes hard-coded english on resume page ([135d9ba](https://github.com/celsopalmeiraneto/personal-website/commit/135d9ba4ea08807abd976548907aba7bfecd0ee2))
+
+
+### Bug Fixes
+
+* sets maximum width for code blocks ([f8b89f5](https://github.com/celsopalmeiraneto/personal-website/commit/f8b89f58f448b966e045e1b094bd445db3fc4d0d))
+
 ## [2.0.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.0.0...v2.0.1) (2022-09-17)
 
 
