@@ -30,6 +30,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Main RSS Feed"
+          href="/rss/main.rss"
+        />
         <title>Celso Palmeira Neto's HP</title>
       </Head>
       <header id={styles.header}>
