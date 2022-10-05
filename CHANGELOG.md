@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.1.0...v2.1.1) (2022-10-05)
+
+
+### Bug Fixes
+
+* **deploy:** changes trigger action ([015d121](https://github.com/celsopalmeiraneto/personal-website/commit/015d121467227449250b5b53b9e9a49dafc2a7f5))
+
 ## [2.1.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.0.1...v2.1.0) (2022-10-04)
 
 
