@@ -1,6 +1,7 @@
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - v2.*
 name: deploy
 jobs:
   deployment:
