@@ -9,6 +9,11 @@ export const isSupportedLocales = (value: string): value is SupportedLocales => 
   return SUPPORTED_LOCALES.includes(value as SupportedLocales);
 };
 
+export interface AssetMetadata {
+  alt: string;
+  sub: string;
+}
+
 export interface PostLocalized {
   title: string;
   slug: string;
@@ -19,6 +24,8 @@ export interface PostLocalized {
   postTags: string[];
   tags: string[];
   writtenAt: Date;
+  assetsPath?: string;
+  coverMetadata?: AssetMetadata;
 }
 
 export type PostLocalizedSerializable = Omit<PostLocalized, "writtenAt"> & {

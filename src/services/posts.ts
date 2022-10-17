@@ -9,6 +9,7 @@ import {
   LocalizedPostKey,
   isSupportedLocales,
   PostLocalizedSerializable,
+  AssetMetadata,
 } from "../types";
 
 marked.use({
@@ -38,6 +39,7 @@ const parsePromisified = (
 };
 
 const POSTS_FOLDER_PATH = path.resolve("data", "posts");
+const PUBLIC_FOLDER_PATH = path.resolve("public");
 
 const readPostsFolder = (): Promise<string[]> => {
   return fs.readdir(POSTS_FOLDER_PATH);
@@ -66,13 +68,42 @@ const convertFileNameToPostKey = (name: string): LocalizedPostKey => {
   };
 };
 
+const createSymlinkForAssetFolder = async (relativeAssetsPath: string): Promise<string> => {
+  const assetsPath = path.resolve(POSTS_FOLDER_PATH, relativeAssetsPath.trim());
+  const publicAssetsPath = path.resolve(PUBLIC_FOLDER_PATH, relativeAssetsPath.trim());
+
+  try {
+    await fs.readlink(publicAssetsPath);
+  } catch {
+    await fs.symlink(assetsPath, publicAssetsPath);
+  }
+
+  return assetsPath;
+};
+
+const readCoverMetadata = async (assetsPath: string): Promise<AssetMetadata | undefined> => {
+  try {
+    const coverMetadataRaw = await fs.readFile(path.resolve(assetsPath, "cover.json"));
+    return JSON.parse(coverMetadataRaw.toString());
+  } catch {
+    return undefined;
+  }
+};
+
 const getPostByKey = async (key: LocalizedPostKey): Promise<PostLocalized> => {
   const file = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, key.fileName));
-  const postLocalized: PostLocalized = JSON.parse(file.toString());
-  return {
-    ...postLocalized,
-    writtenAt: new Date(postLocalized.writtenAt),
+  const parsedContents = JSON.parse(file.toString());
+  const postLocalized: PostLocalized = {
+    ...parsedContents,
+    writtenAt: new Date(parsedContents.writtenAt),
   };
+
+  if (postLocalized.assetsPath?.trim()) {
+    const assetsPath = await createSymlinkForAssetFolder(postLocalized.assetsPath);
+    postLocalized.coverMetadata = await readCoverMetadata(assetsPath);
+  }
+
+  return postLocalized;
 };
 
 export const getPostsSummaries = async (locale?: SupportedLocales): Promise<PostLocalized[]> => {
