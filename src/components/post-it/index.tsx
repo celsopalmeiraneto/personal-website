@@ -5,13 +5,17 @@ export interface PostItProps {
   title: string;
   tag: string;
   text: string;
+  cover: {
+    src: string;
+    alt: string;
+  };
 }
 
-export const PostIt = ({ id, title, tag, text }: PostItProps) => {
+export const PostIt = ({ id, title, tag, text, cover }: PostItProps) => {
   return (
     <div className={styles.container}>
       <a href={`/posts/${id}`}>
-        <img className={styles.image} src="/img/numbers.jpg" />
+        <img className={styles.image} src={cover.src} alt={cover.alt} />
       </a>
       <a href={`/posts/${id}`}>
         <h6 className={styles.title}>{title}</h6>

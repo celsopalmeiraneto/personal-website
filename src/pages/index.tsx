@@ -9,6 +9,11 @@ interface Props {
   posts: PostLocalizedSerializable[];
 }
 
+const DEFAULT_POSTIT_COVER = {
+  alt: "Number in a ",
+  src: "/img/numbers.jpg",
+};
+
 const Home = ({ posts }: Props) => {
   return (
     <div>
@@ -27,6 +32,14 @@ const Home = ({ posts }: Props) => {
             title={post.title}
             tag={post.tags.slice(0, 5).join(", ")}
             text={post.summary}
+            cover={
+              post.coverMetadata && post.assetsPath
+                ? {
+                    alt: post.coverMetadata.alt,
+                    src: `${post.assetsPath}/cover.jpg`,
+                  }
+                : DEFAULT_POSTIT_COVER
+            }
           />
         ))}
       </Section>
