@@ -1,0 +1,12 @@
+{
+  "slug": "arithmetic-progression",
+  "title": "Finding holes on ordered collections",
+  "summary": "We'll explore how to find holes on ordered collections without looping over items.",
+  "postId": "WCY6WAuZqN",
+  "locale": "en-US",
+  "availableLocales": ["en-US"],
+  "postTags": ["Miscellaneous"],
+  "tags": ["Programming", "SQL"],
+  "writtenAt": "2022-10-19T19:36:29+01:00",
+  "assetsPath": "assets-arithmetic-progression"
+}
