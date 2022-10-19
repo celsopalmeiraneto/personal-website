@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.1.1...v2.2.0) (2022-10-19)
+
+
+### Features
+
+* create symlinks for assets in case they exist ([8bed795](https://github.com/celsopalmeiraneto/personal-website/commit/8bed79563bef40102615cba0c8053563efdf57e5))
+* displays cover image for post when available ([038745f](https://github.com/celsopalmeiraneto/personal-website/commit/038745f004ae84b96ee60c20277b07f66a3ae30d))
+* writes post about arithmetic progressions ([ff65df1](https://github.com/celsopalmeiraneto/personal-website/commit/ff65df1d18db61587593029a047588bec9d4d4e0))
+
 ## [2.1.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.1.0...v2.1.1) (2022-10-05)
 
 
