@@ -43,6 +43,10 @@ const Home = ({ posts }: Props) => {
           />
         ))}
       </Section>
+      <Section title="Pages" className={styles.menu} type="nav">
+        <a href="/resumes/en-US">Résumé</a>
+        <a href="/uses">Uses</a>
+      </Section>
       <Section className={styles.socialContainer} title="Social">
         <a target="_blank" rel="author noopener" href="https://github.com/celsopalmeiraneto">
           <img src="img/github.png" alt="GitHub's Logo" />

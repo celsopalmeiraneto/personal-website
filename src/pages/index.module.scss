@@ -30,3 +30,12 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
