@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.2.0...v2.3.0) (2022-11-02)
+
+
+### Features
+
+* adds navigation section ([da64d50](https://github.com/celsopalmeiraneto/personal-website/commit/da64d50a05a28e2ebb3e4fae664c4fb2cd900400))
+* implements /uses page ([7c8cd46](https://github.com/celsopalmeiraneto/personal-website/commit/7c8cd46220e7679a98579fb471fe776aca46edcc))
+
 ## [2.2.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.1.1...v2.2.0) (2022-10-19)
 
 
