@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.3.0...v2.3.1) (2023-02-26)
+
+
+### Bug Fixes
+
+* fixes GA ([a94f844](https://github.com/celsopalmeiraneto/personal-website/commit/a94f844b43aeb00cf55fb62bae361d1977bc2b9a))
+
 ## [2.3.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.2.0...v2.3.0) (2022-11-02)
 
 
