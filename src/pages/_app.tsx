@@ -12,17 +12,15 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-MQHLVKFF7P"
         strategy="afterInteractive"
-        onLoad={() => {
-          // @ts-ignore
-          window.dataLayer = window.dataLayer || [];
-          function gtag(...args: unknown[]) {
-            // @ts-ignore
-            window.dataLayer.push(args);
-          }
-          gtag("js", new Date());
-          gtag("config", "G-MQHLVKFF7P");
-        }}
       />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-MQHLVKFF7P');
+        `}
+      </Script>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
