@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import Script from "next/script";
 import { useEffect, useRef } from "react";
 import { getPost, getPostsSummaries } from "../../services/posts";
 import { PostLocalizedSerializable } from "../../types";
@@ -23,6 +24,17 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
     <div id={styles.container}>
       <Head>
         <title>Celso's Notes: {post.title}</title>
+        <script id={`schema-blog-post-${post.postId}`} type="application/ld+json">
+          {JSON.stringify({
+            "@id": post.postId,
+            "@type": "BlogPost",
+            description: post.summary,
+            datePublished: post.writtenAt,
+            dateModified: post.writtenAt,
+            name: post.title,
+            inLanguage: post.locale,
+          })}
+        </script>
       </Head>
       <h1>&gt; {post.title}</h1>
       <div id={styles.dateAndAuthor}>
