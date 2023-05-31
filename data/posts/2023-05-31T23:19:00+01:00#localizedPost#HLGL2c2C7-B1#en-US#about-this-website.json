@@ -1,0 +1,12 @@
+{
+  "slug": "about-this-website",
+  "title": "About this Website",
+  "summary": "Why I chose Next.JS for this building my personal website.",
+  "postId": "HLGL2c2C7-B1",
+  "locale": "en-US",
+  "availableLocales": ["en-US"],
+  "postTags": ["Miscellaneous"],
+  "tags": ["JS", "Next.JS"],
+  "writtenAt": "2023-05-31T23:19:00+01:00",
+  "assetsPath": "assets-about-this-website"
+}
