@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.5.0...v2.5.1) (2023-05-31)
+
+
+### Bug Fixes
+
+* fixes typo on summary for about next ([3c42be7](https://github.com/celsopalmeiraneto/personal-website/commit/3c42be765b07769a3d0701b0fd06a77d91cdbe54))
+
 ## [2.5.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.4.0...v2.5.0) (2023-05-31)
 
 
