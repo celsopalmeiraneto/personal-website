@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.5.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.4.0...v2.5.0) (2023-05-31)
+
+
+### Features
+
+* add opengraph information to blog posts ([c9e330b](https://github.com/celsopalmeiraneto/personal-website/commit/c9e330b1149b282d973b76f4a3ce5b39cdc2ce88))
+* blog post about the tech stack of this website ([0d2b9b2](https://github.com/celsopalmeiraneto/personal-website/commit/0d2b9b29d5af0ff95d3b2616f9b7ea057bba4962))
+
 ## [2.4.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.3.1...v2.4.0) (2023-03-18)
 
 
