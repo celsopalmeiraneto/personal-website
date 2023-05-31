@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import Script from "next/script";
 import { useEffect, useRef } from "react";
 import { getPost, getPostsSummaries } from "../../services/posts";
 import { PostLocalizedSerializable } from "../../types";
@@ -35,6 +34,10 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
             inLanguage: post.locale,
           })}
         </script>
+        <meta property="og:url" content={`https://celsoneto.com.br/posts/${post.slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.summary} />
       </Head>
       <h1>&gt; {post.title}</h1>
       <div id={styles.dateAndAuthor}>
