@@ -21,7 +21,9 @@ const ResumePage = ({ locale }: ResumePageProps) => {
             <h2>{sectionInfo.title[locale]}</h2>
             {sectionInfo.items.map((item) => (
               <div className={styles.item} key={item.slug}>
-                <div className={styles.itemInstitution}>{item.institution[locale]}</div>
+                <a href={item.website} target="_blank">
+                  <div className={styles.itemInstitution}>{item.institution[locale]}</div>
+                </a>
                 <div className={styles.itemLocation}>{item.location[locale]}</div>
                 <div className={styles.itemDescription}>{item.description[locale]}</div>
                 <div className={styles.itemPeriod}>

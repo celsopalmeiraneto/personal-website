@@ -46,6 +46,11 @@
         "description period"
         "notes notes";
 
+      a:visited,
+      a {
+        color: inherit;
+      }
+
       .itemNotes {
         grid-column-start: notes-start;
         grid-column-end: notes-end;

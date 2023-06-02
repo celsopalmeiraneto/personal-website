@@ -8,6 +8,7 @@
       "items": [
         {
           "slug": "mobietrain",
+          "website": "https://www.mobietrain.com",
           "institution": {
             "en-US": "MobieTrain N.V."
           },
@@ -27,6 +28,7 @@
         },
         {
           "slug": "adentis",
+          "website": "https://www.adentis.pt",
           "institution": {
             "en-US": "HIQ Adentis S/A"
           },
@@ -46,6 +48,7 @@
         },
         {
           "slug": "onegrid",
+          "website": "https://www.onegrid.com.br",
           "institution": {
             "en-US": "ONEGRID Sistemas S/A"
           },
@@ -65,6 +68,7 @@
         },
         {
           "slug": "inflor",
+          "website": "https://inflor.com",
           "institution": {
             "en-US": "INFLOR Consultoria e Sistemas"
           },
@@ -84,6 +88,7 @@
         },
         {
           "slug": "bacc",
+          "website": "https://brazilcham.com",
           "institution": {
             "en-US": "Brazilian-American Chamber of Commerce, Inc."
           },
@@ -103,6 +108,7 @@
         },
         {
           "slug": "sep",
+          "website": "https://www.planejamento.es.gov.br",
           "institution": {
             "en-US": "Espírito Santo State Dept. of Budget and Planning"
           },
@@ -122,6 +128,7 @@
         },
         {
           "slug": "servinn",
+          "website": "https://servinn.com.br",
           "institution": {
             "en-US": "Servinn Webservice"
           },
@@ -149,6 +156,7 @@
       "items": [
         {
           "slug": "baruch",
+          "website": "https://www.baruch.cuny.edu",
           "institution": {
             "en-US": "Baruch College/Zicklin School of Business, CUNY"
           },
@@ -165,6 +173,7 @@
         },
         {
           "slug": "faesa",
+          "website": "https://www.faesa.br",
           "institution": {
             "en-US": "FAESA - Faculdades Integradas Espíritossantanses"
           },
