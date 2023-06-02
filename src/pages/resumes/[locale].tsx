@@ -24,7 +24,10 @@ const ResumePage = ({ locale }: ResumePageProps) => {
                 <div className={styles.itemInstitution}>{item.institution[locale]}</div>
                 <div className={styles.itemLocation}>{item.location[locale]}</div>
                 <div className={styles.itemDescription}>{item.description[locale]}</div>
-                <div className={styles.itemPeriod}>Julu 2000 - Sep. 2001</div>
+                <div className={styles.itemPeriod}>
+                  {item.period.begin}
+                  {item.period.end ? ` - ${item.period.end}` : ""}
+                </div>
                 {"notes" in item && (
                   <div className={styles.itemNotes}>
                     <p>{item.notes[locale]}</p>

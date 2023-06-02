@@ -19,7 +19,7 @@
           },
           "period": {
             "begin": "2020-04",
-            "end": ""
+            "end": null
           },
           "notes": {
             "en-US": "At MobieTrain I worked with our team in dozens of new features and improvements of the NodeJS API, including a migration from Vanilla JS to TypeScript, adoption of Secret Manager, Webhooks for systems integrations using Google PubSub, CI/CD integration with Google Cloud Build for CI/CD, SAML Authentication and more. As Tech Leader I helped nurturing new talent, designing solutions, and be the liaison between business and technology. In an environment that strived for quality and pace, we managed to often find a balance between those seemly paradoxical requisites."
