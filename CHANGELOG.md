@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.6.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.5.0...v2.6.0) (2023-06-03)
+
+
+### Features
+
+* add programming languages to uses page ([3594c09](https://github.com/celsopalmeiraneto/personal-website/commit/3594c095caf2a92b497d3f45a12bfab9f11cfcf3))
+* add website to resume items ([e12b2a3](https://github.com/celsopalmeiraneto/personal-website/commit/e12b2a3984a835de345c7f2dd977627da5ab5432))
+
+
+### Bug Fixes
+
+* fixes typo on summary for about next ([3c42be7](https://github.com/celsopalmeiraneto/personal-website/commit/3c42be765b07769a3d0701b0fd06a77d91cdbe54))
+* shows correct dates on the resume page ([a5bc51c](https://github.com/celsopalmeiraneto/personal-website/commit/a5bc51cfc480e7f99e64fcc198e48af684698a9d))
+
 ## [2.5.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.4.0...v2.5.0) (2023-05-31)
 
 
