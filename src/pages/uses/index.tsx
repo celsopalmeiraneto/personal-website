@@ -12,7 +12,8 @@ const UsesPage = () => (
           <li>AMD Ryzen 7 5700U with Radeon Graphics</li>
           <li>24GB RAM</li>
           <li>1.5TB NVMe SSD</li>
-          <li>Debian Bullseye</li>
+          <li>Debian Bullseye Backports</li>
+          <li>Kitty</li>
         </ul>
       </section>
       <section>
@@ -63,6 +64,43 @@ const UsesPage = () => (
             <a href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons">
               VSCode Icons
             </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <h2>Software Engineering</h2>
+      <section>
+        <h3>Programming Languages</h3>
+        <p>
+          Since 2019 I've been mainly working with JavaScript + Node, but here's a list of the
+          languages I professionally worked with:
+        </p>
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> (
+            <a href="https://nodejs.org/en">Node.js</a> / <a href="https://nextjs.org/">Next.JS</a>{" "}
+            / <a href="https://react.dev/">React</a> )
+          </li>
+          <li>
+            <a href="https://www.ruby-lang.org/en/">Ruby</a> (
+            <a href="https://rubyonrails.org/">Ruby on Rails</a>)
+          </li>
+          <li>
+            <a href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/">C#</a> (
+            <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.NET</a>)
+          </li>
+          <li>
+            <a href="https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-US/abenabap_overview.htm">
+              ABAP
+            </a>
+          </li>
+          <li>
+            <a href="https://www.php.net/">PHP</a>
+          </li>
+          <li>
+            <a href="http://www.xharbour.org/">XHarbour</a> /{" "}
+            <a href="https://en.wikipedia.org/wiki/Clipper_(programming_language)">Clipper</a>
           </li>
         </ul>
       </section>
