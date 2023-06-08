@@ -13,12 +13,6 @@ interface BlogPostProps {
 const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
   const refContent = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!refContent.current) return;
-
-    refContent.current.innerHTML = htmlContent;
-  }, []);
-
   return (
     <div id={styles.container}>
       <Head>
@@ -46,7 +40,7 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
           dateStyle: "long",
         })}
       </div>
-      <div id={styles.postContent} ref={refContent}></div>
+      <div id={styles.postContent} dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
       <hr />
       <div>Tags: {post.tags.join(", ")}</div>
     </div>
