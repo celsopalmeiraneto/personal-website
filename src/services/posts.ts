@@ -25,19 +25,6 @@ marked.use({
   },
 });
 
-const parsePromisified = (
-  src: Parameters<typeof marked>[0],
-  options: Parameters<typeof marked>[1]
-): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    return marked(src, options, (error, result) => {
-      if (error) return reject(error);
-
-      return resolve(result);
-    });
-  });
-};
-
 const POSTS_FOLDER_PATH = path.resolve("data", "posts");
 const PUBLIC_FOLDER_PATH = path.resolve("public");
 
@@ -149,8 +136,9 @@ export const getPost = async (
   const post = await getPostByKey(postKey);
   const postFile = `${postKey.slug}.md`;
   const markdownContent = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, postFile));
-  const htmlContent: string = await parsePromisified(markdownContent.toString(), {
+  const htmlContent: string = await marked(markdownContent.toString(), {
     gfm: true,
+    async: true,
   });
 
   return {

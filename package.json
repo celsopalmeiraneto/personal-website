@@ -22,7 +22,7 @@
   "homepage": "https://github.com/celsopalmeiraneto/personal-website#readme",
   "dependencies": {
     "highlight.js": "11.6.0",
-    "marked": "4.0.18",
+    "marked": "10.0.0",
     "next": "13.4.4",
     "normalize.css": "8.0.1",
     "react": "18.2.0",
@@ -30,7 +30,6 @@
     "sass": "1.32.8"
   },
   "devDependencies": {
-    "@types/marked": "4.0.6",
     "@types/node": "20.9.0",
     "@types/react": "17.0.3",
     "eslint-config-next": "13.4.4",
