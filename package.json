@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Celso's personal website.",
   "scripts": {
     "build": "next build",
