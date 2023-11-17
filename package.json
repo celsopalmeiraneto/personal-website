@@ -4,9 +4,7 @@
   "description": "Celso's personal website.",
   "scripts": {
     "build": "next build",
-    "preexport": "npm run build",
-    "export": "next export",
-    "postexport": "ts-node src/services/post-export.ts",
+    "postbuild": "ts-node src/services/post-export.ts",
     "dev": "next dev",
     "start": "next start"
   },
@@ -23,16 +21,16 @@
   "dependencies": {
     "highlight.js": "11.9.0",
     "marked": "10.0.0",
-    "next": "13.4.4",
+    "next": "^14.0.2",
     "normalize.css": "8.0.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "1.32.8"
   },
   "devDependencies": {
     "@types/node": "20.9.0",
     "@types/react": "17.0.3",
-    "eslint-config-next": "13.4.4",
+    "eslint-config-next": "^14.0.2",
     "prettier": "2.7.1",
     "ts-node": "10.9.1",
     "typescript": "5.2.2"
