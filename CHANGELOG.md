@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.6.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.5.0...v2.6.0) (2024-01-20)
+
+
+### Features
+
+* add posts link to homepage ([6b433b7](https://github.com/celsopalmeiraneto/personal-website/commit/6b433b7f0634fc8f552a662ab8b2f38f2692d4a8))
+* add posts page to list all posts ([7623987](https://github.com/celsopalmeiraneto/personal-website/commit/7623987863bd2dfc33b49b028a03c97fbc8b3f61))
+* add programming languages to uses page ([3594c09](https://github.com/celsopalmeiraneto/personal-website/commit/3594c095caf2a92b497d3f45a12bfab9f11cfcf3))
+* add website to resume items ([e12b2a3](https://github.com/celsopalmeiraneto/personal-website/commit/e12b2a3984a835de345c7f2dd977627da5ab5432))
+* change top bar color ([3710f58](https://github.com/celsopalmeiraneto/personal-website/commit/3710f58e6fc78aa763012d05ad4e219d8b5cb997))
+* increate margig between post title and date ([98d1b99](https://github.com/celsopalmeiraneto/personal-website/commit/98d1b99c868533111f194ed131e84e6463f609a0))
+* replace ref with dangerouslySetInnerHTML for SSR blog posts ([2711b31](https://github.com/celsopalmeiraneto/personal-website/commit/2711b31d401dee7411e7454d0c05785602a54c37))
+* update next to v13 ([71480c9](https://github.com/celsopalmeiraneto/personal-website/commit/71480c9d0ae1f63e503f103b7959b2555ad3a509))
+* update node to v18 ([af19050](https://github.com/celsopalmeiraneto/personal-website/commit/af190507b5e3d21b7f92a17a8d638394809a5dff))
+
+
+### Bug Fixes
+
+* fixes typo on summary for about next ([3c42be7](https://github.com/celsopalmeiraneto/personal-website/commit/3c42be765b07769a3d0701b0fd06a77d91cdbe54))
+* shows correct dates on the resume page ([a5bc51c](https://github.com/celsopalmeiraneto/personal-website/commit/a5bc51cfc480e7f99e64fcc198e48af684698a9d))
+
 ## [2.5.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.4.0...v2.5.0) (2023-05-31)
 
 
