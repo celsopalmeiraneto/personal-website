@@ -44,6 +44,7 @@ const Home = ({ posts }: Props) => {
         ))}
       </Section>
       <Section title="Pages" className={styles.menu} type="nav">
+        <a href="/posts">Posts</a>
         <a href="/resumes/en-US">Résumé</a>
         <a href="/uses">Uses</a>
       </Section>
