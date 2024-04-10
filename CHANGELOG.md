@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.6.0...v2.7.0) (2024-04-10)
+
+
+### Features
+
+* add lucky audit post ([6565b72](https://github.com/celsopalmeiraneto/personal-website/commit/6565b72e56ec893dd3a3ca5b25dc834e530e659f))
+
 ## [2.6.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.5.0...v2.6.0) (2024-01-20)
 
 
