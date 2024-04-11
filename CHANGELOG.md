@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.7.0...v2.8.0) (2024-04-11)
+
+
+### Features
+
+* improve rss feed ([ff71506](https://github.com/celsopalmeiraneto/personal-website/commit/ff7150683e0e49e1e5839d64c51b3c0c18c1e80d))
+
 ## [2.7.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.6.0...v2.7.0) (2024-04-10)
 
 
