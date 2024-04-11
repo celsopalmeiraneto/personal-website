@@ -9,7 +9,7 @@ const parsePostIntoRssItem = (post: PostLocalized) => {
   <title>${post.title}</title>
   <link>https://celsoneto.com.br/posts/${post.slug}</link>
   <description>${post.summary}</description>
-  <guid>${post.slug}</guid>
+  <guid isPermalink="false">${post.slug}</guid>
   <pubDate>${post.writtenAt.toUTCString()}</pubDate>
 </item>`.trim();
 };
@@ -21,12 +21,13 @@ export const generate = async () => {
   });
 
   return `
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Celso Palmeira Neto's - All Content</title>
+    <title>Celso Palmeira Neto's</title>
     <link>https://celsoneto.com.br</link>
     <description>All items from the website</description>
     <ttl>60</ttl>
+    <atom:link href="https://celsoneto.com.br/rss/main.rss" rel="self" type="application/rss+xml" />
     ${posts.map(parsePostIntoRssItem).join("\n")}
   </channel>
 </rss>`.trim();
