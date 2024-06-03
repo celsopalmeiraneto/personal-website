@@ -1,0 +1,12 @@
+{
+  "slug": "pr-evaluations",
+  "title": "The Art of the PR",
+  "summary": "Effective Code Review for Humans",
+  "postId": "16PAhR",
+  "locale": "en-US",
+  "availableLocales": ["en-US"],
+  "postTags": ["Software Engineering", "Code Review", "PR"],
+  "tags": ["Software Engineering", "Code Review", "PR"],
+  "writtenAt": "2024-06-03T22:43:00+01:00",
+  "assetsPath": "pr-evaluations"
+}
