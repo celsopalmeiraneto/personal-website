@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.9.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.8.0...v2.9.0) (2024-06-03)
+
+
+### Features
+
+* blog post on pr evaluations ([a5ee6da](https://github.com/celsopalmeiraneto/personal-website/commit/a5ee6dad53bde88d48d308012b7519c302313c7a))
+* small formatting tweaks ([ebc6907](https://github.com/celsopalmeiraneto/personal-website/commit/ebc6907df35ac4b0c6d626ed77e475274906d96e))
+
 ## [2.8.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.7.0...v2.8.0) (2024-04-11)
 
 
