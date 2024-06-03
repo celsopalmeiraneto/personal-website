@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.1](https://github.com/celsopalmeiraneto/personal-website/compare/v2.9.0...v2.9.1) (2024-06-03)
+
+
+### Bug Fixes
+
+* resizes cover image for pr-evaluation post ([8d52108](https://github.com/celsopalmeiraneto/personal-website/commit/8d521085c0f4ec26a48e6bd3c82fd0556d2fc2dc))
+
 ## [2.9.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.8.0...v2.9.0) (2024-06-03)
 
 
