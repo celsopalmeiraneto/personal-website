@@ -79,10 +79,12 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      posts: posts.map((post) => ({
-        ...post,
-        writtenAt: post.writtenAt.toISOString(),
-      })),
+      posts: posts
+        .map((post) => ({
+          ...post,
+          writtenAt: post.writtenAt.toISOString(),
+        }))
+        .sort((a, b) => (a.writtenAt > b.writtenAt ? -1 : 1)),
     },
   };
 };
