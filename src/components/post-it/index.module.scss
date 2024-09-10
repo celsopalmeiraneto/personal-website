@@ -13,6 +13,10 @@
     object-fit: cover;
     height: 150px;
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      height: 180px;
+    }
   }
 
   .title {
@@ -27,5 +31,9 @@
   .text {
     font-size: 0.8em;
     margin: 0 0 10px 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 320px;
   }
 }
