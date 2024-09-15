@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.10.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.9.0...v2.10.0) (2024-09-15)
+
+
+### Features
+
+* increase size of home images for larger screens ([ba228c8](https://github.com/celsopalmeiraneto/personal-website/commit/ba228c813504598cd4a96b78fe99cef000f0a872))
+* sort posts from new to old ([2e27b47](https://github.com/celsopalmeiraneto/personal-website/commit/2e27b4762b258a25f99a28f65f4555cdd032b7c7))
+
+
+### Bug Fixes
+
+* resizes cover image for pr-evaluation post ([8d52108](https://github.com/celsopalmeiraneto/personal-website/commit/8d521085c0f4ec26a48e6bd3c82fd0556d2fc2dc))
+
 ## [2.9.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.8.0...v2.9.0) (2024-06-03)
 
 
