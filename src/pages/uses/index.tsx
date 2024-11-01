@@ -7,13 +7,16 @@ const UsesPage = () => (
     <section>
       <h2>Hardware</h2>
       <section>
-        <h3>Laptop - Lenovo ThinkPad E14 Gen3 14"</h3>
+        <h3>
+          <a href="https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-edge-laptops/thinkpad-e14-gen-3">
+            Laptop - Lenovo ThinkPad E14 Gen3 14"
+          </a>
+        </h3>
         <ul>
           <li>AMD Ryzen 7 5700U with Radeon Graphics</li>
           <li>24GB RAM</li>
           <li>1.5TB NVMe SSD</li>
-          <li>Debian Bullseye Backports</li>
-          <li>Kitty</li>
+          <li>Debian 12</li>
         </ul>
       </section>
       <section>
@@ -22,14 +25,21 @@ const UsesPage = () => (
           <li>Intel Core i5, 12GHz Quad-Core</li>
           <li>16GB RAM</li>
           <li>500GB SSD</li>
-          <li>macOS Monterey</li>
+          <li>macOS 15</li>
         </ul>
       </section>
       <section>
-        <h3>Monitor - AOC G2590VXQ 24.5" FHD</h3>
+        <h3>
+          <a href="https://aoc.com/uk/gaming/products/monitors/g2590vxq">
+            Monitor - AOC G2590VXQ 24.5" FHD
+          </a>
+        </h3>
       </section>
       <section>
-        <h3>Keyboard - KROM Kempo Mechanical Keyboard</h3>
+        <h3>UGREEN Revodok Pro 210 Docking Station</h3>
+      </section>
+      <section>
+        <h3>Keyboard - RAZOR BLACKWIDOW v3</h3>
       </section>
       <section>
         <h3>Mouse - KROM Kane</h3>
@@ -66,6 +76,7 @@ const UsesPage = () => (
             </a>
           </li>
         </ul>
+        <h3>tmux</h3>
       </section>
     </section>
     <section>
@@ -112,10 +123,13 @@ const UsesPage = () => (
         <p>I always setup the Action Button to adjust the level of Noise Cancellation.</p>
       </section>
       <section>
-        <h3>Earphones - Sony AS210</h3>
+        <h3>Microphone - HyperX SoloCast</h3>
       </section>
       <section>
-        <h3>Phone - Samsung Galaxy A50</h3>
+        <h3>Earphones - Soundcore Sport X10</h3>
+      </section>
+      <section>
+        <h3>Phone - iPhone 11</h3>
       </section>
     </section>
   </div>
