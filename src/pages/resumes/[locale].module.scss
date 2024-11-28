@@ -16,54 +16,111 @@
   }
 }
 
-@media print {
-  .container > * {
-    display: none;
-  }
-}
-
 #resume {
   margin-top: 2em;
-  gap: 1.3em;
+  gap: 1em;
   display: grid;
 
   h2 {
     margin: 0;
   }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  header {
+    display: grid;
+    gap: 0.4em;
+
+    .titleAndLocation {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .contactInfo {
+    display: flex;
+    justify-content: space-between;
+
+    .contactItem {
+      display: flex;
+      align-items: center;
+
+      height: 1.5em;
+      .icon {
+        height: 1em;
+        margin-right: 0.3em;
+      }
+    }
+  }
+
   section {
     display: grid;
     gap: 1.2em;
+
     h2 {
-      font-size: 1.2em;
+      font-size: 1.5em;
       text-decoration: underline;
       margin: 0;
     }
 
     .item {
+      break-inside: avoid;
+      padding-left: 0.5em;
       display: grid;
       grid:
-        "institution location"
-        "description period"
-        "notes notes";
+        "title title"
+        "location period"
+        "highlights highlights"
+        "notes notes"
+        "stack stack";
+      gap: 0.3em;
 
       a:visited,
       a {
         color: inherit;
       }
 
-      .itemNotes {
-        grid-column-start: notes-start;
-        grid-column-end: notes-end;
+      .itemTitle {
+        grid-area: title;
+        grid-column: span 2;
+        span:nth-of-type(1) {
+          font-size: 1.2em;
+        }
+        span:nth-of-type(2) {
+          font-size: 0.9em;
+        }
       }
 
-      .itemLocation,
+      .itemNotes {
+        grid-area: notes;
+        grid-column: span 2;
+        font-size: 0.9em;
+      }
+
       .itemPeriod {
+        grid-area: period;
         justify-self: end;
       }
 
-      .itemInstitution,
       .itemLocation {
-        font-weight: bold;
+        grid-area: location;
+      }
+
+      .itemStack {
+        grid-area: stack;
+        grid-column: span 2;
+        font-size: 0.9em;
+      }
+
+      .itemHighlights {
+        grid-area: highlights;
+        grid-column: span 2;
+        font-size: 0.9em;
+
+        margin: 0;
+        padding: 0 1em;
       }
 
       p {
@@ -76,7 +133,16 @@
 }
 
 @media print {
+  .container > * {
+    display: none;
+  }
+
   #resume {
-    font-size: 10px;
+    font-size: 16px;
+    margin: 0;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 }

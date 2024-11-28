@@ -23,8 +23,32 @@
             "end": null
           },
           "notes": {
-            "en-US": "At MobieTrain I worked with our team in dozens of new features and improvements of the NodeJS API, including a migration from Vanilla JS to TypeScript, adoption of Secret Manager, Webhooks for systems integrations using Google PubSub, CI/CD integration with Google Cloud Build and Terraform, enterprise authentication with JWTs, OAuth2 and SAML, service oriented architecture using Google Cloud Run. I designed and implemented a scalable, highly available and resilient infrastructure that handles millions of requests per month."
-          }
+            "en-US": "Led a team of Software Engineers (5~9 people) ensuring that we deliver high-quality software that meets the business requirements. I was responsible for defining architecture and best practices, keeping tabs on the latest technologies and trends, helping to choose the right tools for the job."
+          },
+          "highlights": {
+            "en-US": [
+              "Migrated 3rd party IPaaS to in-house solution saving 90% of the costs in the first year",
+              "Created near real-time analytics pipeline that runs 20x faster than the previous solution",
+              "Led the rewrite of an application that reduced the response time by 70% and costed 80% less",
+              "Led the creation of a RAG application to create a tenant based knowledge library"
+            ]
+          },
+          "stack": [
+            "GPT",
+            "Docker",
+            "Google BigQuery",
+            "Google Cloud Build",
+            "Google Cloud Compute Engine",
+            "Google Cloud Run",
+            "Google Pub/Sub",
+            "Google Secret Manager",
+            "MySQL 8",
+            "NodeJS",
+            "Redis",
+            "Terraform",
+            "TypeScript",
+            "JavaScript"
+          ]
         },
         {
           "slug": "adentis",
@@ -43,8 +67,23 @@
             "end": "2020-04"
           },
           "notes": {
-            "en-US": "For Adentis’ clients, I have developed web applications like a full-featured online Vehicle Dealership catalog using technologies that included React, AWS Lambda for microservices, S3, CloudFront and CloudFormation."
-          }
+            "en-US": "Worked from end-to-end of the software process to deliver state-of-the-art software."
+          },
+          "highlights": {
+            "en-US": [
+              "Developed an Online Vehicle Dealership catalog in 6 months, fully replacing a 3rd party solution",
+              "Mentored 2 Intern Students, which managed to deliver an MVP for HR Management in 3 months"
+            ]
+          },
+          "stack": [
+            "AWS CloudFormation",
+            "AWS Lambda",
+            "AWS S3",
+            "AWS CloudFront",
+            "NodeJS",
+            "React",
+            "Microservices"
+          ]
         },
         {
           "slug": "onegrid",
@@ -63,8 +102,29 @@
             "end": "2019-08"
           },
           "notes": {
-            "en-US": "As a startup in early stage, ONEGRID needed to prepare its software assets to scale. Migrated the Ruby on Rails webapp from a simple Heroku Dyno to a still simple, but robust AWS infrastructure that included EC2 for servers, ECS and Docker for application scaling, EBS for load balancing, RDS for the Postgres database, CloudFront for CDN, S3 for static assets hosting, SNS and SES and to deliver messages to the users. By using the new infrastructure ONEGRID was able to scale its capabilities from a couple of dozen to a couple of hundred devices."
-          }
+            "en-US": "Managed a small team of 2 engineers and introduced processes and practices to ensure ONEGRID could handle the growth of its IoT business."
+          },
+          "highlights": {
+            "en-US": [
+              "Migrated the PoC from Heroku to a scalable AWS infrastructure in 3 months",
+              "Designed an infrastructure that handled hundreds of IoT devices and millions of requests per month",
+              "Introduced Git Flow and CI/CD to the development team, reducing the time to deliver new features"
+            ]
+          },
+          "stack": [
+            "Docker",
+            "Ruby",
+            "JavaScript",
+            "CSS",
+            "Ruby on Rails",
+            "AWS ECS",
+            "AWS RDS",
+            "AWS ELB",
+            "AWS S3",
+            "PostgreSQL",
+            "AWS S3",
+            "CloudFlare CDN"
+          ]
         },
         {
           "slug": "inflor",
@@ -83,8 +143,32 @@
             "end": "2018-11"
           },
           "notes": {
-            "en-US": "Working on the Innovation area of INFLOR I developed Proof-of-Concepts and MVPs for internal and external clients, allowing the commercial team to put new products into the market. In the Project team of INFLOR I worked with corporate clients on SAP related projects. The stack included Vue.JS (frontend) and C# ASP.NET MVC or Node.js + Express (backend), or SAPUI5 (frontend) and SAP Gateway (backend)."
-          }
+            "en-US": "Developed Proof-of-Concepts and MVPs for internal and external clients. Worked with corporate clients on large SAP projects and adoption of new technologies."
+          },
+          "highlights": {
+            "en-US": [
+              "Developed a GIS application that allowed clients to have near real-time data of their farm operations",
+              "Developed a SAP sales modules which required significantly less maintenance than the previous solution"
+            ]
+          },
+          "stack": [
+            "C#",
+            "JavaScript",
+            "SAP ABAP",
+            "SAP Web Dynpro",
+            "SAPUI5",
+            "GIS",
+            "ArcGIS",
+            "SAP Fiori",
+            "SAP PI",
+            "SAP Digital Boardroom",
+            "ETL",
+            "VueJS",
+            "ASP.NET MVC",
+            "ASP.NET Webforms",
+            "Oracle DB",
+            "SQL"
+          ]
         },
         {
           "slug": "bacc",
@@ -103,8 +187,15 @@
             "end": "2015-08"
           },
           "notes": {
-            "en-US": "Delivered a diagnostic of all Chamber's needs related to software, analyzed the stack they had in house and wrote a report with recommendations to improve the Chamber's work. In addition to that, I acted as a liaison between the Chamber and its service providers, better translating the user needs to request of services."
-          }
+            "en-US": "Acted as a bridge between the Executive Director and the 3rd party CRM vendor to ensure the CRM was tailored to the organization's needs."
+          },
+          "highlights": {
+            "en-US": [
+              "Assisted the Executive Director in the negotiation for the improvements of the CRM",
+              "Configured the CRM to better suit the needs of the organization"
+            ]
+          },
+          "stack": []
         },
         {
           "slug": "sep",
@@ -123,8 +214,16 @@
             "end": "2014-07"
           },
           "notes": {
-            "en-US": "Led the improvement of the SIGES, a projects and portfolios management system used state-wide by more than 400 users. As developer, improved the overall loading speed of the pages by implementing tactics as caching and image compression. This application was developed using C# with ASP.NET Webforms and jQuery."
-          }
+            "en-US": "Led the maintenance of a project and portfolio management system by more than 400 users spread over a state in Brazil."
+          },
+          "highlights": {
+            "en-US": [
+              "Create reporting engine that was able to generate reports 5x faster than the previous solution",
+              "Reduced the amount of duplicated logic by 30% by refactoring the codebase",
+              "Introduced the use of Version Control System to the development team to ensure traceability"
+            ]
+          },
+          "stack": ["SQL Server", "C#", "ASP.NET Webforms", "jQuery"]
         },
         {
           "slug": "servinn",
@@ -143,8 +242,26 @@
             "end": "2013-04"
           },
           "notes": {
-            "en-US": "As part of a small team, I used to support customers, understand their needs, develop fixes and features for them. Working at Servinn was a great school to my career as had contact with a broad spectrum of the IT field. The technical stack was included Clipper and xHarbour for DOS legacy applications, xHarbour and C++ on a CGI application to reuse the old Clipper codebase on the Web and jQuery to perform AJAX requests. There were, also, some applications written in PHP + jQuery."
-          }
+            "en-US": "As part of a small team ensured that new and existing clients had been onboarded and developed new features for the ERP the company offered. In addition to that, maintained legacy systems written for MS-DOS."
+          },
+          "highlights": {
+            "en-US": [
+              "Optimized performance by 10x on large listings in the Web-based ERP",
+              "Supervised the onboarding of dozens of clients to Servinn's products ensuring a smooth launch"
+            ]
+          },
+          "stack": [
+            "xHarbour",
+            "MySQL 5",
+            "PHP",
+            "Clipper",
+            "DBF",
+            "Windows Server",
+            "jQuery",
+            "IIS",
+            "MS-DOS",
+            "CGI Webservers"
+          ]
         }
       ]
     },
@@ -154,23 +271,6 @@
         "en-US": "Education"
       },
       "items": [
-        {
-          "slug": "baruch",
-          "website": "https://www.baruch.cuny.edu",
-          "institution": {
-            "en-US": "Baruch College/Zicklin School of Business, CUNY"
-          },
-          "location": {
-            "en-US": "New York City, USA"
-          },
-          "description": {
-            "en-US": "Exchange Program - Computer Information Systems"
-          },
-          "period": {
-            "begin": "2014-07",
-            "end": "2015-05"
-          }
-        },
         {
           "slug": "faesa",
           "website": "https://www.faesa.br",
@@ -186,6 +286,23 @@
           "period": {
             "begin": "2020-01",
             "end": "2017-12"
+          }
+        },
+        {
+          "slug": "baruch",
+          "website": "https://www.baruch.cuny.edu",
+          "institution": {
+            "en-US": "Baruch College/Zicklin School of Business, CUNY"
+          },
+          "location": {
+            "en-US": "New York City, USA"
+          },
+          "description": {
+            "en-US": "Exchange Program - Computer Information Systems"
+          },
+          "period": {
+            "begin": "2014-07",
+            "end": "2015-05"
           }
         }
       ]
