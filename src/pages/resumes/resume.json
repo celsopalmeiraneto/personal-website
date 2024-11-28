@@ -3,27 +3,32 @@
     {
       "slug": "work",
       "title": {
-        "en-US": "Work Experience"
+        "en-US": "Work Experience",
+        "pt-BR": "Experiências Profissionais"
       },
       "items": [
         {
           "slug": "mobietrain",
           "website": "https://www.mobietrain.com",
           "institution": {
-            "en-US": "MobieTrain N.V."
+            "en-US": "MobieTrain N.V.",
+            "pt-BR": "MobieTrain N.V."
           },
           "location": {
-            "en-US": "Lisbon, Portugal"
+            "en-US": "Lisbon, Portugal",
+            "pt-BR": "Lisboa, Portugal"
           },
           "description": {
-            "en-US": "Senior Software Engineer, Backend Tech Leader"
+            "en-US": "Senior Software Engineer, Backend Tech Leader",
+            "pt-BR": "Engenheiro de Software Sênior, Líder Técnico de Backend"
           },
           "period": {
             "begin": "2020-04",
             "end": null
           },
           "notes": {
-            "en-US": "Led a team of Software Engineers (5~9 people) ensuring that we deliver high-quality software that meets the business requirements. I was responsible for defining architecture and best practices, keeping tabs on the latest technologies and trends, helping to choose the right tools for the job."
+            "en-US": "Led a team of Software Engineers (5~9 people) ensuring that we deliver high-quality software that meets the business requirements. Responsible for defining architecture and best practices, keeping tabs on the latest technologies and trends, helping to choose the right tools for the job.",
+            "pt-BR": "Liderou uma equipe de engenheiros de software (5~9 pessoas) garantindo entregas de alta qualidade que atendem aos requisitos de negócios. Responsável por definir a arquitetura e as melhores práticas, acompanhar as últimas tecnologias e tendências, ajudar a escolher as ferramentas certas para o trabalho."
           },
           "highlights": {
             "en-US": [
@@ -31,6 +36,12 @@
               "Created near real-time analytics pipeline that runs 20x faster than the previous solution",
               "Led the rewrite of an application that reduced the response time by 70% and costed 80% less",
               "Led the creation of a RAG application to create a tenant based knowledge library"
+            ],
+            "pt-BR": [
+              "Migrou um IPaaS de terceiros para solução interna economizando 90% dos custos no primeiro ano",
+              "Criou pipeline de análise de dados quase em tempo real que funciona 20x mais rápido que a solução anterior",
+              "Liderou a reescrita de uma aplicação que reduziu o tempo de resposta em 70% e custou 80% menos",
+              "Liderou a criação de uma aplicação RAG para criar bibliotecas de conhecimento"
             ]
           },
           "stack": [
@@ -54,25 +65,33 @@
           "slug": "adentis",
           "website": "https://www.adentis.pt",
           "institution": {
-            "en-US": "HIQ Adentis S/A"
+            "en-US": "HIQ Adentis S/A",
+            "pt-BR": "HIQ Adentis S/A"
           },
           "location": {
-            "en-US": "Lisbon, Portugal"
+            "en-US": "Lisbon, Portugal",
+            "pt-BR": "Lisboa, Portugal"
           },
           "description": {
-            "en-US": "Consultant and Software Engineer"
+            "en-US": "Consultant and Software Engineer",
+            "pt-BR": "Consultor e Engenheiro de Software"
           },
           "period": {
             "begin": "2019-10",
             "end": "2020-04"
           },
           "notes": {
-            "en-US": "Worked from end-to-end of the software process to deliver state-of-the-art software."
+            "en-US": "Worked from end-to-end of the software process to deliver state-of-the-art software.",
+            "pt-BR": "Trabalhou de ponta a ponta no processo de software para entregar software de última geração."
           },
           "highlights": {
             "en-US": [
               "Developed an Online Vehicle Dealership catalog in 6 months, fully replacing a 3rd party solution",
               "Mentored 2 Intern Students, which managed to deliver an MVP for HR Management in 3 months"
+            ],
+            "pt-BR": [
+              "Desenvolveu um catálogo online para concessionária de veículos em 6 meses, substituindo totalmente uma solução de terceiros",
+              "Fez mentoria de 2 estagiários, que conseguiram entregar um MVP para Gestão de RH em 3 meses"
             ]
           },
           "stack": [
@@ -89,26 +108,35 @@
           "slug": "onegrid",
           "website": "https://www.onegrid.com.br",
           "institution": {
-            "en-US": "ONEGRID Sistemas S/A"
+            "en-US": "ONEGRID Sistemas S/A",
+            "pt-BR": "ONEGRID Sistemas S/A"
           },
           "location": {
-            "en-US": "Vila Velha, Brazil"
+            "en-US": "Vila Velha, Brazil",
+            "pt-BR": "Vila Velha, Brasil"
           },
           "description": {
-            "en-US": "Software Development Manager"
+            "en-US": "Software Development Manager",
+            "pt-BR": "Gerente de Desenvolvimento de Software"
           },
           "period": {
             "begin": "2018-11",
             "end": "2019-08"
           },
           "notes": {
-            "en-US": "Managed a small team of 2 engineers and introduced processes and practices to ensure ONEGRID could handle the growth of its IoT business."
+            "en-US": "Managed a small team of 2 engineers and introduced processes and practices to ensure ONEGRID could handle the growth of its IoT business.",
+            "pt-BR": "Gerenciou uma pequena equipe de 2 engenheiros e introduziu processos e práticas para garantir que a ONEGRID pudesse lidar com o crescimento de seu negócio de IoT."
           },
           "highlights": {
             "en-US": [
               "Migrated the PoC from Heroku to a scalable AWS infrastructure in 3 months",
               "Designed an infrastructure that handled hundreds of IoT devices and millions of requests per month",
               "Introduced Git Flow and CI/CD to the development team, reducing the time to deliver new features"
+            ],
+            "pt-BR": [
+              "Migrou o PoC do Heroku para uma infraestrutura escalável da AWS em 3 meses",
+              "Desenhou uma infraestrutura que lidava com centenas de dispositivos IoT e milhões de solicitações por mês",
+              "Introduziu Git Flow e CI/CD para a equipe de desenvolvimento, reduzindo o tempo de entrega de novas funcionalidades"
             ]
           },
           "stack": [
@@ -130,25 +158,33 @@
           "slug": "inflor",
           "website": "https://inflor.com",
           "institution": {
-            "en-US": "INFLOR Consultoria e Sistemas"
+            "en-US": "INFLOR Consultoria e Sistemas",
+            "pt-BR": "INFLOR Consultoria e Sistemas"
           },
           "location": {
-            "en-US": "Vitória, Brazil"
+            "en-US": "Vitória, Brazil",
+            "pt-BR": "Vitória, Brasil"
           },
           "description": {
-            "en-US": "Systems Analyst"
+            "en-US": "Systems Analyst",
+            "pt-BR": "Analista de Sistemas"
           },
           "period": {
             "begin": "2015-10",
             "end": "2018-11"
           },
           "notes": {
-            "en-US": "Developed Proof-of-Concepts and MVPs for internal and external clients. Worked with corporate clients on large SAP projects and adoption of new technologies."
+            "en-US": "Developed Proof-of-Concepts and MVPs for internal and external clients. Worked with corporate clients on large SAP projects and adoption of new technologies.",
+            "pt-BR": "Desenvolveu Provas de Conceito e MVPs para clientes internos e externos. Trabalhou com clientes corporativos em grandes projetos SAP e adoção de novas tecnologias."
           },
           "highlights": {
             "en-US": [
               "Developed a GIS application that allowed clients to have near real-time data of their farm operations",
               "Developed a SAP sales modules which required significantly less maintenance than the previous solution"
+            ],
+            "pt-BR": [
+              "Desenvolveu uma aplicação GIS que permitiu aos clientes ter dados quase em tempo real de suas operações agrícolas",
+              "Desenvolveu módulos de vendas SAP que exigiam significativamente menos manutenção do que a solução anterior"
             ]
           },
           "stack": [
@@ -174,25 +210,33 @@
           "slug": "bacc",
           "website": "https://brazilcham.com",
           "institution": {
-            "en-US": "Brazilian-American Chamber of Commerce, Inc."
+            "en-US": "Brazilian-American Chamber of Commerce, Inc.",
+            "pt-BR": "Câmara de Comércio Brasil-Estados Unidos"
           },
           "location": {
-            "en-US": "New York City, USA"
+            "en-US": "New York City, USA",
+            "pt-BR": "Nova Iorque, EUA"
           },
           "description": {
-            "en-US": "Software Analyst Intern"
+            "en-US": "Software Analyst Intern",
+            "pt-BR": "Estagiário de Análise de Software"
           },
           "period": {
             "begin": "2015-05",
             "end": "2015-08"
           },
           "notes": {
-            "en-US": "Acted as a bridge between the Executive Director and the 3rd party CRM vendor to ensure the CRM was tailored to the organization's needs."
+            "en-US": "Acted as a bridge between the Executive Director and the 3rd party CRM vendor to ensure the CRM was tailored to the organization's needs.",
+            "pt-BR": "Atuou como uma ponte entre o Diretor Executivo e o fornecedor de CRM de terceiros para garantir que o CRM fosse adaptado às necessidades da organização."
           },
           "highlights": {
             "en-US": [
               "Assisted the Executive Director in the negotiation for the improvements of the CRM",
               "Configured the CRM to better suit the needs of the organization"
+            ],
+            "pt-BR": [
+              "Auxiliou o Diretor Executivo na negociação para as melhorias do CRM",
+              "Configurou o CRM para melhor atender às necessidades da organização"
             ]
           },
           "stack": []
@@ -201,26 +245,35 @@
           "slug": "sep",
           "website": "https://www.planejamento.es.gov.br",
           "institution": {
-            "en-US": "Espírito Santo State Dept. of Budget and Planning"
+            "en-US": "Espírito Santo State Dept. of Budget and Planning",
+            "pt-BR": "Secretaria de Estado de Orçamento e Planejamento do Espírito Santo"
           },
           "location": {
-            "en-US": "Vitória, Brazil"
+            "en-US": "Vitória, Brazil",
+            "pt-BR": "Vitória, Brasil"
           },
           "description": {
-            "en-US": "Lead Systems Analyst"
+            "en-US": "Lead Systems Analyst",
+            "pt-BR": "Analista de Sistemas Líder"
           },
           "period": {
             "begin": "2013-04",
             "end": "2014-07"
           },
           "notes": {
-            "en-US": "Led the maintenance of a project and portfolio management system by more than 400 users spread over a state in Brazil."
+            "en-US": "Led the maintenance of a project and portfolio management system used by more than 400 users spread over a state in Brazil.",
+            "pt-BR": "Liderou a manutenção de um sistema de gerenciamento de projetos e portfólios utilziado por mais de 400 usuários espalhados no Espírito Santo."
           },
           "highlights": {
             "en-US": [
               "Create reporting engine that was able to generate reports 5x faster than the previous solution",
               "Reduced the amount of duplicated logic by 30% by refactoring the codebase",
               "Introduced the use of Version Control System to the development team to ensure traceability"
+            ],
+            "pt-BR": [
+              "Criou um mecanismo de relatórios que foi capaz de gerar relatórios 5x mais rápido do que a solução anterior",
+              "Reduziu a quantidade de lógica duplicada em 30% ao refatorar a base de código",
+              "Introduziu o uso de Sistema de Controle de Versão para a equipe de desenvolvimento para garantir a rastreabilidade"
             ]
           },
           "stack": ["SQL Server", "C#", "ASP.NET Webforms", "jQuery"]
@@ -229,25 +282,33 @@
           "slug": "servinn",
           "website": "https://servinn.com.br",
           "institution": {
-            "en-US": "Servinn Webservice"
+            "en-US": "Servinn Webservice",
+            "pt-BR": "Servinn Webservice"
           },
           "location": {
-            "en-US": "Eunápolis, Brazil"
+            "en-US": "Eunápolis, Brazil",
+            "pt-BR": "Eunápolis, Brasil"
           },
           "description": {
-            "en-US": "ERP Systems Analyst and Developer"
+            "en-US": "ERP Systems Analyst and Developer",
+            "pt-BR": "Analista e Desenvolvedor de Sistemas ERP"
           },
           "period": {
             "begin": "2006-05",
             "end": "2013-04"
           },
           "notes": {
-            "en-US": "As part of a small team ensured that new and existing clients had been onboarded and developed new features for the ERP the company offered. In addition to that, maintained legacy systems written for MS-DOS."
+            "en-US": "As part of a small team ensured that new and existing clients had been onboarded and developed new features for the ERP the company offered. In addition to that, maintained legacy systems written for MS-DOS.",
+            "pt-BR": "Como parte de uma pequena equipe, garantiu que novos e existentes clientes fossem integrados e desenvolveu novos recursos para o ERP oferecido pela empresa. Além disso, manteve sistemas legados escritos para MS-DOS."
           },
           "highlights": {
             "en-US": [
               "Optimized performance by 10x on large listings in the Web-based ERP",
-              "Supervised the onboarding of dozens of clients to Servinn's products ensuring a smooth launch"
+              "Supervised the onboarding of dozens of clients to Servinn's products ensuring successful launches"
+            ],
+            "pt-BR": [
+              "Otimizou o desempenho em 10x em grandes listagens no ERP baseado na Web",
+              "Supervisionou a integração de dezenas de clientes aos produtos da Servinn, garantindo implantações bem sucedidas"
             ]
           },
           "stack": [
@@ -268,20 +329,24 @@
     {
       "slug": "education",
       "title": {
-        "en-US": "Education"
+        "en-US": "Education",
+        "pt-BR": "Educação"
       },
       "items": [
         {
           "slug": "faesa",
           "website": "https://www.faesa.br",
           "institution": {
-            "en-US": "FAESA - Faculdades Integradas Espíritossantanses"
+            "en-US": "FAESA - Faculdades Integradas Espíritossantanses",
+            "pt-BR": "FAESA - Faculdades Integradas Espíritossantanses"
           },
           "location": {
-            "en-US": "Vitória, Brazil"
+            "en-US": "Vitória, Brazil",
+            "pt-BR": "Vitória, Brasil"
           },
           "description": {
-            "en-US": "B. Sc. Information Systems"
+            "en-US": "B. Sc. Information Systems",
+            "pt-BR": "Bacharelado em Sistemas de Informação"
           },
           "period": {
             "begin": "2020-01",
@@ -292,13 +357,16 @@
           "slug": "baruch",
           "website": "https://www.baruch.cuny.edu",
           "institution": {
-            "en-US": "Baruch College/Zicklin School of Business, CUNY"
+            "en-US": "Baruch College/Zicklin School of Business, CUNY",
+            "pt-BR": "Baruch College/Zicklin School of Business, CUNY"
           },
           "location": {
-            "en-US": "New York City, USA"
+            "en-US": "New York City, USA",
+            "pt-BR": "Nova Iorque, EUA"
           },
           "description": {
-            "en-US": "Exchange Program - Computer Information Systems"
+            "en-US": "Exchange Program - Computer Information Systems",
+            "pt-BR": "Programa de Intercâmbio - Sistemas de Informação"
           },
           "period": {
             "begin": "2014-07",
