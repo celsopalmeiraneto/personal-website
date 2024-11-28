@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.0.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.10.0...v3.0.0) (2024-11-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* new resume page
+
+### Features
+
+* add hardcoded contact info ([e30fcea](https://github.com/celsopalmeiraneto/personal-website/commit/e30fcea45ddab3486d218a43d598b1c18c78e09c))
+* add pt-BR translations to resume ([cd73859](https://github.com/celsopalmeiraneto/personal-website/commit/cd73859c15bd5d0b1c50b9f918153f74510986a2))
+* new resume page ([e30fcea](https://github.com/celsopalmeiraneto/personal-website/commit/e30fcea45ddab3486d218a43d598b1c18c78e09c))
+* update copy of job descriptions ([2324ff2](https://github.com/celsopalmeiraneto/personal-website/commit/2324ff2da01c72c78c691327727e9238e9e35b85))
+* update uses page ([f9fa78a](https://github.com/celsopalmeiraneto/personal-website/commit/f9fa78a6e1ad9e6f2710e7f6f80bb38397b49415))
+
 ## [2.10.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.9.0...v2.10.0) (2024-10-27)
 
 
