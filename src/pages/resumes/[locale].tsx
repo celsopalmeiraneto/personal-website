@@ -39,7 +39,7 @@ const ResumePage = ({ locale, contactInfo }: ResumePageProps) => {
                 https://celsoneto.com.br
               </a>
             </div>
-            {contactInfo.phoneNumber && (
+            {contactInfo.emailAddress && (
               <div className={styles.contactItem}>
                 <EnvelopeIcon className={styles.icon} />
                 <a href={`mailto:${contactInfo.emailAddress}`}>{contactInfo.emailAddress}</a>
