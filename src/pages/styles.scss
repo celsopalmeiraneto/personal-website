@@ -1,74 +1,27 @@
-:root {
-  --default-font-size: 18px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+:root {
   --pantone-ultimate-gray: #939597;
   --pantone-cloud-dancer: #f0eee9;
   --pantone-pms-448: #474026;
   --pantone-moondrop-grapes: #1c1619;
   --pantone-viva-magenta: #bb2649;
+  --pantone-ultra-violet: #5f4b8b;
   --post-it-color: #fffaeb;
-
-  --viewport-extra-small: 576px;
-  --viewport-small: 576px;
-  --viewport-medium: 768px;
-  --viewport-large: 992px;
-  --viewport-extra-large: 1200px;
-  --viewport-extra-extra-large: 1400px;
 
   --background-color: white;
   --foreground-color: black;
   --border-color: var(--pantone-moondrop-grapes);
-
-  --margin-default: 10px;
-  --padding-default: 10px;
 }
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: var(--default-font-size);
-  font-weight: 400;
-  color: var(--foreground-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 1em 0;
-}
-
-h1 {
-  font-size: 2.2em;
-  font-weight: 200;
-}
-
-h2 {
-  font-size: 2em;
-  font-weight: 200;
-}
-
-h3 {
-  font-size: 1.8em;
-  font-weight: 200;
-}
-
-h4 {
-  font-size: 1.6em;
-  font-weight: 200;
-}
-
-h5 {
-  font-size: 1.4em;
-  font-weight: 200;
-}
-
-h6 {
-  font-size: 1.2em;
-  font-weight: 400;
-}
-
-p {
-  font-size: 1em;
+@layer components {
+  a:visited.visited {
+    color: var(--pantone-ultra-violet);
+  }
 }

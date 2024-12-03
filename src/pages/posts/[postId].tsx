@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import { useEffect, useRef } from "react";
 import { getPost, getPostsSummaries } from "../../services/posts";
 import { PostLocalizedSerializable } from "../../types";
 import styles from "./[postId].module.scss";
@@ -11,10 +10,8 @@ interface BlogPostProps {
 }
 
 const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
-  const refContent = useRef<HTMLDivElement>(null);
-
   return (
-    <div id={styles.container}>
+    <div className="container mx-auto flex flex-col gap-5 text-xl">
       <Head>
         <title>Celso's Notes: {post.title}</title>
         <script id={`schema-blog-post-${post.postId}`} type="application/ld+json">
@@ -33,8 +30,8 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.summary} />
       </Head>
-      <h1>&gt; {post.title}</h1>
-      <div id={styles.dateAndAuthor}>
+      <h1 className="text-center text-4xl font-thin my-2">&gt; {post.title}</h1>
+      <div>
         Written on&nbsp;
         {new Date(post.writtenAt).toLocaleDateString([post.locale], {
           dateStyle: "long",

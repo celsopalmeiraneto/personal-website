@@ -1,6 +1,5 @@
-import styles from "./index.module.scss";
-
 export interface PostItProps {
+  className?: string;
   id: string;
   title: string;
   tag: string;
@@ -11,20 +10,20 @@ export interface PostItProps {
   };
 }
 
-export const PostIt = ({ id, title, tag, text, cover }: PostItProps) => {
+export const PostIt = ({ id, title, tag, text, cover, className = "" }: PostItProps) => {
   return (
-    <div className={styles.container}>
-      <a href={`/posts/${id}`}>
-        <img className={styles.image} src={cover.src} alt={cover.alt} />
+    <div className={`${className} flex flex-col w-72 md:w-80`}>
+      <a className="visited" href={`/posts/${id}`}>
+        <img className="object-cover h-36 md:h-48 w-full" src={cover.src} alt={cover.alt} />
       </a>
-      <a href={`/posts/${id}`}>
-        <h6 className={styles.title}>{title}</h6>
+      <a className="visited" href={`/posts/${id}`}>
+        <p className="text-2xl">{title}</p>
       </a>
-      <a href={`/posts/${id}`}>
-        <span className={styles.tag}>{tag}</span>
+      <a className="visited" href={`/posts/${id}`}>
+        <p>{text}</p>
       </a>
-      <a href={`/posts/${id}`}>
-        <div className={styles.text}>{text}</div>
+      <a className="visited" href={`/posts/${id}`}>
+        <span className="text-sm">{tag}</span>
       </a>
     </div>
   );
