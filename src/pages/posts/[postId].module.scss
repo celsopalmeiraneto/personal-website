@@ -71,7 +71,11 @@
   }
 
   table {
-    @apply border-y border-black;
+    @apply border-y border-black w-max;
+    td,
+    th {
+      @apply px-2;
+    }
     tbody {
       tr {
         @apply odd:bg-gray-200;
