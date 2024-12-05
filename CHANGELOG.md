@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.1.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.0.0...v3.1.0) (2024-12-05)
+
+
+### Features
+
+* migrate to tailwinds ([9771b33](https://github.com/celsopalmeiraneto/personal-website/commit/9771b333f5744b8e8e80e4b456cecf596c79076f))
+
+
+### Bug Fixes
+
+* adjust typo on college name ([a3e4008](https://github.com/celsopalmeiraneto/personal-website/commit/a3e4008315355d0b0bc932302aa0cf61e4b8bf2e))
+* email is not showing up properly on resume ([eb141d2](https://github.com/celsopalmeiraneto/personal-website/commit/eb141d2696715753eb76681ebcf1c5f258811d94))
+* increase padding of tables on posts ([ce61e15](https://github.com/celsopalmeiraneto/personal-website/commit/ce61e15bf11a45745091343a82a7fe1525a28af6))
+* remove printing options from print version ([9acd4d6](https://github.com/celsopalmeiraneto/personal-website/commit/9acd4d690ae6a3572d5a5ccb06cfbf0c2190bc13))
+
 ## [3.0.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.10.0...v3.0.0) (2024-11-28)
 
 
