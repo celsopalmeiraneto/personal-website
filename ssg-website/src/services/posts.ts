@@ -25,7 +25,7 @@ marked.use({
   },
 });
 
-const POSTS_FOLDER_PATH = path.resolve("data", "posts");
+const POSTS_FOLDER_PATH = path.resolve("..", "data", "posts");
 const PUBLIC_FOLDER_PATH = path.resolve("public");
 
 const readPostsFolder = (): Promise<string[]> => {
