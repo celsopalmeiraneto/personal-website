@@ -1,22 +1,23 @@
 {
-  "name": "personal-website",
+  "name": "ssg-website",
   "version": "3.0.0",
-  "description": "Celso's Personal Website.",
+  "description": "Celso's personal website.",
   "scripts": {
+    "build": "next build",
+    "postbuild": "ts-node src/services/post-export.ts",
+    "dev": "next dev",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/celsopalmeiraneto/personal-website.git"
   },
-  "author": "Celso Palmeira Neto",
+  "author": "",
   "license": "Unlicense",
   "bugs": {
     "url": "https://github.com/celsopalmeiraneto/personal-website/issues"
   },
   "homepage": "https://github.com/celsopalmeiraneto/personal-website#readme",
-  "workspaces": [
-    "ssg-website"
-  ],
   "dependencies": {
     "@heroicons/react": "2.2.0",
     "highlight.js": "11.9.0",
