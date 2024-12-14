@@ -55,24 +55,52 @@ const Home = ({ posts }: Props) => {
       </Section>
       <Section className="flex justify-around py-3" title="Social">
         <a target="_blank" rel="author noopener" href="https://github.com/celsopalmeiraneto">
-          <img className="h-8" src="img/github.png" alt="GitHub's Logo" />
+          <img
+            alt="GitHub's Logo"
+            className="h-8"
+            fetchPriority="low"
+            height="32"
+            src="img/github.png"
+            width="32"
+          />
         </a>
         <a target="_blank" rel="author noopener" href="https://www.linkedin.com/in/celsopalmeira/">
-          <img className="h-8" src="img/linkedin.png" alt="LinkedIn's Logo" />
+          <img
+            alt="LinkedIn's Logo"
+            className="h-8"
+            fetchPriority="low"
+            height="32"
+            src="img/linkedin.png"
+            width="32"
+          />
         </a>
         <a
           target="_blank"
           rel="author noopener"
           href="https://stackoverflow.com/users/2455964/celsoneto07"
         >
-          <img className="h-8" src="img/stackoverflow.png" alt="StackOverflow's Logo" />
+          <img
+            alt="StackOverflow's Logo"
+            className="h-8"
+            fetchPriority="low"
+            height="32"
+            src="img/stackoverflow.png"
+            width="32"
+          />
         </a>
         <a
           target="_blank"
           rel="author noopener"
           href="https://www.goodreads.com/user/show/108800771-celso-palmeira"
         >
-          <img className="h-8" src="img/goodreads.svg" alt="GoodRead's Logo" />
+          <img
+            alt="GoodRead's Logo"
+            className="h-8"
+            fetchPriority="low"
+            height="32"
+            src="img/goodreads.svg"
+            width="150"
+          />
         </a>
       </Section>
     </div>

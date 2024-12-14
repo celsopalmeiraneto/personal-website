@@ -14,7 +14,13 @@ export const PostIt = ({ id, title, tag, text, cover, className = "" }: PostItPr
   return (
     <div className={`${className} flex flex-col w-72 md:w-80`}>
       <a className="visited" href={`/posts/${id}`}>
-        <img className="object-cover h-36 md:h-48 w-full" src={cover.src} alt={cover.alt} />
+        <img
+          className="object-cover h-36 md:h-48 w-full"
+          width="288"
+          height="144"
+          src={cover.src}
+          alt={cover.alt}
+        />
       </a>
       <a className="visited" href={`/posts/${id}`}>
         <p className="text-2xl">{title}</p>
