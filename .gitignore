@@ -7,9 +7,11 @@ old
 
 
 node_modules
-.next
-out
 
 .env
 
 data/private/
+
+dist/
+out/
+build/

@@ -57,7 +57,7 @@ const convertFileNameToPostKey = (name: string): LocalizedPostKey => {
 
 const createSymlinkForAssetFolder = async (relativeAssetsPath: string): Promise<string> => {
   const assetsPath = path.resolve(POSTS_FOLDER_PATH, relativeAssetsPath.trim());
-  const publicAssetsPath = path.resolve(PUBLIC_FOLDER_PATH, relativeAssetsPath.trim());
+  const publicAssetsPath = path.resolve(PUBLIC_FOLDER_PATH, "posts", relativeAssetsPath.trim());
 
   try {
     await fs.readlink(publicAssetsPath);

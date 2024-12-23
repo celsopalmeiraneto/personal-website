@@ -1,4 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "cSpell.words": ["pantone"]
+  "cSpell.words": ["pantone"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
