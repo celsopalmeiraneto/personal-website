@@ -4,8 +4,9 @@
   "description": "Celso's personal website.",
   "scripts": {
     "build": "next build",
-    "postbuild": "ts-node src/services/post-export.ts",
+    "create-post": "ts-node src/scripts/create-post.ts",
     "dev": "next dev",
+    "postbuild": "ts-node src/scripts/generate-rss.ts",
     "start": "next start"
   },
   "repository": {

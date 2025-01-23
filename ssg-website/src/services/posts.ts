@@ -11,6 +11,8 @@ import {
   PostLocalizedSerializable,
   AssetMetadata,
 } from "../types";
+import { randomFill, randomUUID } from "node:crypto";
+import { promisify } from "node:util";
 
 marked.use({
   renderer: {
@@ -75,6 +77,49 @@ const readCoverMetadata = async (assetsPath: string): Promise<AssetMetadata | un
   } catch {
     return undefined;
   }
+};
+
+const randomFillPromisified = promisify(randomFill);
+
+const randomId = async () => {
+  const temporaryStorage = new Uint8Array(64);
+  await randomFillPromisified(temporaryStorage);
+  const randomString = Buffer.from(temporaryStorage).toString("base64");
+  return randomString.replace(/[^a-zA-Z0-9]/g, "").slice(0, 5);
+};
+
+export const createNewPost = async (slug: string) => {
+  const postId = await randomId();
+  const newPost: PostLocalized = {
+    availableLocales: [SupportedLocales.AmericanEnglish],
+    locale: SupportedLocales.AmericanEnglish,
+    postId,
+    postTags: [],
+    slug,
+    summary: "",
+    tags: [],
+    title: slug,
+    writtenAt: new Date(),
+  };
+
+  const newPostFileName = `${newPost.writtenAt.toISOString()}#localizedPost#${newPost.postId}#${
+    newPost.locale
+  }#${newPost.slug}.json`;
+
+  await fs.writeFile(
+    path.resolve(POSTS_FOLDER_PATH, newPostFileName),
+    JSON.stringify(newPost, null, 2)
+  );
+
+  await fs.writeFile(
+    path.resolve(POSTS_FOLDER_PATH, `${newPost.slug}.md`),
+    `# ${newPost.title}\n\n${newPost.summary}`
+  );
+
+  return {
+    fileName: newPostFileName,
+    post: newPost,
+  };
 };
 
 const getPostByKey = async (key: LocalizedPostKey): Promise<PostLocalized> => {

@@ -1,4 +1,4 @@
-import { generateAndWriteFeed } from "./rss";
+import { generateAndWriteFeed } from "../services/rss";
 
 (async () => {
   console.log("Generating RSS Feed...");

@@ -2,8 +2,7 @@
   "name": "personal-website",
   "version": "3.0.0",
   "description": "Celso's Personal Website.",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/celsopalmeiraneto/personal-website.git"
@@ -15,7 +14,8 @@
   },
   "homepage": "https://github.com/celsopalmeiraneto/personal-website#readme",
   "workspaces": [
-    "ssg-website"
+    "ssg-website",
+    "image-loader"
   ],
   "dependencies": {
     "@heroicons/react": "2.2.0",
