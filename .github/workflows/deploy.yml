@@ -22,7 +22,12 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run build
-      - run: aws s3 sync ./out "s3://$WEBSITE_BUCKET"
-      - run: aws s3 cp --content-type "application/rss+xml" ./out/rss/main.rss "s3://$WEBSITE_BUCKET/rss/main.rss"
-      - run: aws cloudfront create-invalidation --distribution-id $WEBSITE_DISTRIBUTION --paths '/*'
+      - name: Build SSG website
+        working-directory: ./ssg-website
+        run: npm run build
+      - name: Deploy to S3 and Invalidate Cache
+        working-directory: ./ssg-website
+        run: |
+          aws s3 sync ./out "s3://$WEBSITE_BUCKET"
+          aws s3 cp --content-type "application/rss+xml" ./out/rss/main.rss "s3://$WEBSITE_BUCKET/rss/main.rss"
+          aws cloudfront create-invalidation --distribution-id $WEBSITE_DISTRIBUTION --paths '/*'
