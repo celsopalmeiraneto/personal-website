@@ -20,7 +20,7 @@ const ResumePage = ({ locale, contactInfo }: ResumePageProps) => {
   return (
     <div className="container mx-auto">
       <Head>
-        <title>Celso Palmeira Neto - {translate({ key: "resume.resume" })}</title>
+        <title>{`Celso Palmeira Neto's HP - ${translate({ key: "resume.resume" })}`}</title>
       </Head>
       <h1 className="text-3xl font-thin print:hidden">{translate({ key: "resume.resume" })}</h1>
       <div className="flex gap-3 print:hidden mb-10">

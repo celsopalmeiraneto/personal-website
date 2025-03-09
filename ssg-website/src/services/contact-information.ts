@@ -6,7 +6,7 @@ export interface ContactInformation {
   phoneNumber: string;
 }
 
-const CONTACT_INFO_FILE = path.resolve("data", "private", "contact-information.json");
+const CONTACT_INFO_FILE = path.resolve("..", "data", "private", "contact-information.json");
 
 export const getContactInformation = async (): Promise<ContactInformation> => {
   try {

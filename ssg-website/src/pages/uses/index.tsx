@@ -1,5 +1,10 @@
+import Head from "next/head";
+
 const UsesPage = () => (
   <div className="container mx-auto flex flex-col gap-3">
+    <Head>
+      <title>Celso Palmeira Neto's HP - Uses</title>
+    </Head>
     <h1 className="text-3xl font-thin">Uses</h1>
     <p>Here you'll find the tools I use on my day-to-day life.</p>
     <section className="flex flex-col gap-3">

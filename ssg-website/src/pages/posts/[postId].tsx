@@ -13,7 +13,7 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
   return (
     <div className="container mx-auto flex flex-col gap-5 text-xl">
       <Head>
-        <title>Celso's Notes: {post.title}</title>
+        <title>{`Celso's Notes - ${post.title}`}</title>
         <script id={`schema-blog-post-${post.postId}`} type="application/ld+json">
           {JSON.stringify({
             "@id": post.postId,
