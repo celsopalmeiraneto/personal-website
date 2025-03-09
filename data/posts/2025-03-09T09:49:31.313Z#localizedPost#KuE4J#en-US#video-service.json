@@ -1,0 +1,12 @@
+{
+  "assetsPath": "video-service",
+  "availableLocales": ["en-US"],
+  "locale": "en-US",
+  "postId": "KuE4J",
+  "postTags": [],
+  "slug": "video-service",
+  "summary": "Integrating a video service in a SaaS application.",
+  "tags": ["Software Engineering", "System Design"],
+  "title": "Serving Videos in a SaaS Application",
+  "writtenAt": "2025-03-09T09:49:31.313Z"
+}
