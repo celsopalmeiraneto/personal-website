@@ -1,5 +1,27 @@
 # Changelog
 
+## [3.1.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.0.0...v3.1.0) (2025-03-09)
+
+
+### Features
+
+* create script to automate post creation ([beacc58](https://github.com/celsopalmeiraneto/personal-website/commit/beacc586d91985912fc85103c45df7cceb0ca9fa))
+* migrate to tailwinds ([9771b33](https://github.com/celsopalmeiraneto/personal-website/commit/9771b333f5744b8e8e80e4b456cecf596c79076f))
+* support custom filenames for cover images ([f9ebc6b](https://github.com/celsopalmeiraneto/personal-website/commit/f9ebc6b90d9d0cc2027d516d62ab9c63a63a0d74))
+* uses subfolder in public folder for symlink ([42d2e72](https://github.com/celsopalmeiraneto/personal-website/commit/42d2e72e137584284589105ee3fb3964dd132db0))
+* write post about video service ([4ab7a50](https://github.com/celsopalmeiraneto/personal-website/commit/4ab7a50c94a216eb7758247c61225d265d81d1b9))
+
+
+### Bug Fixes
+
+* adjust typo on college name ([a3e4008](https://github.com/celsopalmeiraneto/personal-website/commit/a3e4008315355d0b0bc932302aa0cf61e4b8bf2e))
+* email is not showing up properly on resume ([eb141d2](https://github.com/celsopalmeiraneto/personal-website/commit/eb141d2696715753eb76681ebcf1c5f258811d94))
+* fix CD process ([d455280](https://github.com/celsopalmeiraneto/personal-website/commit/d4552808d69d3c61e1288de62b7409a94d8b8b65))
+* increase padding of tables on posts ([ce61e15](https://github.com/celsopalmeiraneto/personal-website/commit/ce61e15bf11a45745091343a82a7fe1525a28af6))
+* remove printing options from print version ([9acd4d6](https://github.com/celsopalmeiraneto/personal-website/commit/9acd4d690ae6a3572d5a5ccb06cfbf0c2190bc13))
+* sets height and width of images to reduce impacts of layout shift ([f3bac59](https://github.com/celsopalmeiraneto/personal-website/commit/f3bac59504d37f6da55195cbd2a9e204822b9f40))
+* stop showing comment on titles ([bd4b106](https://github.com/celsopalmeiraneto/personal-website/commit/bd4b106c9e681fb68b929c454bfd152196e343f0))
+
 ## [3.0.0](https://github.com/celsopalmeiraneto/personal-website/compare/v2.10.0...v3.0.0) (2024-11-28)
 
 
