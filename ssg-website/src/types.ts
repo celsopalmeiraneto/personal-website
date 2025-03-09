@@ -12,6 +12,7 @@ export const isSupportedLocales = (value: string): value is SupportedLocales => 
 export interface AssetMetadata {
   alt: string;
   sub: string;
+  filename: string;
 }
 
 export interface PostLocalized {

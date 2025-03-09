@@ -37,7 +37,7 @@ const Home = ({ posts }: Props) => {
               post.coverMetadata && post.assetsPath
                 ? {
                     alt: post.coverMetadata.alt,
-                    src: `posts/${post.assetsPath}/cover.jpg`,
+                    src: `posts/${post.assetsPath}/${post.coverMetadata.filename}`,
                   }
                 : DEFAULT_POSTIT_COVER
             }
