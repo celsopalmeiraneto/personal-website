@@ -11,18 +11,34 @@ import {
   PostLocalizedSerializable,
   AssetMetadata,
 } from "../types";
-import { randomFill, randomUUID } from "node:crypto";
+import { randomFill } from "node:crypto";
 import { promisify } from "node:util";
+
+type CodeRenderer = (code: string, language: string) => string;
+
+const renderWithHljs: CodeRenderer = (code: string, language: string): string => {
+  const languageArray = language ? [language] : [];
+
+  const highlightedContent = highlight.highlightAuto(code, languageArray);
+
+  return `<pre><code class="hljs">${
+    highlightedContent.illegal ? code : highlightedContent.value
+  }</code></pre>`;
+};
+
+const renderWithMermaid: CodeRenderer = (code: string): string => {
+  return `<pre class="mermaid">${code}</pre>`;
+};
 
 marked.use({
   renderer: {
     code(code, language) {
-      const languageArray = language ? [language] : [];
-      const highlightedContent = highlight.highlightAuto(code, languageArray);
-
-      return `<pre><code class="hljs">${
-        highlightedContent.illegal ? code : highlightedContent.value
-      }</code></pre>`;
+      switch (language) {
+        case "mermaid":
+          return renderWithMermaid(code, "");
+        default:
+          return renderWithHljs(code, language ?? "");
+      }
     },
   },
 });

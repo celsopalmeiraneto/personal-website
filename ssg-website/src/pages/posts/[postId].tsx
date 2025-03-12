@@ -3,6 +3,8 @@ import Head from "next/head";
 import { getPost, getPostsSummaries } from "../../services/posts";
 import { PostLocalizedSerializable } from "../../types";
 import styles from "./[postId].module.scss";
+import Script from "next/script";
+import mermaid from "mermaid";
 
 interface BlogPostProps {
   post: PostLocalizedSerializable;
@@ -37,9 +39,22 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
           dateStyle: "long",
         })}
       </div>
-      <div id={styles.postContent} dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
+      <div
+        id={styles.postContent}
+        dangerouslySetInnerHTML={{ __html: htmlContent }}
+        suppressHydrationWarning={true}
+      ></div>
       <hr />
       <div>Tags: {post.tags.join(", ")}</div>
+      <Script
+        src="/external-scripts/mermaid.min.js"
+        strategy="lazyOnload"
+        onReady={() => {
+          mermaid.initialize({
+            startOnLoad: true,
+          });
+        }}
+      />
     </div>
   );
 };
