@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.2.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.1.0...v3.2.0) (2025-03-25)
+
+
+### Features
+
+* add blog post content ([77ef370](https://github.com/celsopalmeiraneto/personal-website/commit/77ef370a39e9091423efab01fce38662099ec572))
+* add cover image to blog post ([b75baf4](https://github.com/celsopalmeiraneto/personal-website/commit/b75baf42a1ecdba81a009267bc8e63f58e3c977e))
+* add cover image to post ([0fb52a2](https://github.com/celsopalmeiraneto/personal-website/commit/0fb52a265fce0487c79e7f5f9fe012a5ef1214d7))
+* reduce font size of written on copy ([1e70aa8](https://github.com/celsopalmeiraneto/personal-website/commit/1e70aa815ee0db6a362640db821d9f5b9a6d7df2))
+* remove google analytics from website ([e174425](https://github.com/celsopalmeiraneto/personal-website/commit/e174425b16cff7511b8fc0e015dc0c8fcf3af6b0))
+
 ## [3.1.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.0.0...v3.1.0) (2025-03-09)
 
 
