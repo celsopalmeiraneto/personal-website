@@ -31,11 +31,10 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
         <meta property="og:description" content={post.summary} />
       </Head>
       <h1 className="text-center text-4xl font-thin my-2">&gt; {post.title}</h1>
-      <div>
-        Written on&nbsp;
-        {new Date(post.writtenAt).toLocaleDateString([post.locale], {
+      <div className="text-base">
+        {`Written on ${new Date(post.writtenAt).toLocaleDateString([post.locale], {
           dateStyle: "long",
-        })}
+        })}`}
       </div>
       <div id={styles.postContent} dangerouslySetInnerHTML={{ __html: htmlContent }}></div>
       <hr />
