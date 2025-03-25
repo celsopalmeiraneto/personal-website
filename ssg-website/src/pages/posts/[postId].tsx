@@ -30,6 +30,13 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.summary} />
       </Head>
+      {post.coverMetadata && (
+        <img
+          src={`${post.assetsPath}/${post.coverMetadata.filename}`}
+          alt={post.coverMetadata.alt}
+          className="h-28 object-cover object-center opacity-85"
+        />
+      )}
       <h1 className="text-center text-4xl font-thin my-2">&gt; {post.title}</h1>
       <div className="text-base">
         {`Written on ${new Date(post.writtenAt).toLocaleDateString([post.locale], {
