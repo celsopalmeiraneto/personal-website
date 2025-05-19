@@ -1,10 +1,10 @@
 import data from "./resume.json";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { SupportedLocales } from "../../types";
-import { DevicePhoneMobileIcon, EnvelopeIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
 import { ContactInformation, getContactInformation } from "../../services/contact-information";
 import { useTranslations } from "../../i18n/client";
 import Head from "next/head";
+import { DevicePhoneMobileIcon, EnvelopeIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
 
 interface ResumePageProps {
   locale: SupportedLocales;
