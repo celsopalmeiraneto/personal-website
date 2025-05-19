@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.3.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.2.0...v3.3.0) (2025-05-19)
+
+
+### Features
+
+* set mobietrain employment end ([4334668](https://github.com/celsopalmeiraneto/personal-website/commit/433466810c19ad7cfb56612c743aa28428c5f20f))
+
+
+### Bug Fixes
+
+* readd imports fro monorepo ([3a67b70](https://github.com/celsopalmeiraneto/personal-website/commit/3a67b70cfc7ee5b36bd58316ff893ed95689f42d))
+
 ## [3.2.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.1.0...v3.2.0) (2025-03-25)
 
 
