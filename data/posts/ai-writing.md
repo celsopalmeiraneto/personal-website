@@ -4,13 +4,13 @@ This is how I prefer to see LLMs and AI at the end of the day: tools that help m
 
 ## Problem
 
-Often, when I use AI, I end up not learning as much as I could. While I get things done I don't accrue the bits of knowledge that make me improve.
+Often, when I use AI, I end up not learning as much as I could. While I get things done, I don't accrue the bits of knowledge that make me improve.
 
-This feeling can be somewhat validated by a [recent study by Nataliya Kosmyna et al](https://arxiv.org/abs/2506.08872)., where people tasked to write an essay using ChatGPT displayed weaker brain connectivity in comparison with people only using their brains or brains plus Google.
+This feeling can be validated by a [recent study by Nataliya Kosmyna et al](https://arxiv.org/abs/2506.08872)., where people tasked to write an essay using ChatGPT displayed weaker brain connectivity in comparison with people only using their brains or brains plus Google.
 
 I'm far from a specialist in the topic of learning, but I can tell you, doing something again and again, breaking through obstacles and having those "eureka" moments are essential parts of the learning process, and when we prompt ChatGPT, get the results back, tweak here and there, and that's it, we skip parts of this process.
 
-Back to the weight lifting example, we end up using the AI as an air wedge. There's nothing wrong with air wedges, but those things are for the super heavy stuff we can't handle by ourselves.
+Back to the weightlifting example, we end up using the AI as an air wedge. There's nothing wrong with air wedges, but those things are for the super heavy stuff we can't handle by ourselves.
 
 The other day, for instance, I was asked to write a recommendation letter for a friend of mine. Had I just explained to ChatGPT which type of letter, described my friend, set the tone, I would, for sure, have the recommendation letter as output. But what about me getting better at writing?
 
@@ -41,4 +41,12 @@ From that point on, I get the feedback and apply into the text myself. This proc
 
 Note that LLMs can't help themselves and always sneak a bit of a rewrite here and there, I would then hold the urge to copy and paste whatever it suggested into my letter.
 
-Another benefit is that people on the receiving end of those letters, CVs, and even code, say they are starting to somewhat identify LLM generated content. By following those steps, we make sure we also stand out.
+Another benefit is that people on the receiving end of those letters, CVs, and even code, say they are starting to identify LLM generated content. By following those steps, we make sure we also stand out.
+
+## Takeaway
+
+There's much potential for growth that we are leaving on the table by not leveraging the new tools that are available for us.
+
+AI is changing the way many people solve problems. It's helping people do things they never knew they could, however, choosing not to learn about topics of our interest is a mistake.
+
+By using it to elevate our knowledge, we grow, and we ensure the output contains the layers of learning we accrued from interacting with the world.
