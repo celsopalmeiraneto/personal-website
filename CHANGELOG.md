@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.4.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.3.0...v3.4.0) (2025-12-30)
+
+
+### Features
+
+* add cover image and final touches to ai writing post ([56be403](https://github.com/celsopalmeiraneto/personal-website/commit/56be403bf5e26e521da07c3ab8abb78cdc0ed14e))
+* writes ai writing blog post ([d2c3fc0](https://github.com/celsopalmeiraneto/personal-website/commit/d2c3fc05e731730a69c930cd36291730949adc27))
+
+
+### Bug Fixes
+
+* fixes type on bs start date ([ce588b1](https://github.com/celsopalmeiraneto/personal-website/commit/ce588b1eba4d925238efa8e348d42c8a6347a4f5))
+
 ## [3.3.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.2.0...v3.3.0) (2025-05-19)
 
 
