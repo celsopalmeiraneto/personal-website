@@ -58,7 +58,7 @@ const Home = ({ posts }: Props) => {
           <picture>
             <source
               type="image/webp"
-              srcSet="img/github-dark.webp"
+              srcSet="img/github-white.webp"
               media="(prefers-color-scheme: dark)"
             />
             <source type="image/webp" srcSet="img/github.webp" />
@@ -77,22 +77,7 @@ const Home = ({ posts }: Props) => {
             className="h-8"
             fetchPriority="low"
             height="32"
-            src="img/linkedin.png"
-            width="32"
-          />
-        </a>
-        <a
-          target="_blank"
-          rel="author noopener"
-          href="https://stackoverflow.com/users/2455964/celsoneto07"
-        >
-          <img
-            alt="StackOverflow's Logo"
-            className="h-8"
-            fetchPriority="low"
-            height="32"
-            src="img/stackoverflow.png"
-            width="32"
+            src="img/linkedin.webp"
           />
         </a>
         <a
@@ -102,11 +87,10 @@ const Home = ({ posts }: Props) => {
         >
           <img
             alt="GoodRead's Logo"
-            className="h-8"
+            className="h-8 dark:invert"
             fetchPriority="low"
             height="32"
-            src="img/goodreads.svg"
-            width="150"
+            src="img/goodreads.webp"
           />
         </a>
       </Section>
