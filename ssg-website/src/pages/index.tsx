@@ -61,7 +61,7 @@ const Home = ({ posts }: Props) => {
           <picture>
             <source
               type="image/webp"
-              srcSet="img/github-dark.webp"
+              srcSet="img/github-white.webp"
               media="(prefers-color-scheme: dark)"
             />
             <source type="image/webp" srcSet="img/github.webp" />
