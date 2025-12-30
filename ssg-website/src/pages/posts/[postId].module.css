@@ -5,10 +5,6 @@
     @apply underline;
   }
 
-  a:visited {
-    color: var(--pantone-ultra-violet);
-  }
-
   p {
     @apply leading-relaxed md:leading-normal;
   }
@@ -79,6 +75,18 @@
     tbody {
       tr {
         @apply odd:bg-gray-200;
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    table {
+      @apply border-white;
+
+      tbody {
+        tr {
+          @apply odd:bg-gray-800;
+        }
       }
     }
   }

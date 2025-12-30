@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         "pantone-viva-magenta": "#bb2649",
+        "pantone-ultra-violet": "#5f4b8b",
       },
     },
   },

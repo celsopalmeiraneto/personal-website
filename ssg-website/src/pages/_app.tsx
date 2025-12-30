@@ -6,12 +6,7 @@ import "./styles.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <div
-      className="grid h-screen"
-      style={{
-        gridTemplateRows: "auto 1fr auto",
-      }}
-    >
+    <div className="grid min-h-screen text-black dark:text-white dark:bg-gray-950 bg-white grid-rows-[auto_1fr_auto]">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -27,7 +22,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <title>Celso Palmeira Neto's HP</title>
       </Head>
-      <header className="p-2 md:p-3 h-20 md:h-24 text-white bg-pantone-viva-magenta flex items-center print:hidden">
+      <header className="p-2 md:p-3 h-20 md:h-24 text-white bg-pantone-viva-magenta dark:bg-pantone-ultra-violet flex items-center print:hidden">
         <p className="text-xl md:text-2xl m-0">
           <a href="/">
             Hey there! I am <span className="text-4xl md:text-5xl font-thin">Celso Neto</span>
@@ -37,7 +32,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <div className="p-3 md:p-4 print:p-0">
         <Component {...pageProps} />
       </div>
-      <footer className="p-2 md:p-3 h-20 text-white bg-pantone-viva-magenta flex items-center print:hidden">
+      <footer className="p-2 md:p-3 h-20 text-white bg-pantone-viva-magenta dark:bg-pantone-ultra-violet flex items-center print:hidden">
         With love from Celso
       </footer>
     </div>
