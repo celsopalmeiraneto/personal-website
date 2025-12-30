@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { getPost, getPostsSummaries } from "../../services/posts";
 import { PostLocalizedSerializable } from "../../types";
-import styles from "./[postId].module.scss";
+import styles from "./[postId].module.css";
 
 interface BlogPostProps {
   post: PostLocalizedSerializable;

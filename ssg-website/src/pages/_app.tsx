@@ -2,7 +2,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import "highlight.js/styles/github-dark-dimmed.css";
-import "./styles.scss";
+import "./styles.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
