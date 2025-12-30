@@ -53,16 +53,23 @@ const Home = ({ posts }: Props) => {
         <a href="/resumes/en-US">Résumé</a>
         <a href="/uses">Uses</a>
       </Section>
-      <Section className="flex justify-around py-3" title="Social">
+      <Section className="flex justify-around py-3" title="Find me on">
         <a target="_blank" rel="author noopener" href="https://github.com/celsopalmeiraneto">
-          <img
-            alt="GitHub's Logo"
-            className="h-8"
-            fetchPriority="low"
-            height="32"
-            src="img/github.png"
-            width="32"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="img/github-dark.webp"
+              media="(prefers-color-scheme: dark)"
+            />
+            <source type="image/webp" srcSet="img/github.webp" />
+            <img
+              alt="GitHub's Logo"
+              className="h-8"
+              fetchPriority="low"
+              height="32"
+              src="img/github.webp"
+            />
+          </picture>
         </a>
         <a target="_blank" rel="author noopener" href="https://www.linkedin.com/in/celsopalmeira/">
           <img
