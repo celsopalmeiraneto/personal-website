@@ -8,6 +8,52 @@
       },
       "items": [
         {
+          "slug": "shares",
+          "website": "https://www.shares.io/",
+          "institution": {
+            "en-US": "Shares Poland Support Services Sp. z o.o.",
+            "pt-BR": "Shares Poland Support Services Sp. z o.o."
+          },
+          "location": {
+            "en-US": "Braga, Portugal",
+            "pt-BR": "Braga, Portugal"
+          },
+          "description": {
+            "en-US": "Software Engineer",
+            "pt-BR": "Engenheiro de Software"
+          },
+          "period": {
+            "begin": "2025-06",
+            "end": null
+          },
+          "notes": {
+            "en-US": "Worked on the Staff Engineering team improving the developer experience and coding infrastructure for dozens of engineers.",
+            "pt-BR": "Trabalhou na equipe de Staff Engineering melhorando a experiência do desenvolvedor e a infraestrutura de código para dezenas de engenheiros."
+          },
+          "highlights": {
+            "en-US": [
+              "Eliminated critical CI/CD pipeline failures, reclaiming thousands of CPU hours per month and significantly reducing infrastructure waste",
+              "Refactored integration test suite common paths to cut end-to-end pipeline latency by 10%, accelerating feedback loops for engineering teams"
+            ],
+            "pt-BR": [
+              "Eliminou falhas críticas no pipeline de CI/CD, recuperando milhares de horas de CPU por mês e reduzindo significativamente o desperdício de infraestrutura",
+              "Refatorou a lógica comum do conjunto de testes de integração para reduzir a latência do pipeline de ponta a ponta em 10%, acelerando os ciclos de feedback para as equipes de engenharia"
+            ]
+          },
+          "stack": [
+            "AWS",
+            "Docker",
+            "GitHub Actions",
+            "Grafana",
+            "NodeJS",
+            "OpenSearch",
+            "oxlint",
+            "Rust",
+            "Terraform",
+            "TypeScript"
+          ]
+        },
+        {
           "slug": "mobietrain",
           "website": "https://www.mobietrain.com",
           "institution": {
