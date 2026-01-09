@@ -1,13 +1,12 @@
 As any parent knows, kids get sick, especially when they are of a young age, and sometimes it's troublesome to give them medicine.
-I, the adult in the room, usually say: "Come on... It's not that bad" and proceed to give myself a small dose or taste it.
+I, the adult in the room, usually say: "Come on... It's not that bad" and proceed to give myself a small dose.
 
 This time around it was **that bad**.
 
-The medication was based on Atropine Sulfate, which was prescribed to my child before an eye exam. Half an hour after "experimenting"
-it, my eyes felt funny. On the following day I realized I made a mistake; I could only see things further than a meter,
-and my eyes were hypersensitive to light.
+Half an hour after one drop of Atropine Sulfate in each eye I was having difficulties focusing.
+On the following day, I could only see things further than a meter and my eyes were hypersensitive to light.
 
-## Failures of Font Scaling
+## Font Scaling
 
 ### iOS
 
@@ -16,12 +15,12 @@ Since I could still see and read from the distance, I started changing my access
 Finding the right settings was challenging. My wife was not home, and at that moment,
 I wondered if Siri could have helped me a bit more with such a task.
 
-Using Apple's apps like Message or Mail was easy. All content was responsive, making it possible to read.
+Using apps like Messages, Mail or WhatsApp was manageable. All content was responsive, making it possible to read.
 
-The experience with other apps was mixed. My own (grain of salt: I don't work on the mobile team) Shares app
+The experience with other apps was mixed. My own (note: I don't work on the mobile team) Shares app
 worked well, most text was responsive to my system settings, on the other hand, apps like the BPI or
 Bankinter (two banks that operate in Portugal) were impossible. To make things more difficult, some apps
-that use MFA in the app (i.e. to log in on the browser) were only usable with iOS' zoom feature.
+that use MFA in the app (i.e. logging into the browser) were only usable with iOS' zoom feature.
 
 ### Browsers
 
@@ -36,14 +35,16 @@ It shows that even applications with dense content can be highly accessible.
 
 ### Coding
 
-Regarding code, using VSCode and Terminal was not a problem. Customizing fonts, font sizes and
-themes are features that are as old as Notepad++ and have always been there.
+Using VSCode and Terminal was mostly fine. Reading and writing code, using the context menus, autocompletion, all AI
+features were readable.
+
+Running heavy processes that print in the terminal tens of lines per second, was a problem. The large fonts make text go
+"over the fold" too quickly, which highlighted the importance of coloring logs based on severity.
 
 ## The Necessity of Dark Mode
 
-This feature made so much difference. Even though, many times,
-when colleagues said that dark mode was an accessibility need, one side of me always thought that
-people were justifying their preferences.
+This feature made so much difference. It made me regret thinking that former colleagues were using accessibility as an
+pretext to implement dark mode.
 
 I was wrong.
 
@@ -52,11 +53,11 @@ I could use the Dark Reader extension to force dark mode, on the iOS apps I had 
 and I could do that only for a couple of seconds until I had to look somewhere else.
 
 Thankfully, even when being forced to look at those small fonts and white backgrounds, I most of the time
-knew where to look at.
+knew where to look.
 
 ## Familiarity and Physical Safety
 
-Familiarity helped me a lot, in both real and virtual worlds.
+Familiarity helped me a lot, in both real and digital worlds.
 
 Knowing where to find some phone settings, or where to click to do something helped me so much. Even though I
 could not clearly read what was written on that orange button with white text, I knew I had to click there.
@@ -65,8 +66,11 @@ Our brain is a powerful machine, and those moments made me realize that we don't
 
 ## Takeaway
 
-We as developers have a serious influence on how our users are impacted by our work. Visual impairments can happen to all of us, temporarily or not, and with the tooling we have for web and app development, caring for basic accessibility features won't derail the delivery of good software.
+We as developers have a serious influence on how our users are impacted by our work and we should remember that visual impairments can happen to all of us, temporarily or not.
 
-Familiarity is important and we should not be moving things all the time in our apps. Even small, poorly thought changes can cause serious issues. Imagine if we switch the colors or positions of the "Cancel" and "Confirm" in a highly used screen.
+Caring for basic accessibility features won't derail the delivery of good software and the tooling we have for web and app development
+ensure we all can identify and fix issues quickly.
 
-And last, let's be curious, not reactive. Next time around, Celso, don't brush off someone's points, that's hubris and ignorance.
+Familiarity is important and we should not be moving things all the time in our apps. Even small, poorly thought changes can cause serious issues. Imagine if we switch the colors or positions of the "Cancel" and "Confirm" in a highly used part of an app.
+
+And last, let's be curious, not reactive. Next time around, Celso, don't brush off someone's points: that's hubris and ignorance.
