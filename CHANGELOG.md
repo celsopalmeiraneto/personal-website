@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.4.1](https://github.com/celsopalmeiraneto/personal-website/compare/v3.4.0...v3.4.1) (2026-01-10)
+
+
+### Bug Fixes
+
+* improve accessiblity of visited links ([867f620](https://github.com/celsopalmeiraneto/personal-website/commit/867f6205dc7814fc1e75178233a77bdc0cad5bfb))
+
 ## [3.4.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.3.0...v3.4.0) (2026-01-10)
 
 
