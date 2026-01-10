@@ -1,5 +1,21 @@
 # Changelog
 
+## [3.4.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.3.0...v3.4.0) (2026-01-10)
+
+
+### Features
+
+* add cover image and final touches to ai writing post ([56be403](https://github.com/celsopalmeiraneto/personal-website/commit/56be403bf5e26e521da07c3ab8abb78cdc0ed14e))
+* add shares to resume ([337ea97](https://github.com/celsopalmeiraneto/personal-website/commit/337ea9746c7ba4dfa138841c57b53d183c30722f))
+* implement darkmode and post about accessibility ([1483ea9](https://github.com/celsopalmeiraneto/personal-website/commit/1483ea94bdb1812b73cc26094b30ac542d1603f6))
+* sets dark colors for backgrounds and fonts ([1483ea9](https://github.com/celsopalmeiraneto/personal-website/commit/1483ea94bdb1812b73cc26094b30ac542d1603f6))
+* writes ai writing blog post ([d2c3fc0](https://github.com/celsopalmeiraneto/personal-website/commit/d2c3fc05e731730a69c930cd36291730949adc27))
+
+
+### Bug Fixes
+
+* fixes type on bs start date ([ce588b1](https://github.com/celsopalmeiraneto/personal-website/commit/ce588b1eba4d925238efa8e348d42c8a6347a4f5))
+
 ## [3.3.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.2.0...v3.3.0) (2025-05-19)
 
 
