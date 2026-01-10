@@ -24,4 +24,10 @@ body {
   a:visited.visited {
     color: var(--pantone-ultra-violet);
   }
+
+  @media (prefers-color-scheme: dark) {
+    a:visited.visited {
+      color: #b3adcc;
+    }
+  }
 }
