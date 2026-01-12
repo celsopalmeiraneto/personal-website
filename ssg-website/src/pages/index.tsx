@@ -5,7 +5,10 @@ import { getPostsSummaries } from "../services/posts";
 import { PostLocalizedSerializable, SupportedLocales } from "../types";
 
 interface Props {
-  posts: PostLocalizedSerializable[];
+  posts: Pick<
+    PostLocalizedSerializable,
+    "slug" | "title" | "tags" | "summary" | "coverMetadata" | "assetsPath"
+  >[];
 }
 
 const DEFAULT_POSTIT_COVER = {
@@ -105,7 +108,12 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     props: {
       posts: posts
         .map((post) => ({
-          ...post,
+          slug: post.slug,
+          title: post.title,
+          tags: post.tags,
+          summary: post.summary,
+          ...(post.coverMetadata ? { coverMetadata: post.coverMetadata } : {}),
+          ...(post.assetsPath ? { assetsPath: post.assetsPath } : {}),
           writtenAt: post.writtenAt.toISOString(),
         }))
         .sort((a, b) => (a.writtenAt > b.writtenAt ? -1 : 1)),
