@@ -1,7 +1,7 @@
 As any parent knows, kids get sick, especially when they are of a young age, and sometimes it's troublesome to give them medicine.
 I, the adult in the room, usually say: "Come on... It's not that bad" and proceed to give myself a small dose.
 
-This time around it was **that bad**.
+That's what I did a couple of days ago, and this time around it was **that bad**.
 
 Half an hour after one drop of Atropine Sulfate in each eye I was having difficulties focusing.
 On the following day, I could only see things further than a meter and my eyes were hypersensitive to light.
