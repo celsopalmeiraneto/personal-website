@@ -16,12 +16,12 @@ import { promisify } from "node:util";
 
 marked.use({
   renderer: {
-    code(code, language) {
-      const languageArray = language ? [language] : [];
-      const highlightedContent = highlight.highlightAuto(code, languageArray);
+    code({ text, lang }: { text: string; lang?: string }) {
+      const languageArray = lang ? [lang] : [];
+      const highlightedContent = highlight.highlightAuto(text, languageArray);
 
       return `<pre><code class="hljs">${
-        highlightedContent.illegal ? code : highlightedContent.value
+        highlightedContent.illegal ? text : highlightedContent.value
       }</code></pre>`;
     },
   },

@@ -15,3 +15,6 @@ data/private/
 dist/
 out/
 build/
+
+# TypeScript build info
+*.tsbuildinfo
