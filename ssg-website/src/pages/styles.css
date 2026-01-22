@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   LIGHT MODE (DEFAULT)
+   ========================= */
 :root {
   --pantone-ultimate-gray: #939597;
   --pantone-cloud-dancer: #f0eee9;
@@ -11,13 +14,35 @@
   --pantone-ultra-violet: #5f4b8b;
   --post-it-color: #fffaeb;
 
-  --background-color: white;
-  --foreground-color: black;
+  --background-color: #ffffff;
+  --foreground-color: #000000;
   --border-color: var(--pantone-moondrop-grapes);
 }
 
+/* =========================
+   DARK MODE (MANUAL)
+   ========================= */
+.dark {
+  --pantone-ultimate-gray: #6b7280;
+  --pantone-cloud-dancer: #111827;
+  --pantone-pms-448: #2a2615;
+  --pantone-moondrop-grapes: #e5e7eb;
+  --pantone-viva-magenta: #e11d48;
+  --pantone-ultra-violet: #8b5cf6;
+  --post-it-color: #1f2937;
+
+  --background-color: #030712;
+  --foreground-color: #ffffff;
+  --border-color: #374151;
+}
+
+/* =========================
+   GLOBAL
+   ========================= */
 body {
   font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
 }
 
 @layer components {
@@ -31,3 +56,4 @@ body {
     }
   }
 }
+
