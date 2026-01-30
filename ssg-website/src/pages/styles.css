@@ -2,43 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* =========================
-   LIGHT MODE (DEFAULT)
-   ========================= */
+/* LIGHT */
+
 :root {
-  --pantone-ultimate-gray: #939597;
-  --pantone-cloud-dancer: #f0eee9;
-  --pantone-pms-448: #474026;
-  --pantone-moondrop-grapes: #1c1619;
-  --pantone-viva-magenta: #bb2649;
-  --pantone-ultra-violet: #5f4b8b;
-  --post-it-color: #fffaeb;
+  --pantone-ultimate-gray: --pantone-ultimate-gray;
+  --pantone-cloud-dancer: --pantone-cloud-dancer;
+  --pantone-pms-448: --pantone-pms-448;
+  --pantone-moondrop-grapes: --pantone-moondrop-grapes;
+  --pantone-viva-magenta: --pantone-viva-magenta;
+  --pantone-ultra-violet: --pantone-ultra-violet;
+  --post-it-color: --post-it-color;
 
   --background-color: #ffffff;
   --foreground-color: #000000;
   --border-color: var(--pantone-moondrop-grapes);
 }
 
-/* =========================
-   DARK MODE (MANUAL)
-   ========================= */
+/* DARK */
+
 .dark {
-  --pantone-ultimate-gray: #6b7280;
-  --pantone-cloud-dancer: #111827;
-  --pantone-pms-448: #2a2615;
-  --pantone-moondrop-grapes: #e5e7eb;
-  --pantone-viva-magenta: #e11d48;
-  --pantone-ultra-violet: #8b5cf6;
-  --post-it-color: #1f2937;
+  --pantone-ultimate-gray: --pantone-ultimate-gray;
+  --pantone-cloud-dancer: --pantone-cloud-dancer;
+  --pantone-pms-448: --pantone-pms-448;
+  --pantone-moondrop-grapes: --pantone-moondrop-grapes;
+  --pantone-viva-magenta: --pantone-viva-magenta;
+  --pantone-ultra-violet: --pantone-ultra-violet;
+  --post-it-color: --post-it-color;
 
   --background-color: #030712;
   --foreground-color: #ffffff;
   --border-color: #374151;
 }
 
-/* =========================
-   GLOBAL
-   ========================= */
+/* GLOBAL */
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   background-color: var(--background-color);
@@ -49,10 +46,12 @@ body {
   a:visited.visited {
     color: var(--pantone-ultra-violet);
   }
-
+  
   @media (prefers-color-scheme: dark) {
-    a:visited.visited {
-      color: #b3adcc;
+    :root {
+      --background-color: #030712;
+      --foreground-color: #ffffff;
+      --border-color: #374151;
     }
   }
 }
