@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --pantone-ultimate-gray: #939597;
-  --pantone-cloud-dancer: #f0eee9;
-  --pantone-pms-448: #474026;
-  --pantone-moondrop-grapes: #1c1619;
-  --pantone-viva-magenta: #bb2649;
-  --pantone-ultra-violet: #5f4b8b;
-  --post-it-color: #fffaeb;
+/* LIGHT */
 
-  --background-color: white;
-  --foreground-color: black;
+:root {
+  --pantone-ultimate-gray: --pantone-ultimate-gray;
+  --pantone-cloud-dancer: --pantone-cloud-dancer;
+  --pantone-pms-448: --pantone-pms-448;
+  --pantone-moondrop-grapes: --pantone-moondrop-grapes;
+  --pantone-viva-magenta: --pantone-viva-magenta;
+  --pantone-ultra-violet: --pantone-ultra-violet;
+  --post-it-color: --post-it-color;
+
+  --background-color: #ffffff;
+  --foreground-color: #000000;
   --border-color: var(--pantone-moondrop-grapes);
 }
 
+/* DARK */
+
+.dark {
+  --pantone-ultimate-gray: --pantone-ultimate-gray;
+  --pantone-cloud-dancer: --pantone-cloud-dancer;
+  --pantone-pms-448: --pantone-pms-448;
+  --pantone-moondrop-grapes: --pantone-moondrop-grapes;
+  --pantone-viva-magenta: --pantone-viva-magenta;
+  --pantone-ultra-violet: --pantone-ultra-violet;
+  --post-it-color: --post-it-color;
+
+  --background-color: #030712;
+  --foreground-color: #ffffff;
+  --border-color: #374151;
+}
+
+/* GLOBAL */
+
 body {
   font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
 }
 
 @layer components {
   a:visited.visited {
     color: var(--pantone-ultra-violet);
   }
-
+  
   @media (prefers-color-scheme: dark) {
-    a:visited.visited {
-      color: #b3adcc;
+    :root {
+      --background-color: #030712;
+      --foreground-color: #ffffff;
+      --border-color: #374151;
     }
   }
 }
+
