@@ -9,36 +9,47 @@ type Theme = "light" | "dark";
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [theme, setTheme] = useState<Theme | null>(null);
   const [hasUserPreference, setHasUserPreference] = useState(false);
+  const [isReady, setIsReady] = useState(false); // 🔹 controla quando pode renderizar
+
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") as Theme | null;
+    let initialTheme: Theme;
     if (storedTheme) {
-      setTheme(storedTheme);
+      initialTheme = storedTheme;
       setHasUserPreference(true);
-      document.documentElement.classList.toggle("dark", storedTheme === "dark");
     } else {
       const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const initialTheme: Theme = systemPrefersDark ? "dark" : "light";
-      setTheme(initialTheme);
-      document.documentElement.classList.toggle("dark", initialTheme === "dark");
+      initialTheme = systemPrefersDark ? "dark" : "light";
     }
+    setTheme(initialTheme);
+    document.documentElement.classList.toggle("dark", initialTheme === "dark");
+    setIsReady(true); // 🔹 só depois de aplicar o tema liberamos a renderização
   }, []);
+
   useEffect(() => {
     if (hasUserPreference) return;
     const media = window.matchMedia("(prefers-color-scheme: dark)");
     const listener = (e: MediaQueryListEvent) => {
-      setTheme(e.matches ? "dark" : "light");
+      const newTheme: Theme = e.matches ? "dark" : "light";
+      setTheme(newTheme);
       document.documentElement.classList.toggle("dark", e.matches);
     };
     media.addEventListener("change", listener);
     return () => media.removeEventListener("change", listener);
   }, [hasUserPreference]);
+
   const toggleTheme = () => {
+    if (!theme) return;
     const newTheme: Theme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     setHasUserPreference(true);
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
+
+  if (!isReady) {
+    return null;
+  }
   return (
     <div className="grid min-h-screen text-black dark:text-white dark:bg-gray-950 bg-white grid-rows-[auto_1fr_auto]">
       <Head>
@@ -53,15 +64,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <header className="p-2 md:p-3 h-20 md:h-24 text-white bg-pantone-viva-magenta dark:bg-pantone-ultra-violet flex items-center justify-between print:hidden">
         <p className="text-xl md:text-2xl m-0">
           <a href="/">
-            Hey there! I am{" "}
-            <span className="text-4xl md:text-5xl font-thin">Celso Neto</span>
+            Hey there! I am <span className="text-4xl md:text-5xl font-thin">Celso Neto</span>
           </a>
         </p>
-        {}
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded bg-black/20 dark:bg-white/20"
-        >
+        <button onClick={toggleTheme} className="p-2 rounded bg-black/20 dark:bg-white/20">
           {theme === "dark" ? "Light Mode" : "Dark Mode"}
         </button>
       </header>
@@ -74,5 +80,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     </div>
   );
 };
-
 export default MyApp;

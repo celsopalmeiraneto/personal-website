@@ -46,7 +46,7 @@ body {
   a:visited.visited {
     color: var(--pantone-ultra-violet);
   }
-  
+
   @media (prefers-color-scheme: dark) {
     :root {
       --background-color: #030712;
@@ -55,4 +55,3 @@ body {
     }
   }
 }
-
