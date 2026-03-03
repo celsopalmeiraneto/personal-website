@@ -164,6 +164,26 @@ export const getPostsSummaries = async (locale?: SupportedLocales): Promise<Post
   }, Promise.resolve([] as PostLocalized[]));
 };
 
+export const wrapNotesSection = (html: string): string => {
+  const notesHeadingPattern = /<h2>Notes<\/h2>/i;
+  const match = notesHeadingPattern.exec(html);
+
+  if (!match) return html;
+
+  const beforeNotes = html.slice(0, match.index);
+  const fromNotes = html.slice(match.index);
+  const afterNotesHeading = fromNotes.slice(match[0].length);
+
+  const nextH2Match = /<h2>/.exec(afterNotesHeading);
+  if (nextH2Match) {
+    const notesContent = fromNotes.slice(0, match[0].length + nextH2Match.index);
+    const afterNotes = fromNotes.slice(match[0].length + nextH2Match.index);
+    return `${beforeNotes}<section class="notes">${notesContent}</section>${afterNotes}`;
+  }
+
+  return `${beforeNotes}<section class="notes">${fromNotes}</section>`;
+};
+
 export const getPost = async (
   slug: string
 ): Promise<null | {
@@ -181,10 +201,11 @@ export const getPost = async (
   const post = await getPostByKey(postKey);
   const postFile = `${postKey.slug}.md`;
   const markdownContent = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, postFile));
-  const htmlContent: string = await marked(markdownContent.toString(), {
+  const rawHtml: string = await marked(markdownContent.toString(), {
     gfm: true,
     async: true,
   });
+  const htmlContent = wrapNotesSection(rawHtml);
 
   return {
     htmlContent,
