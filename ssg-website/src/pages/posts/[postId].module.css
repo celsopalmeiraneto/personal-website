@@ -79,7 +79,7 @@
     }
   }
 
-  .notes {
+  :global(.notes) {
     @apply text-sm border-t border-gray-300 pt-4 mt-4;
 
     h2 {

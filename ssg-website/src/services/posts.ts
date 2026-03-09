@@ -165,21 +165,13 @@ export const getPostsSummaries = async (locale?: SupportedLocales): Promise<Post
 };
 
 export const wrapNotesSection = (html: string): string => {
-  const notesHeadingPattern = /<h2>Notes<\/h2>/i;
-  const match = notesHeadingPattern.exec(html);
+  const lastH2Pattern = /<h2>([^<]*)<\/h2>(?![\s\S]*<h2>)/i;
+  const match = lastH2Pattern.exec(html);
 
-  if (!match) return html;
+  if (!match || match[1].toLowerCase() !== "notes") return html;
 
   const beforeNotes = html.slice(0, match.index);
   const fromNotes = html.slice(match.index);
-  const afterNotesHeading = fromNotes.slice(match[0].length);
-
-  const nextH2Match = /<h2>/.exec(afterNotesHeading);
-  if (nextH2Match) {
-    const notesContent = fromNotes.slice(0, match[0].length + nextH2Match.index);
-    const afterNotes = fromNotes.slice(match[0].length + nextH2Match.index);
-    return `${beforeNotes}<section class="notes">${notesContent}</section>${afterNotes}`;
-  }
 
   return `${beforeNotes}<section class="notes">${fromNotes}</section>`;
 };
