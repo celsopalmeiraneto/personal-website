@@ -74,3 +74,8 @@ ensure we all can identify and fix issues quickly.
 Familiarity is important and we should not be moving things all the time in our apps. Even small, poorly thought changes can cause serious issues. Imagine if we switch the colors or positions of the "Cancel" and "Confirm" in a highly used part of an app.
 
 And last, let's be curious, not reactive. Next time around, Celso, don't brush off someone's points: that's hubris and ignorance.
+
+## Notes
+
+2026-03-09: A couple of friends reached out to check if I was okay. Yes, I am! The effects of the medication in my eyes
+was over in 4 days.
