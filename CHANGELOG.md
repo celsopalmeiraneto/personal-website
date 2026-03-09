@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.5.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.4.0...v3.5.0) (2026-03-09)
+
+
+### Features
+
+* add styled `## Notes` section support to blog posts ([#53](https://github.com/celsopalmeiraneto/personal-website/issues/53)) ([b916a05](https://github.com/celsopalmeiraneto/personal-website/commit/b916a0575abaa2fdb4c8922ff152ac2df844548d))
+* clarify the cause of my visual impairment ([0951bb9](https://github.com/celsopalmeiraneto/personal-website/commit/0951bb9a85986b07e57374508c1581794c7d28ab))
+
+
+### Bug Fixes
+
+* improve accessiblity of visited links ([867f620](https://github.com/celsopalmeiraneto/personal-website/commit/867f6205dc7814fc1e75178233a77bdc0cad5bfb))
+
 ## [3.4.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.3.0...v3.4.0) (2026-01-10)
 
 
