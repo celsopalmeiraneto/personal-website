@@ -57,6 +57,9 @@ const ResumePage = ({ locale, contactInfo }: ResumePageProps) => {
               </div>
             )}
           </div>
+          {locale === SupportedLocales.AmericanEnglish && (
+            <p className="text-sm italic">Resident in Portugal. No visa sponsorship required.</p>
+          )}
         </header>
         {data.sections.map((sectionInfo) => (
           <section key={sectionInfo.slug}>
@@ -65,7 +68,7 @@ const ResumePage = ({ locale, contactInfo }: ResumePageProps) => {
             </h2>
             {sectionInfo.items.map((item) => (
               <div
-                className="grid break-inside-avoid pl-2 gap-1 print:gap-0 grid-cols-2 mb-8 last:mb-0"
+                className="grid break-inside-avoid pl-2 gap-1 print:gap-0 grid-cols-2 mb-6 last:mb-0"
                 key={item.slug}
               >
                 <p className="col-span-2">
