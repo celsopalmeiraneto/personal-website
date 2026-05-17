@@ -1,6 +1,5 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-import Script from "next/script";
 import "highlight.js/styles/github-dark-dimmed.css";
 import "./styles.css";
 
@@ -19,6 +18,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           type="application/rss+xml"
           title="Main RSS Feed"
           href="/rss/main.rss"
+        />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="Main Atom Feed"
+          href="/atom/main.atom"
         />
         <title>Celso Palmeira Neto's HP</title>
       </Head>

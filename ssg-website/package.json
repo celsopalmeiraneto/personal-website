@@ -6,7 +6,7 @@
     "build": "next build",
     "create-post": "ts-node src/scripts/create-post.ts",
     "dev": "next dev",
-    "postbuild": "ts-node src/scripts/generate-rss.ts",
+    "postbuild": "ts-node src/scripts/generate-feeds.ts",
     "start": "next start"
   },
   "repository": {

@@ -42,6 +42,7 @@
           },
           "stack": [
             "AWS",
+            "CodeGen",
             "Docker",
             "GitHub Actions",
             "Grafana",
@@ -91,7 +92,7 @@
             ]
           },
           "stack": [
-            "GPT",
+            "CodeGen",
             "Docker",
             "Google BigQuery",
             "Google Cloud Build",
