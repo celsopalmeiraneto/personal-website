@@ -17,6 +17,10 @@ import { promisify } from "node:util";
 marked.use({
   renderer: {
     code({ text, lang }: { text: string; lang?: string }) {
+      if (lang === "mermaid") {
+        return `<pre class="mermaid">${text}</pre>`;
+      }
+
       const languageArray = lang ? [lang] : [];
       const highlightedContent = highlight.highlightAuto(text, languageArray);
 
@@ -181,6 +185,7 @@ export const getPost = async (
 ): Promise<null | {
   htmlContent: string;
   post: PostLocalizedSerializable;
+  hasMermaid: boolean;
 }> => {
   const fileNames = await readPostsFolder();
   const { localizedPostFileNames } = groupFilesNamesByType(fileNames);
@@ -193,6 +198,7 @@ export const getPost = async (
   const post = await getPostByKey(postKey);
   const postFile = `${postKey.slug}.md`;
   const markdownContent = await fs.readFile(path.resolve(POSTS_FOLDER_PATH, postFile));
+  const hasMermaid = /^```mermaid\b/m.test(markdownContent.toString());
   const rawHtml: string = await marked(markdownContent.toString(), {
     gfm: true,
     async: true,
@@ -205,5 +211,6 @@ export const getPost = async (
       ...post,
       writtenAt: post.writtenAt.toISOString(),
     },
+    hasMermaid,
   };
 };

@@ -7,9 +7,10 @@ import styles from "./[postId].module.css";
 interface BlogPostProps {
   post: PostLocalizedSerializable;
   htmlContent: string;
+  hasMermaid: boolean;
 }
 
-const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
+const BlogPost = ({ post, htmlContent, hasMermaid }: BlogPostProps) => {
   return (
     <div className="container mx-auto flex flex-col gap-5 text-xl">
       <Head>
@@ -29,6 +30,12 @@ const BlogPost = ({ post, htmlContent }: BlogPostProps) => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.summary} />
+        {hasMermaid && (
+          <>
+            <script src="/scripts/mermaid.min.js" />
+            <script>{`mermaid.initialize({ startOnLoad: true })`}</script>
+          </>
+        )}
       </Head>
       {post.coverMetadata && (
         <img
