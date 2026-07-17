@@ -10,12 +10,12 @@
   }
 
   pre {
-    @apply self-center text-base;
+    @apply self-center text-base print:max-w-full print:whitespace-pre-wrap print:break-inside-avoid;
     max-width: calc(100vw - 3rem);
 
     code {
       @apply rounded-lg;
-      @apply overflow-x-scroll;
+      @apply overflow-x-scroll print:overflow-x-visible;
     }
   }
 
@@ -67,10 +67,10 @@
   }
 
   table {
-    @apply border-y border-black w-max;
+    @apply border-y border-black w-max print:w-full print:table-fixed;
     td,
     th {
-      @apply px-2;
+      @apply px-2 print:break-words;
     }
     tbody {
       tr {
