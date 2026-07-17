@@ -20,14 +20,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 24
       - run: npm install
       - name: Build SSG website
-        working-directory: ./ssg-website
+        working-directory: ./astro-website
         run: npm run build
       - name: Deploy to S3 and Invalidate Cache
-        working-directory: ./ssg-website
+        working-directory: ./astro-website
         run: |
-          aws s3 sync ./out "s3://$WEBSITE_BUCKET"
-          aws s3 cp --content-type "application/rss+xml" ./out/rss/main.rss "s3://$WEBSITE_BUCKET/rss/main.rss"
+          aws s3 sync ./dist "s3://$WEBSITE_BUCKET"
+          aws s3 cp --content-type "application/rss+xml" ./dist/rss/main.rss "s3://$WEBSITE_BUCKET/rss/main.rss"
           aws cloudfront create-invalidation --distribution-id $WEBSITE_DISTRIBUTION --paths '/*'

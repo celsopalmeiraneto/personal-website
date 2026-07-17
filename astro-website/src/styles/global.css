@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pantone-viva-magenta: #bb2649;
+  --color-pantone-ultra-violet: #5f4b8b;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@layer components {
+  a:visited.visited {
+    color: var(--color-pantone-ultra-violet);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    a:visited.visited {
+      color: #b3adcc;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { PostIt } from "../components/PostIt";
+import { Section } from "../components/Section";
+import { readCoverMetadata } from "../services/posts";
+import path from "node:path";
+
+const POSTS_DIR = path.resolve("..", "data", "posts");
+const posts = await getCollection("posts", (p) => p.data.locale === "en-US");
+const sorted = posts
+  .sort((a, b) => b.data.writtenAt.getTime() - a.data.writtenAt.getTime())
+  .slice(0, 12);
+
+const DEFAULT_POSTIT_COVER = {
+  alt: "Number in a ",
+  src: "/img/numbers.jpg",
+};
+
+const postsWithCovers = await Promise.all(
+  sorted.map(async (post) => {
+    let cover = DEFAULT_POSTIT_COVER;
+    if (post.data.assetsPath) {
+      const assetsDir = path.resolve(POSTS_DIR, post.data.assetsPath);
+      const meta = await readCoverMetadata(assetsDir);
+      if (meta) {
+        cover = {
+          alt: meta.alt,
+          src: `posts/${post.data.assetsPath}/${meta.filename}`,
+        };
+      }
+    }
+    return { post, cover };
+  })
+);
+---
+
+<BaseLayout title="Celso Palmeira Neto's HP" description="Father, Husband, Friend, Software Engineer.">
+  <div class="flex flex-col">
+    <Section title="" className="flex flex-col text-center gap-4">
+      <p class="text-3xl md:text-4xl font-thin">
+        Father, Husband, Friend, Software Engineer.
+      </p>
+      <p class="text-lg md:text-xl">
+        I work with a lot of fantastic people to deliver software that helps real people get
+        things done throughout the world.
+      </p>
+    </Section>
+    <Section title="Notes" className="flex flex-wrap justify-around gap-5">
+      {
+        postsWithCovers.map(({ post, cover }) => (
+          <PostIt
+            key={post.data.slug ?? post.id}
+            id={post.data.slug ?? post.id}
+            title={post.data.title}
+            tag={post.data.tags.slice(0, 5).join(", ")}
+            text={post.data.summary}
+            cover={cover}
+          />
+        ))
+      }
+    </Section>
+    <Section
+      title="Pages"
+      className="flex justify-around tracking-wider uppercase flex-wrap text-xl md:text-2xl"
+      type="nav"
+    >
+      <a href="/posts">Posts</a>
+      <a href="/resumes/en-US">Résumé</a>
+      <a href="/uses">Uses</a>
+    </Section>
+    <Section className="flex justify-around py-3" title="Find me on">
+      <a target="_blank" rel="author noopener" href="https://github.com/celsopalmeiraneto">
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="img/github-white.webp"
+            media="(prefers-color-scheme: dark)"
+          />
+          <source type="image/webp" srcSet="img/github.webp" />
+          <img
+            alt="GitHub's Logo"
+            class="h-8"
+            fetchPriority="low"
+            height="32"
+            src="img/github.webp"
+          />
+        </picture>
+      </a>
+      <a target="_blank" rel="author noopener" href="https://www.linkedin.com/in/celsopalmeira/">
+        <img
+          alt="LinkedIn's Logo"
+          class="h-8"
+          fetchPriority="low"
+          height="32"
+          src="img/linkedin.webp"
+        />
+      </a>
+      <a
+        target="_blank"
+        rel="author noopener"
+        href="https://www.goodreads.com/user/show/108800771-celso-palmeira"
+      >
+        <img
+          alt="GoodRead's Logo"
+          class="h-8 dark:invert"
+          fetchPriority="low"
+          height="32"
+          src="img/goodreads.webp"
+        />
+      </a>
+    </Section>
+  </div>
+</BaseLayout>

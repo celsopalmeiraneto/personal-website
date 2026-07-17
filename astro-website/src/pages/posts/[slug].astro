@@ -1,0 +1,97 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { marked } from "marked";
+import highlight from "highlight.js";
+import { wrapNotesSection, readCoverMetadata } from "../../services/posts";
+import path from "node:path";
+import "../../styles/post-content.css";
+
+marked.use({
+  renderer: {
+    code({ text, lang }: { text: string; lang?: string }) {
+      if (lang === "mermaid") {
+        return `<pre class="mermaid">${text}</pre>`;
+      }
+      const languageArray = lang ? [lang] : [];
+      const highlightedContent = highlight.highlightAuto(text, languageArray);
+      return `<pre><code class="hljs">${
+        highlightedContent.illegal ? text : highlightedContent.value
+      }</code></pre>`;
+    },
+  },
+});
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const posts = await getCollection("posts", (p) => p.data.slug === slug);
+
+if (posts.length === 0) {
+  return Astro.redirect("/404");
+}
+
+const post = posts[0];
+const rawHtml: string = await marked(post.body!, { gfm: true, async: true });
+const htmlContent = wrapNotesSection(rawHtml);
+const hasMermaid = post.body ? /^```mermaid\b/m.test(post.body) : false;
+
+const POSTS_DIR = path.resolve("..", "data", "posts");
+let coverSrc: string | undefined;
+let coverAlt: string | undefined;
+if (post.data.assetsPath) {
+  const assetsDir = path.resolve(POSTS_DIR, post.data.assetsPath);
+  const meta = await readCoverMetadata(assetsDir);
+  if (meta) {
+    coverSrc = `${post.data.assetsPath}/${meta.filename}`;
+    coverAlt = meta.alt;
+  }
+}
+
+const title = `Celso's Notes - ${post.data.title}`;
+---
+
+<BaseLayout title={title} description={post.data.summary} mermaidScripts={hasMermaid}>
+  <div class="container mx-auto flex flex-col gap-5 text-xl">
+    <script
+      id={`schema-blog-post-${post.data.postId}`}
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@id": post.data.postId,
+        "@type": "BlogPost",
+        description: post.data.summary,
+        datePublished: post.data.writtenAt.toISOString(),
+        dateModified: post.data.writtenAt.toISOString(),
+        name: post.data.title,
+        inLanguage: post.data.locale,
+      })}
+    />
+    <meta property="og:url" content={`https://celsoneto.com.br/posts/${post.data.slug}`} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={post.data.title} />
+    <meta property="og:description" content={post.data.summary} />
+    {
+      coverSrc && (
+        <img
+          src={coverSrc}
+          alt={coverAlt ?? ""}
+          class="h-28 object-cover object-center opacity-85"
+        />
+      )
+    }
+    <h1 class="text-center text-4xl font-thin my-2">&gt; {post.data.title}</h1>
+    <div class="text-base">
+      {`Written on ${new Date(post.data.writtenAt).toLocaleDateString([post.data.locale], {
+        dateStyle: "long",
+      })}`}
+    </div>
+    <div id="postContent" set:html={htmlContent}></div>
+    <hr />
+    <div>Tags: {post.data.tags.join(", ")}</div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = await getCollection("posts", (p) => p.data.locale === "en-US");
+const sorted = posts.sort((a, b) => b.data.writtenAt.getTime() - a.data.writtenAt.getTime());
+---
+
+<BaseLayout title="Celso Palmeira Neto's HP - Posts">
+  <div>
+    {
+      sorted.map((post) => (
+        <article class="mb-4">
+          <h2 class="text-2xl font-thin">
+            <a class="visited underline" href={`/posts/${post.data.slug}`}>
+              {post.data.title}
+            </a>
+          </h2>
+          <p>{post.data.summary}</p>
+        </article>
+      ))
+    }
+  </div>
+</BaseLayout>
