@@ -21,14 +21,15 @@ async function symlinkPostAssets() {
     const publicPath = path.resolve(publicPostsDir, entry.name);
 
     try {
-      const stat = await fs.lstat(publicPath);
-      if (stat.isSymbolicLink()) continue; // already linked
+      await fs.unlink(publicPath);
     } catch {
-      // doesn't exist, create symlink
-      await fs.mkdir(path.dirname(publicPath), { recursive: true });
-      await fs.symlink(assetPath, publicPath, "dir");
-      console.log(`Symlinked post assets: ${entry.name}`);
+      // doesn't exist, fine
     }
+
+    await fs.mkdir(path.dirname(publicPath), { recursive: true });
+    const relativeAssetPath = path.relative(path.dirname(publicPath), assetPath);
+    await fs.symlink(relativeAssetPath, publicPath, "dir");
+    console.log(`Symlinked post assets: ${entry.name}`);
   }
 }
 
