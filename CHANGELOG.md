@@ -1,5 +1,27 @@
 # Changelog
 
+## [4.0.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.4.0...v4.0.0) (2026-07-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* first version with astro
+
+### Features
+
+* add atom feed ([45d31ca](https://github.com/celsopalmeiraneto/personal-website/commit/45d31ca13fbe6bdf0701cf7f48591f1e24a30b05))
+* add mermaidjs support ([4d107c8](https://github.com/celsopalmeiraneto/personal-website/commit/4d107c8a60b6510e8e449175d05640dd01e4c602))
+* add styled `## Notes` section support to blog posts ([#53](https://github.com/celsopalmeiraneto/personal-website/issues/53)) ([b916a05](https://github.com/celsopalmeiraneto/personal-website/commit/b916a0575abaa2fdb4c8922ff152ac2df844548d))
+* clarify the cause of my visual impairment ([0951bb9](https://github.com/celsopalmeiraneto/personal-website/commit/0951bb9a85986b07e57374508c1581794c7d28ab))
+* first version with astro ([818af13](https://github.com/celsopalmeiraneto/personal-website/commit/818af13bd64415617c9f43d5357016060a416f5c))
+
+
+### Bug Fixes
+
+* fix loading of images ([93b4f29](https://github.com/celsopalmeiraneto/personal-website/commit/93b4f29abcaa6ec026766dee925c96033005aae3))
+* improve accessiblity of visited links ([867f620](https://github.com/celsopalmeiraneto/personal-website/commit/867f6205dc7814fc1e75178233a77bdc0cad5bfb))
+* prevent page breaks in code blocks ([3c1523a](https://github.com/celsopalmeiraneto/personal-website/commit/3c1523ad32182b03fca7bb59a5be6e55680569ba))
+
 ## [3.4.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.3.0...v3.4.0) (2026-01-10)
 
 
