@@ -17,5 +17,8 @@ vim.api.nvim_create_autocmd("User", {
 		ft.graphql = { "prettier" }
 		ft.less = { "prettier" }
 		ft.vue = { "prettier" }
+
+		vim.lsp.config["astro"] = {}
+		vim.lsp.enable("astro")
 	end,
 })

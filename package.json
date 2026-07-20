@@ -17,9 +17,11 @@
     "astro-website"
   ],
   "devDependencies": {
-    "@types/node": "^26.1.1",
-    "playwright": "^1.61.1",
+    "@astrojs/language-server": "2.16.12",
+    "@types/node": "26.1.1",
+    "playwright": "1.61.1",
     "prettier": "3.8.0",
+    "prettier-plugin-astro": "0.14.1",
     "typescript": "5.9.3"
   }
 }

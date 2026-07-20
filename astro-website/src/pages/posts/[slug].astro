@@ -48,7 +48,7 @@ if (post.data.assetsPath) {
   const assetsDir = path.resolve(POSTS_DIR, post.data.assetsPath);
   const meta = await readCoverMetadata(assetsDir);
   if (meta) {
-    coverSrc = `${post.data.assetsPath}/${meta.filename}`;
+    coverSrc = `/posts/${post.data.assetsPath}/${meta.filename}`;
     coverAlt = meta.alt;
   }
 }
