@@ -4,12 +4,13 @@ summary: "Effective Code Review for Humans."
 slug: "pr-evaluations"
 postId: "16PAhR"
 locale: "en-US"
-postTags: ["Software Engineering","Code Review","PR"]
-tags: ["Software Engineering","Code Review","PR"]
+postTags: ["Software Engineering", "Code Review", "PR"]
+tags: ["Software Engineering", "Code Review", "PR"]
 availableLocales: ["en-US"]
 writtenAt: "2024-06-03T22:43:00+01:00"
 assetsPath: "pr-evaluations"
 ---
+
 _This blog post was written partially at my work hours at [MobieTrain](https://mobietrain.com) to share my view on PR evaluations with my colleagues. I had approval from the leadership team on sharing this article on my personal blog._
 
 ## Code is written for humans

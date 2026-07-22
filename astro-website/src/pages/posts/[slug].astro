@@ -86,11 +86,13 @@ const title = `Celso's Notes - ${post.data.title}`;
     }
     <h1 class="text-center text-4xl font-thin my-2">&gt; {post.data.title}</h1>
     <div class="text-base">
-      {`Written on ${new Date(post.data.writtenAt).toLocaleDateString([post.data.locale], {
-        dateStyle: "long",
-      })}`}
+      {
+        `Written on ${new Date(post.data.writtenAt).toLocaleDateString([post.data.locale], {
+          dateStyle: "long",
+        })}`
+      }
     </div>
-    <div id="postContent" set:html={htmlContent}></div>
+    <div id="postContent" set:html={htmlContent} />
     <hr />
     <div>Tags: {post.data.tags.join(", ")}</div>
   </div>

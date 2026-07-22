@@ -4,12 +4,13 @@ summary: "A Tale of Code and Toilet Paper."
 slug: "refactoring-and-tp"
 postId: "PhTIg"
 locale: "en-US"
-postTags: ["Software Engineering","Refactoring"]
-tags: ["Software Engineering","Refactoring"]
+postTags: ["Software Engineering", "Refactoring"]
+tags: ["Software Engineering", "Refactoring"]
 availableLocales: ["en-US"]
 writtenAt: "2025-03-25T12:27:36.186Z"
 assetsPath: "refactoring-and-tp"
 ---
+
 The act of refactoring is a lot like restocking toilet paper in your bathroom.
 
 In every house I’ve lived in, we’ve always kept two or three extra TP rolls within reach. That habit has been incredibly handy, especially when a roll runs out mid-use. You can just grab a fresh one and take care of the "situation".

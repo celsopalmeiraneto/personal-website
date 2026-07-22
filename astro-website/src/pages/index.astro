@@ -31,19 +31,20 @@ const postsWithCovers = await Promise.all(
       }
     }
     return { post, cover };
-  })
+  }),
 );
 ---
 
-<BaseLayout title="Celso Palmeira Neto's HP" description="Father, Husband, Friend, Software Engineer.">
+<BaseLayout
+  title="Celso Palmeira Neto's HP"
+  description="Father, Husband, Friend, Software Engineer."
+>
   <div class="flex flex-col">
     <Section title="" className="flex flex-col text-center gap-4">
-      <p class="text-3xl md:text-4xl font-thin">
-        Father, Husband, Friend, Software Engineer.
-      </p>
+      <p class="text-3xl md:text-4xl font-thin">Father, Husband, Friend, Software Engineer.</p>
       <p class="text-lg md:text-xl">
-        I work with a lot of fantastic people to deliver software that helps real people get
-        things done throughout the world.
+        I work with a lot of fantastic people to deliver software that helps real people get things
+        done throughout the world.
       </p>
     </Section>
     <Section title="Notes" className="flex flex-wrap justify-around gap-5">
@@ -69,7 +70,7 @@ const postsWithCovers = await Promise.all(
       <a href="/resumes/en-US">Résumé</a>
       <a href="/uses">Uses</a>
     </Section>
-    <Section className="flex justify-around py-3" title="Find me on">
+    <Section className="flex justify-around py-3 flex-wrap" title="Find me on">
       <a target="_blank" rel="author noopener" href="https://github.com/celsopalmeiraneto">
         <picture>
           <source

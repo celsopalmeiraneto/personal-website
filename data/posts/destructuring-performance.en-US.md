@@ -5,10 +5,11 @@ slug: "destructuring-performance"
 postId: "V0Gc06lq4P6q"
 locale: "en-US"
 postTags: ["Miscellaneous"]
-tags: ["JS","Performance"]
+tags: ["JS", "Performance"]
 availableLocales: ["en-US"]
 writtenAt: "2022-09-15T08:58:31+01:00"
 ---
+
 ## Context
 
 The other day I was asked to solve some performance issues at friend's product and got started analyzing the bottlenecks and potential issues on their codebase.

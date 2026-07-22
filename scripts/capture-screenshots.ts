@@ -127,7 +127,9 @@ async function main() {
   const outputFlag = args.indexOf("--output");
 
   if (dirFlag === -1 || outputFlag === -1) {
-    console.error("Usage: npx tsx scripts/capture-screenshots.ts --dir <build-dir> --output <screenshots-dir>");
+    console.error(
+      "Usage: npx tsx scripts/capture-screenshots.ts --dir <build-dir> --output <screenshots-dir>",
+    );
     process.exit(1);
   }
 

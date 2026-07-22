@@ -18,3 +18,5 @@ build/
 
 # TypeScript build info
 *.tsbuildinfo
+
+test-screenshots/

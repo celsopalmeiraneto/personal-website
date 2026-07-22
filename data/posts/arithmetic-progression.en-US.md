@@ -5,11 +5,12 @@ slug: "arithmetic-progression"
 postId: "WCY6WAuZqN"
 locale: "en-US"
 postTags: ["Miscellaneous"]
-tags: ["Programming","SQL"]
+tags: ["Programming", "SQL"]
 availableLocales: ["en-US"]
 writtenAt: "2022-10-19T19:36:29+01:00"
 assetsPath: "assets-arithmetic-progression"
 ---
+
 ## Context
 
 At [MobieTrain](https://www.mobietrain.com) we serve micro-learnings to front-line employees and one important thing when teaching people is to teach the right things in the right order.

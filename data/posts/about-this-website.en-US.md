@@ -5,11 +5,12 @@ slug: "about-this-website"
 postId: "HLGL2c2C7-B1"
 locale: "en-US"
 postTags: ["Miscellaneous"]
-tags: ["JS","Next.JS"]
+tags: ["JS", "Next.JS"]
 availableLocales: ["en-US"]
 writtenAt: "2023-05-31T23:19:00+01:00"
 assetsPath: "assets-about-this-website"
 ---
+
 ## Context
 
 A personal website is one of the few ways people can express themselves on the Internet without having to conform to a format conceived by someone else.

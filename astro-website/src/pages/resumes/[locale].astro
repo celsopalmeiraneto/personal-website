@@ -7,18 +7,20 @@ import { getTranslations, translateFromCollection } from "../../i18n";
 import { DevicePhoneMobileIcon, EnvelopeIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
 
 export function getStaticPaths() {
-  return [
-    { params: { locale: "en-US" } },
-    { params: { locale: "pt-BR" } },
-  ];
+  return [{ params: { locale: "en-US" } }, { params: { locale: "pt-BR" } }];
 }
 
 const { locale } = Astro.params as { locale: string };
-const supportedLocale = locale === "pt-BR" ? SupportedLocales.BrazilianPortuguese : SupportedLocales.AmericanEnglish;
+const supportedLocale =
+  locale === "pt-BR" ? SupportedLocales.BrazilianPortuguese : SupportedLocales.AmericanEnglish;
 const contactInfo = await getContactInformation();
 const translations = getTranslations(supportedLocale);
-const t = (key: string, fallbackText?: string) => translateFromCollection(translations, { key, fallbackText });
-const { format: formatDate } = new Intl.DateTimeFormat(supportedLocale, { month: "2-digit", year: "numeric" });
+const t = (key: string, fallbackText?: string) =>
+  translateFromCollection(translations, { key, fallbackText });
+const { format: formatDate } = new Intl.DateTimeFormat(supportedLocale, {
+  month: "2-digit",
+  year: "numeric",
+});
 ---
 
 <BaseLayout title={`Celso Palmeira Neto's HP - ${t("resume.resume")}`}>
@@ -39,78 +41,86 @@ const { format: formatDate } = new Intl.DateTimeFormat(supportedLocale, { month:
         <div class="flex justify-between flex-wrap gap-2">
           <div class="flex items-center">
             <GlobeAltIcon className="size-5" />
-            <a href="https://celsoneto.com.br" target="_blank">
-              celsoneto.com.br
-            </a>
+            <a href="https://celsoneto.com.br" target="_blank"> celsoneto.com.br </a>
           </div>
-          {contactInfo.emailAddress && (
-            <div class="flex items-center">
-              <EnvelopeIcon className="size-5" />
-              <a href={`mailto:${contactInfo.emailAddress}`}>{contactInfo.emailAddress}</a>
-            </div>
-          )}
-          {contactInfo.phoneNumber && (
-            <div class="flex items-center">
-              <DevicePhoneMobileIcon className="size-5" />
-              <a href={`tel:${contactInfo.phoneNumber.replaceAll(" ", "")}`}>
-                {contactInfo.phoneNumber}
-              </a>
-            </div>
-          )}
-        </div>
-        {supportedLocale === SupportedLocales.AmericanEnglish && (
-          <p class="text-sm italic">Resident in Portugal. No visa sponsorship required.</p>
-        )}
-      </header>
-      {data.sections.map((sectionInfo: any) => (
-        <section>
-          <h2 class="text-3xl font-thin underline decoration-1 mb-3">
-            {sectionInfo.title[supportedLocale]}
-          </h2>
-          {sectionInfo.items.map((item: any) => (
-            <div class="grid break-inside-avoid pl-2 gap-1 print:gap-0 grid-cols-2 mb-6 last:mb-0">
-              <p class="col-span-2">
-                <span class="text-2xl">{item.description[supportedLocale]}</span>
-                {" "} {`${t("resume.at")} `}
-                <span class="text-lg">
-                  <a class="underline" href={item.website} target="_blank">
-                    {item.institution[supportedLocale]}
-                  </a>
-                </span>
-              </p>
-              <div class="text-lg content-center">{item.location[supportedLocale]}</div>
-              <div class="text-lg text-right content-center">
-                {formatDate(new Date(item.period.begin))} - {" "}
-                {item.period.end
-                  ? formatDate(new Date(item.period.end))
-                  : t("resume.presentDays")}
+          {
+            contactInfo.emailAddress && (
+              <div class="flex items-center">
+                <EnvelopeIcon className="size-5" />
+                <a href={`mailto:${contactInfo.emailAddress}`}>{contactInfo.emailAddress}</a>
               </div>
-              {"highlights" in item && (
-                <ul class="col-span-2 list-inside list-disc">
-                  {item.highlights[supportedLocale].map((highlight: string, index: number, array: string[]) => (
-                    <li>
-                      {highlight}
-                      {index === array.length - 1 ? "." : ";"}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {"notes" in item && (
-                <div class="col-span-2">
-                  <p class="leading-tight">{item.notes[supportedLocale]}</p>
+            )
+          }
+          {
+            contactInfo.phoneNumber && (
+              <div class="flex items-center">
+                <DevicePhoneMobileIcon className="size-5" />
+                <a href={`tel:${contactInfo.phoneNumber.replaceAll(" ", "")}`}>
+                  {contactInfo.phoneNumber}
+                </a>
+              </div>
+            )
+          }
+        </div>
+        {
+          supportedLocale === SupportedLocales.AmericanEnglish && (
+            <p class="text-sm italic">Resident in Portugal. No visa sponsorship required.</p>
+          )
+        }
+      </header>
+      {
+        data.sections.map((sectionInfo: any) => (
+          <section>
+            <h2 class="text-3xl font-thin underline decoration-1 mb-3">
+              {sectionInfo.title[supportedLocale]}
+            </h2>
+            {sectionInfo.items.map((item: any) => (
+              <div class="grid break-inside-avoid pl-2 gap-1 print:gap-0 grid-cols-2 mb-6 last:mb-0">
+                <p class="col-span-2">
+                  <span class="text-2xl">{item.description[supportedLocale]}</span>{" "}
+                  {`${t("resume.at")} `}
+                  <span class="text-lg">
+                    <a class="underline" href={item.website} target="_blank">
+                      {item.institution[supportedLocale]}
+                    </a>
+                  </span>
+                </p>
+                <div class="text-lg content-center">{item.location[supportedLocale]}</div>
+                <div class="text-lg text-right content-center">
+                  {formatDate(new Date(item.period.begin))} -{" "}
+                  {item.period.end
+                    ? formatDate(new Date(item.period.end))
+                    : t("resume.presentDays")}
                 </div>
-              )}
-              {"stack" in item && item.stack.length > 0 && (
-                <div class="text-sm col-span-2">
-                  <p>
-                    <strong>Stack:</strong> {item.stack.sort().join(", ")}.
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </section>
-      ))}
+                {"highlights" in item && (
+                  <ul class="col-span-2 list-inside list-disc">
+                    {item.highlights[supportedLocale].map(
+                      (highlight: string, index: number, array: string[]) => (
+                        <li>
+                          {highlight}
+                          {index === array.length - 1 ? "." : ";"}
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                )}
+                {"notes" in item && (
+                  <div class="col-span-2">
+                    <p class="leading-tight">{item.notes[supportedLocale]}</p>
+                  </div>
+                )}
+                {"stack" in item && item.stack.length > 0 && (
+                  <div class="text-sm col-span-2">
+                    <p>
+                      <strong>Stack:</strong> {item.stack.sort().join(", ")}.
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </section>
+        ))
+      }
     </div>
   </div>
 </BaseLayout>

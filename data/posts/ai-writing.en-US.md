@@ -4,12 +4,13 @@ summary: "Support growth without replacing effort."
 slug: "ai-writing"
 postId: "Eq2b3"
 locale: "en-US"
-postTags: ["AI","LLM","Writing"]
-tags: ["AI","LLM","Writing"]
+postTags: ["AI", "LLM", "Writing"]
+tags: ["AI", "LLM", "Writing"]
 availableLocales: ["en-US"]
 writtenAt: "2025-09-28T10:17:57.031Z"
 assetsPath: "ai-writing"
 ---
+
 Whenever I need to lift some weights at the gym I use gloves. Gloves don't make me stronger, but the extra grip helps and the layer of fabric between the bars and my skin makes me endure the pain of exercising for longer.
 
 This is how I prefer to see LLMs and AI at the end of the day: tools that help me improve, so that I can become better in the tasks I'm applying AI to.

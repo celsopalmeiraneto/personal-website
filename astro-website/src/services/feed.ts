@@ -91,9 +91,17 @@ export function feedPlugin(): AstroIntegration {
       "astro:build:done": async ({ dir }) => {
         console.log("Generating RSS + Atom feeds...");
         const posts = await getEnPosts();
-        const sorted = posts.sort((a, b) => b.data.writtenAt.getTime() - a.data.writtenAt.getTime());
+        const sorted = posts.sort(
+          (a, b) => b.data.writtenAt.getTime() - a.data.writtenAt.getTime(),
+        );
 
-        const postsWithContent: Array<{ title: string; summary: string; slug: string; writtenAt: Date; html: string }> = [];
+        const postsWithContent: Array<{
+          title: string;
+          summary: string;
+          slug: string;
+          writtenAt: Date;
+          html: string;
+        }> = [];
 
         for (const post of sorted) {
           const rawHtml: string = await marked(post.body || "", { gfm: true, async: true });

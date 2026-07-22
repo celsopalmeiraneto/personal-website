@@ -4,12 +4,13 @@ summary: "Software Engineering has a critical role in shaping an inclusive digit
 slug: "accessibility-is-on-us"
 postId: "ilqVC"
 locale: "en-US"
-postTags: ["Accessibility","Inclusive Design","Software Engineering"]
-tags: ["Accessibility","Inclusive Design","Software Engineering"]
+postTags: ["Accessibility", "Inclusive Design", "Software Engineering"]
+tags: ["Accessibility", "Inclusive Design", "Software Engineering"]
 availableLocales: ["en-US"]
 writtenAt: "2026-01-10T08:44:00.000Z"
 assetsPath: "accessibility-is-on-us"
 ---
+
 As any parent knows, kids get sick, especially when they are of a young age, and sometimes it's troublesome to give them medicine.
 I, the adult in the room, usually say: "Come on... It's not that bad" and proceed to give myself a small dose.
 

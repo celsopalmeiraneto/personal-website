@@ -10,6 +10,7 @@ availableLocales: ["en-US"]
 writtenAt: "2024-04-10T21:38:00+01:00"
 assetsPath: "lucky-audit"
 ---
+
 In many ways I got lucky throughout my life.
 
 I was lucky to have the parents I have. They always understood the power of education and have invested all they could at the time in our education. I first wanted to have computer classes when I was 7 or 8 and they agreed to put the little spare money we had into the classes. I was lucky for them to allow me to work part time at the age of 14 for a local programming shop. I was lucky that they taught me the value of work and gave me the freedom to move out of their place when I was 17 to live in another state to work full-time there.

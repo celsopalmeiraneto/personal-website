@@ -5,11 +5,12 @@ slug: "video-service"
 postId: "KuE4J"
 locale: "en-US"
 postTags: []
-tags: ["Software Engineering","System Design"]
+tags: ["Software Engineering", "System Design"]
 availableLocales: ["en-US"]
 writtenAt: "2025-03-09T09:49:31.313Z"
 assetsPath: "video-service"
 ---
+
 ## Context
 
 The demand to bring videos to our platform was driven by new prospects who, for

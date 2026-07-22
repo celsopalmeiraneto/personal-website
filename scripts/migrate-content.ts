@@ -38,7 +38,8 @@ function buildFrontmatter(json: Record<string, unknown>): string {
   if (json.locale) lines.push(`locale: ${JSON.stringify(json.locale)}`);
   if (json.postTags) lines.push(`postTags: ${JSON.stringify(json.postTags)}`);
   if (json.tags) lines.push(`tags: ${JSON.stringify(json.tags)}`);
-  if (json.availableLocales) lines.push(`availableLocales: ${JSON.stringify(json.availableLocales)}`);
+  if (json.availableLocales)
+    lines.push(`availableLocales: ${JSON.stringify(json.availableLocales)}`);
   if (json.writtenAt) lines.push(`writtenAt: ${JSON.stringify(json.writtenAt)}`);
   if (json.assetsPath) lines.push(`assetsPath: ${JSON.stringify(json.assetsPath)}`);
 
