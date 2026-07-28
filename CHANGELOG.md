@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.1](https://github.com/celsopalmeiraneto/personal-website/compare/v4.0.0...v4.0.1) (2026-07-28)
+
+
+### Bug Fixes
+
+* ensue symlinks are not being commited ([fdc7f40](https://github.com/celsopalmeiraneto/personal-website/commit/fdc7f40b8036329c0546c2bd19a2bda217d9c264))
+* install mermaidjs ([3e920d6](https://github.com/celsopalmeiraneto/personal-website/commit/3e920d651db63273c27878b353b41d74377e9087))
+
 ## [4.0.0](https://github.com/celsopalmeiraneto/personal-website/compare/v3.4.0...v4.0.0) (2026-07-20)
 
 ### ⚠ BREAKING CHANGES
