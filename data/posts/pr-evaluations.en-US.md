@@ -103,3 +103,7 @@ PRs are a valuable asset for maintaining a healthy codebase, to ensure that peop
 ## Notes
 
 _2024-10-27: I've updated the text to improve clarity as in some points I've made references to internal practices / documents that were not clear for people outside MobieTrain._
+
+_2026-07-28: For those interested, I created an OpenCode Agent to help me with PR evaluations. This
+agent was created based on this blog post and its output has been good. Check it out:
+https://github.com/celsopalmeiraneto/dot-config/blob/main/.config/opencode/agents/review.md_
