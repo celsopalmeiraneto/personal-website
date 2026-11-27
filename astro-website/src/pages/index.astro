@@ -7,7 +7,7 @@ import { readCoverMetadata } from "../services/posts";
 import path from "node:path";
 
 const POSTS_DIR = path.resolve("..", "data", "posts");
-const posts = await getCollection("posts", (p) => p.data.locale === "en-US");
+const posts = await getCollection("posts");
 const sorted = posts
   .sort((a, b) => b.data.writtenAt.getTime() - a.data.writtenAt.getTime())
   .slice(0, 12);

@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "create-post": "node src/scripts/create-post.ts",
     "preview": "astro preview",
     "astro": "astro"
   },
